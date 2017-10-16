@@ -1,3 +1,2 @@
-# fe-cosik
-
-Sedona
+# Sedona
+---------
