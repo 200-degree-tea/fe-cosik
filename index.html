@@ -7,84 +7,84 @@
   </head>
 
   <header>
-    <nav><!-- Navigation menu-->
-      <ul>
-        <li>Home</li>
-        <li><a href='photos.html'>Photos and videos</a></li>
-        <li><a href='form.html'>Feedback Form</a></li>
-        <li>HTML Academy</li>
+    <nav class="nav"><!-- nav menu-->
+      <ul class="nav nav__list">
+        <li class="nav nav__item">Home</li>
+        <li class="nav nav__item"><a href="photos.html">Photos and videos</a></li>
+        <li class="nav nav__item"><a href="form.html">Feedback Form</a></li>
+        <li class="nav nav__item">HTML Academy</li>
       </ul>
-      <img> <!-- LOGO -->
-    </nav><!-- Navigation menu ends-->
+      <img class="nav nav__logo"> <!-- LOGO -->
+    </nav><!-- nav menu ends-->
   </header>
 
   <body>
-    
-    <section><!-- intro -->
-      <div>
-        <h1>Inro</h1>
-        <img>
+
+    <section class="layout"><!-- intro -->
+      <div class="layout__intro">
+        <h1>Intro</h1>
+        <img class="image">
         <p>Intro text - seems to be a picture in the PSD</p>
       </div>
     </section><!-- intro ends -->
 
-    <div><!-- main page -->
-      <section><!-- SEDONA - a small town in the ARIZON, MAKING more! -->
-        <div>
+    <div class="wrapper"><!-- main page -->
+      <section class="content"><!-- SEDONA - a small town in the ARIZON, MAKING more! -->
+        <div class="content__introduction">
           <h1>SEDONA - a small town in the ARIZON, MAKING more!</h1>
           <p>Consider 5 reasons for which Sedona is better than Grand Canion</p>
         </div>
       </section>
 
-      <section><!-- THE PRESENT TOWN - No. 1 - SEDONA NOT ATTRACTION FOR TOURISTS ... -->
-        <div>
+      <section class="content"><!-- THE PRESENT TOWN - No. 1 - SEDONA NOT ATTRACTION FOR TOURISTS ... -->
+        <div class="content__paragraph paragraph--left">
           <h1>The present town</h1>
           <p>No. 1</p>
           <p>Here will come first reason why Sedona is worth to visit. (I can't translate from the picture.)</p>
 
-          <img><!-- photo-city -->
+          <img class="image image--right"><!-- photo-city -->
 
-          <img><!-- icon-house.svg-->
+          <img class="icon"><!-- icon-house.svg-->
           <h2>Housing</h2>
           <p>We recommend to live in a real motel, everything is like in a movie!</p>
 
-          <img> <!-- icon-gift.svg -->
+          <img class="icon"> <!-- icon-gift.svg -->
           <h2>SOUVENIRS</h2>
           <p>Not only of Chinese, but also of local production!</p>
 
-          <img> <!-- icon-burger.svg -->
+          <img class="icon"> <!-- icon-burger.svg -->
           <h2>FOOD</h2>
           <p>Always order a BUGGER, you will NOT be disappointed!</p>
         </div>
       </section>
 
-      <section><!-- THERE IS THE BRIDGE OF THE DEVIL - No. 2 - Yes, you can go through it! If... -->
-        <div>
+      <section class="content"><!-- THERE IS THE BRIDGE OF THE DEVIL - No. 2 - Yes, you can go through it! If... -->
+        <div class="content__paragraph paragraph--right">
           <h1>THERE IS THE BRIDGE OF THE DEVIL</h1>
-            <p>No. 2</p>
-            <p>Yes, you can go through it! If </p>
+          <p>No. 2</p>
+          <p>Yes, you can go through it! If </p>
 
-            <img><!-- photo-bridge-->
+          <img class="image--left"><!-- photo-bridge-->
         </div>
       </section>
 
-      <section><!-- SMALL AREA - No. 3 - ALL SITES are located -->
-        <div>
+      <section class="content"><!-- SMALL AREA - No. 3 - ALL SITES are located -->
+        <div class="content__paragraph">
           <h1>SMALL AREA</h1>
           <p>No. 3</p>
           <p>ALL SITES are located...</p>
         </div>
       </section>
 
-      <section><!-- BEAUTIFUL ROAD - No. 4 - TO GO TO SEDONU FROM LAS VEGAS completely... -->
-        <div>
+      <section class="content"><!-- BEAUTIFUL ROAD - No. 4 - TO GO TO SEDONU FROM LAS VEGAS completely... -->
+        <div class="content__paragraph">
           <h1>BEAUTIFUL ROAD</h1>
           <p>No. 4</p>
           <p>TO GO TO SEDONU FROM LAS VEGAS completely...</p>
         </div>
       </section>
 
-      <section><!-- LITTLE TOURISTS - No. 5 - Most travel to Grand Canyon and crowd... -->
+      <section class="content"><!-- LITTLE TOURISTS - No. 5 - Most travel to Grand Canyon and crowd... -->
         <div>
           <h1>LITTLE TOURISTS</h1>
           <p>No. 5</p>
@@ -92,28 +92,25 @@
         </div>
       </section>
 
-      <section><!-- INTERESTED? Indicate the expected dates of your trip and we are -->
+      <section class="content"><!-- INTERESTED? Indicate the expected dates of your trip and we are -->
         <h1>INTERESTED?</h1>
         <p>Indicate the expected dates of your trip and we are</p>
 
-        <button>FIND HOTEL</button>
+        <button class="btn btn__find btn--blue">FIND HOTEL</button>
 
-        <img><!-- map -->
-
+        <img class="image__map"><!-- map -->
       </section>
     </div><!-- main page ends-->
   </body>
 
-    <footer>
-      <section>
-        <h1>#VISITSEDONA</h1>
+  <footer>
+    <h1>#VISITSEDONA</h1>
 
-        <button>Tweeter</button>
-        <button>Facebook</button>
-        <button>Youtube</button>
+    <button class="btn btn__social">Tweeter</button>
+    <button class="btn btn__social">Facebook</button>
+    <button class="btn btn__social">Youtube</button>
 
-        <p>Developed by</p>
-        <img> <!-- logo-button-->
-      </section>
-    </footer>
+    <p>Developed by</p>
+    <img class="footer-logo"> <!-- logo-button-->
+  </footer>
 </html>
