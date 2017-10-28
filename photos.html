@@ -5,96 +5,98 @@
     <meta name='description'>
     <title>Photos</title>
   </head>
+
   <header>
-    <nav><!-- Navigation menu-->
-      <ul>
-        <li><a href='index.html'>Home</a></li>
-        <li>Photos and videos</li>
-        <li><a href='form.html'>Feedback Form</a></li>
-        <li>HTML Academy</li>
-      </ul>
-      <img> <!-- LOGO -->
-    </nav><!-- Navigation menu ends-->
-  </header>
+    <header>
+      <nav class="nav"><!-- nav menu-->
+        <ul class="nav nav__list">
+          <li class="nav nav__item"><a href="index.html">Home</a></li>
+          <li class="nav nav__item">Photos and videos</li>
+          <li class="nav nav__item"><a href="form.html">Feedback Form</a></li>
+          <li class="nav nav__item">HTML Academy</li>
+        </ul>
+        <img class="nav nav__logo"> <!-- LOGO -->
+      </nav><!-- nav menu ends-->
+    </header>
+
   <body>
-    <section><!-- intro -->
-      <div>
-        <h1>Inro</h1>
-        <img>
-        <p>Intro text - seems to be a picture in the PSD</p>
+    <section class="layout"><!-- intro -->
+      <div class="layout__intro">
+        <h1>SEDONA</h1>
+        <img class="image">
       </div>
     </section><!-- intro ends -->
 
-    <div>
-      <section>
-        <div>
+
+    <div class="wrapper">
+      <section class="content">
+        <div class="content__paragraph">
           <h1>Photos and videos</h1>
           <p>Can not decide on a journey because of the course?</p>
         </div>
       </section>
 
-      <section>
-        <div>
-          <img><!-- photo-1-mobile.jpg -->
+      <section class="gallery">
+        <div class="gallery gallery__image">
+          <img class="image image__layout"><!-- photo-1-mobile.jpg -->
           <p>non-native spaces</p>
           <p>Photo author: Boris</p>
-          <img><!-- like-icon.svg -->
+          <img class="icon icon__social"><!-- like-icon.svg -->
           <p>'amount of likes'</p>
         </div>
       </section>
 
-      <section>
-        <div>
-          <img><!-- photo-2-mobile.jpg -->
+      <section class="gallery">
+        <div class="gallery gallery__image">
+          <img class="image image__layout"><!-- photo-2-mobile.jpg -->
           <p>Local vegetation</p>
           <p>Photo author: Sergey</p>
-          <img><!-- like-icon.svg -->
+          <img class="icon icon__social"><!-- like-icon.svg -->
           <p>'amount of likes'</p>
         </div>
       </section>
 
-      <section>
-        <div>
-          <img><!-- photo-3-mobile.jpg -->
+      <section class="gallery">
+        <div class="gallery gallery__image">
+          <img class="image image__layout"><!-- photo-3-mobile.jpg -->
           <p>Road to the north</p>
           <p>Photo author: Petr</p>
-          <img><!-- like-icon.svg -->
+          <img class="icon icon__social"><!-- like-icon.svg -->
           <p>'amount of likes'</p>
         </div>
       </section>
 
-      <section>
-        <div>
-          <img><!-- photo-4-mobile.jpg -->
+      <section class="gallery">
+        <div class="gallery gallery__image">
+          <img class="image image__layout"><!-- photo-4-mobile.jpg -->
           <p>Devil's Bridge</p>
           <p>Photo author: Anton</p>
-          <img><!-- like-icon.svg -->
+          <img class="icon icon__social"><!-- like-icon.svg -->
           <p>'amount of likes'</p>
         </div>
       </section>
 
-      <section>
-        <div>
+      <section class="gallery">
+        <div class="gallery gallery__video">
           <h1>Still in doubt?</h1>
           <p> See the video presentation and rather for...</p>
-          <video><!-- video-mobile -->
+          <video calss="video"><!-- video-mobile -->
             <source>
           </video>
         </div>
       </section>
-    </div>
 
+    </div> <!-- main page ends -->
   </body>
+
   <footer>
-    <section>
-      <h1>#VISITSEDONA</h1>
+    <h1>#VISITSEDONA</h1>
 
-      <button>Tweeter</button>
-      <button>Facebook</button>
-      <button>Youtube</button>
+    <button class="btn btn__social">Tweeter</button>
+    <button class="btn btn__social">Facebook</button>
+    <button class="btn btn__social">Youtube</button>
 
-      <p>Developed by</p>
-      <img> <!-- logo-button-->
-    </section>
+    <p>Developed by</p>
+    <img class="footer-logo"> <!-- logo-button-->
   </footer>
 </html>
