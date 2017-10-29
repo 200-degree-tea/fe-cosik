@@ -6,111 +6,133 @@
     <title>Sedona cosik</title>
   </head>
 
-  <header>
-    <nav class="nav"><!-- nav menu-->
-      <ul class="nav nav__list">
-        <li class="nav nav__item">Home</li>
-        <li class="nav nav__item"><a href="photos.html">Photos and videos</a></li>
-        <li class="nav nav__item"><a href="form.html">Feedback Form</a></li>
-        <li class="nav nav__item">HTML Academy</li>
-      </ul>
-      <img class="nav nav__logo"> <!-- LOGO -->
-    </nav><!-- nav menu ends-->
-  </header>
-
   <body>
-
-    <section class="layout"><!-- intro -->
-      <div class="layout__intro">
-        <h1>Intro</h1>
-        <img class="image">
-        <p>Intro text - seems to be a picture in the PSD</p>
-      </div>
-    </section><!-- intro ends -->
-
     <div class="wrapper"><!-- main page -->
-      <section class="content"><!-- SEDONA - a small town in the ARIZON, MAKING more! -->
-        <div class="content__introduction">
-          <h1>SEDONA - a small town in the ARIZON, MAKING more!</h1>
-          <p>Consider 5 reasons for which Sedona is better than Grand Canion</p>
+      <header class="page-header">
+        <div calss="page-header__backgroun-img">
+          <nav class="main-nav"><!-- nav menu-->
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active"><a href="index.html">Home</a></li>
+              <li class="main-nav__item"><a href="photos.html">Photos and videos</a></li>
+              <li class="main-nav__item"><a href="form.html">Feedback Form</a></li>
+              <li class="main-nav__item">HTML Academy</li>
+            </ul>
+            <button href="" class="main-nav__toggle main-nav__toggle--close">
+              <img src="" alt="Menu button" class="main-nav__button">
+            </button>
+            <img src="" class="main-nav__logo" alt="Sedona logo"> <!-- LOGO -->
+          </nav><!-- nav menu ends-->
+
+          <ul class="intro-img">
+            <li><img src="" class="intro-img--top" src="/" alt="Welcome text"></li>
+            <li><img src="" class="intro-img--middle" src="/" alt="Sedona"></li>
+            <li><img src="" class="intro-img--bottom" src="/" alt="Because the Grand Canyon sucks."></li>
+          </ul>
+        </div>
+      </header>
+
+      <section class="intro-text">
+        <div class="inner">
+          <h2 class="intro__header">SEDONA - a small town in the ARIZONA, deserves more!</h2>
+          <p class="intro-paragraph__text">Consider 5 reasons why Sedona is cooler than Grand Canyon!</p>
         </div>
       </section>
 
-      <section class="content"><!-- THE PRESENT TOWN - No. 1 - SEDONA NOT ATTRACTION FOR TOURISTS ... -->
-        <div class="content__paragraph paragraph--left">
-          <h1>The present town</h1>
-          <p>No. 1</p>
-          <p>Here will come first reason why Sedona is worth to visit. (I can't translate from the picture.)</p>
-
-          <img class="image image--right"><!-- photo-city -->
-
-          <img class="icon"><!-- icon-house.svg-->
-          <h2>Housing</h2>
-          <p>We recommend to live in a real motel, everything is like in a movie!</p>
-
-          <img class="icon"> <!-- icon-gift.svg -->
-          <h2>SOUVENIRS</h2>
-          <p>Not only of Chinese, but also of local production!</p>
-
-          <img class="icon"> <!-- icon-burger.svg -->
-          <h2>FOOD</h2>
-          <p>Always order a BUGGER, you will NOT be disappointed!</p>
+      <section class="reasons">
+        <div class="reasons__inner reasons__inner--blue">
+          <h2 class="reasons__header">The Present Town</h2>
+          <p class="reasons-paragraph__text">— №1 —</p>
+          <p class="reasons-paragraph__text">Sedona is not a tourist attraction, the life floows in here in it own way.</p>
+          <div class="reasons-one__background-img"></div>
         </div>
       </section>
 
-      <section class="content"><!-- THERE IS THE BRIDGE OF THE DEVIL - No. 2 - Yes, you can go through it! If... -->
-        <div class="content__paragraph paragraph--right">
-          <h1>THERE IS THE BRIDGE OF THE DEVIL</h1>
-          <p>No. 2</p>
-          <p>Yes, you can go through it! If </p>
-
-          <img class="image--left"><!-- photo-bridge-->
+      <section class="to-try">
+        <div class="to-try__inner">
+          <ul class="to-try__list">
+            <li class="to-try__item">
+              <img src="" class="to-try__item--house-pic">
+              <h2 class="to-try__header">Accomodation</h2>
+              <p class="to-try__paragraph to-try__paragraph__list">We recommend to live in a real motel, everything is like in a movie!</p>
+            </li>
+            <li class="to-try__item">
+              <img src="" class="to-try__item--gift-pic">
+              <h2 class="to-try__header">Souvenirs</h2>
+              <p class="to-try__paragraph to-try__paragraph__list">Not only Chinese, but also the local products!</p>
+            </li>
+            <li class="to-try__item">
+              <img src="" class="to-try__item--burger-pic">
+              <h2 class="to-try__header">Food</h2>
+              <p class="to-try__paragraph to-try__paragraph__list">Always order a Brand Burger, you will not be disappointed!</p>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="content"><!-- SMALL AREA - No. 3 - ALL SITES are located -->
-        <div class="content__paragraph">
-          <h1>SMALL AREA</h1>
-          <p>No. 3</p>
-          <p>ALL SITES are located...</p>
+      <section class="reasons"><!-- THERE IS THE BRIDGE OF THE DEVIL - No. 2 - Yes, you can go through it! If... -->
+        <div class="reasons__inner reasons__inner--blue">
+          <h2 class="reasons__header">There's a Devil's Bridge</h2>
+          <p class="reasons__paragraph">— №2 —</p>
+          <p class="reasons__paragraph">Yes, you can go through it! If you dare of course.</p>
+        </div>
+        <div class="reasons__background-img"></div>
+      </section>
+
+      <section class="reasons"><!-- SMALL AREA - No. 3 - ALL SITES are located -->
+        <div class="reasons__inner">
+          <h2 class="reasons__header">Sall Area</h2>
+          <p class="reasons__paragraph">— №3 —</p>
+          <p class="reasons__paragraph">All the attractions are very close</p>
         </div>
       </section>
 
-      <section class="content"><!-- BEAUTIFUL ROAD - No. 4 - TO GO TO SEDONU FROM LAS VEGAS completely... -->
-        <div class="content__paragraph">
-          <h1>BEAUTIFUL ROAD</h1>
-          <p>No. 4</p>
-          <p>TO GO TO SEDONU FROM LAS VEGAS completely...</p>
+      <section class="reasons"><!-- BEAUTIFUL ROAD - No. 4 - TO GO TO SEDONU FROM LAS VEGAS completely... -->
+        <div class="reasons__inner">
+          <h2 class="reasons__header">Beautiful Road</h2>
+          <p class="reasons__paragraph">— №4 —</p>
+          <p class="reasons__paragraph">Go to Sedona Las Vegas it's anything but not boring!</p>
         </div>
       </section>
 
-      <section class="content"><!-- LITTLE TOURISTS - No. 5 - Most travel to Grand Canyon and crowd... -->
-        <div>
-          <h1>LITTLE TOURISTS</h1>
-          <p>No. 5</p>
-          <p>Most travel to Grand Canyon and crowd...</p>
+      <section class="reasons"><!-- LITTLE TOURISTS - No. 5 - Most travel to Grand Canyon and crowd... -->
+        <div class="reasons__inner">
+          <h2 class="reasons__header">Small Tourism</h2>
+          <p class="reasons__paragraph">— №5 —</p>
+          <p class="reasons__paragraph">Most of the turrist travel to the Grand Canyon and it is over crowded. In here is oposite!</p>
         </div>
       </section>
 
-      <section class="content"><!-- INTERESTED? Indicate the expected dates of your trip and we are -->
-        <h1>INTERESTED?</h1>
-        <p>Indicate the expected dates of your trip and we are</p>
+      <section class="search"><!-- INTERESTED? Indicate the expected dates of your trip and we are -->
+        <div class="search__hotel">
+          <h2 class="search__header">Intereted?</h1>
+          <p class="search__paragraph">Specify the expected dates and we will show you the best deals for hotels in Sedona</p>
 
-        <button class="btn btn__find btn--blue">FIND HOTEL</button>
+          <button class="btn btn__search">Find your hotel</button>
+        </div>
+      </section>
 
+      <section class="map">
         <img class="image__map"><!-- map -->
       </section>
+
+      <footer class="page-footer">
+        <div class="footer-wrapper">
+          <div class="page-footer__tag">
+            <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
+          </div>
+
+          <div class="page-footer__social">
+            <a href="" class="page-footer__img--tweeter"></a>
+            <a href="" class="page-footer__img--facebook"></a>
+            <a href="" class="page-footer__img--youtube"></a>
+          </div>
+
+          <div class="page-footer__developer">
+            <p class="footer__paragraph">Developed by</p>
+            <a href="" class="footer-logo"></a> <!-- logo-button-->
+          </div>
+        </div>
+      </footer>
     </div><!-- main page ends-->
   </body>
-
-  <footer>
-    <h1>#VISITSEDONA</h1>
-
-    <button class="btn btn__social">Tweeter</button>
-    <button class="btn btn__social">Facebook</button>
-    <button class="btn btn__social">Youtube</button>
-
-    <p>Developed by</p>
-    <img class="footer-logo"> <!-- logo-button-->
-  </footer>
 </html>
