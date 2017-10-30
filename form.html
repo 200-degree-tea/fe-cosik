@@ -5,127 +5,138 @@
     <meta name='description'>
     <title>Form</title>
   </head>
-  <header>
-    <nav class="nav"><!-- nav menu-->
-      <ul class="nav nav__list">
-        <li class="nav nav__item"><a href='index.html'>Home</a></li>
-        <li class="nav nav__item"><a href='photos.html'>Photos and videos</a></li>
-        <li class="nav nav__item">Feedback Form</li>
-        <li class="nav nav__item">HTML Academy</li>
-      </ul>
-      <img class="nav nav__logo"> <!-- LOGO -->
-    </nav>
-  </header>
-
   <body>
-    <section class="layout"><!-- intro -->
-      <div class="layout__intro">
-        <h1>SEDONA</h1>
-        <img class="image">
-      </div>
-    </section><!-- intro ends -->
+    <div class="body-wrapper"><!-- main page -->
+      <header class="page-header">
+        <div calss="page-header__inner">
+          <nav class="main-nav"><!-- nav menu-->
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a href="index.html">Home</a></li>
+              <li class="main-nav__item"><a href="photos.html">Photos and videos</a></li>
+              <li class="main-nav__item main-nav__item--active"><a href="form.html">Feedback Form</a></li>
+              <li class="main-nav__item">HTML Academy</li>
+            </ul>
+            <a href="" class="main-nav__toggle main-nav__toggle--close"></a>
+            <img src="" class="main-nav__logo" alt="Sedona logo"> <!-- LOGO -->
+          </nav><!-- nav menu ends-->
 
-    <div class="wrapper">
-      <section class="content">
-        <div class="content__paragraph">
-          <h1>Leave your comment</h1>
-          <p>Help our hotels to become better! leave....</p>
+          <ul class="intro-list">
+            <li class="intro-list__item intro-list__item--top"><img class="intro-list__item__img" src="" alt="Welcome text"></li>
+            <li class="intro-list__item intro-list__item--middle"><img class="intro-list__item__img" src="" alt="Sedona"></li>
+            <li class="intro-list__item intro-list__item--bottom"><img class="intro-list__item__img" src="" alt="Because the Grand Canyon sucks."></li>
+          </ul>
+        </div>
+      </header>
+
+
+      <section class="form-page">
+        <div class="form-page__inner">
+          <h2 class="form-page__header">Leave your feedback</h2>
+          <p class="form-page__paragraph">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
         </div>
       </section>
 
-      <section>
-        <form class="form__contact">
-          <div class="form__contact form__content">
-            <h1>Introduce youreself:</h1>
-
-            <p>NAME:</p>
-            <input class="form__contact__input input--dot" type='text'>
-
-            <p>SURNAME:</p>
-            <input class="form__contact__input input--dot" type='text'>
-
-            <p>Middle name:</p>
-            <input class="form__contact__input input--dot" type='text'>
-
+      <section class="identity">
+        <form class="identity__inner">
+            <h2 class="identity__header">Introduce youreself:</h2>
+          <div class="identity__name">
+            <p class="identity__paragraph">Name:</p>
+            <input class="identity__input-text" type='text'>
+          </div>
+          <div class="identity__surname">
+            <p class="identity__paragraph">Surname:</p>
+            <input class="identity__input-text" type='text'>
+          </div>
+          <div class="identity__middle-name">
+            <p class="identity__paragraph">Middle name:</p>
+            <input class="identity__input-text" type='text'>
           </div>
         </form>
       </section>
 
-      <section>
-        <form class="form__contact">
-          <div class="form__contact form__content">
-            <p>Contact number:</p>
-            <h1>Contact Information:</h1>
+      <section class="contact">
+        <form class="contact__inner">
+            <h2 class="contact__header">Contact Information:</h2>
 
-            <input class="form__contact__input" type='text'>
-            <img><!-- phone.svg-->
+            <div class="contact__phone">
+              <p class="contact__paragraph">Contact number:</p>
+              <input class="contact__input-text" type='text'>
+            </div>
 
-            <p>Email:</p>
-            <input class="form__contact__input" type='text'>
-            <img><!-- mail.svg -->
+            <div class="contact__email">
+              <p class="contact__paragraph">Email:</p>
+              <input class="contact__input-text" type='text'>
+            </div>
+        </form>
+      </section>
+
+      <section class="polling">
+        <form class="polling__form">
+          <div class="polling__inner"
+            <h2 class="polling__header">Your General impression:</h2>
+
+            <input class="polling__input-radio" type='radio'>
+            <p class="polling__paragraph">Rather positive</p>
+
+            <input class="polling__input-radio" type='radio'>
+            <p class="polling__paragraph">Rather negative</p>
+
+            <input class="polling__input-radio" type='radio'>
+            <p class="polling__paragraph">Difficult to answer</p>
           </div>
         </form>
       </section>
 
-      <section>
-        <form class="form__questionnaire">
-          <div class="form__contact form__content">
-            <h1>Your General impression:</h1>
+      <section class="atractions">
+        <form class="atractions__form">
+          <div class="atractions_inner">
+            <h2 class="atractions__header">Sights visited:</h2>
 
-            <input class="form__questionnaire__input input__radio" type='radio'>
-            <p>Rather positive</p>
+            <input class="atractions__input-checkbox" type='checkbox'>
+            <p class="atractions__paragraph">The Devil's Bridge</p>
 
-            <input class="form__questionnaire__input input__radio" type='radio'>
-            <p>Rather negative</p>
+            <input class="atractions__input-checkbox" type='checkbox'>
+            <p class="atractions__paragraph">Slide-park</p>
 
-            <input class="form__questionnaire__input input__radio" type='radio'>
-            <p>Difficult to answer</p>
+            <input class="atractions__input-checkbox" type='checkbox'>
+            <p class="atractions__paragraph">Mountain-bell</p>
+
+            <input class="atractions__input-checkbox" type='checkbox'>
+            <p class="atractions__paragraph">Red cliffs</p>
           </div>
         </form>
       </section>
 
-      <section>
-        <form class="form__questionnaire">
-          <div class="form__contact form__content">
-            <h1>Sights visited:</h1>
+      <section class="feedback">
+        <form class="feedback__form">
+          <div class="feedback__inner">
+            <h2 class="feedback__header">Describe your emotions:</h2>
+            <input class="feedback__input-text" type='text'>
 
-            <input class="form__questionnaire__input input__checkbox" type='checkbox'>
-            <p>The Devil's Bridge</p>
-
-            <input class="form__questionnaire__input input__checkbox" type='checkbox'>
-            <p>Slide-park</p>
-
-            <input class="form__questionnaire__input input__checkbox" type='checkbox'>
-            <p>Mountain-bell</p>
-
-            <input class="form__questionnaire__input input__checkbox" type='checkbox'>
-            <p>Red cliffs</p>
+            <p class="feedback__paragraph">* - required fields</p>
+            <button class="feedback__btn">POST A REVIEW</button>
           </div>
         </form>
       </section>
-
-      <section>
-        <form class="form__questionnaire">
-          <div class="form__contact form__content">
-            <h1>Describe your emotions:</h1>
-            <input class="form__questionnaire__input input--text" type='text'>
-
-            <p>* - required fields</p>
-            <button class="btn btn__submit btn--blue">POST A REVIEW</button>
+      <footer class="page-footer">
+        <div class="page-footer__inner">
+          <div class="page-footer__tag">
+            <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
           </div>
-        </form>
-      </section>
+
+          <div class="page-footer__social">
+            <a href="" class="page-footer__img--tweeter"></a>
+            <a href="" class="page-footer__img--facebook"></a>
+            <a href="" class="page-footer__img--youtube"></a>
+          </div>
+
+          <div class="page-footer__developer">
+            <span class="page-footer__paragraph">Developed by</span>
+            <a href="" class="page-footer-logo"></a> <!-- logo-button-->
+          </div>
+        </div>
+      </footer>
+
     </div>
   </body>
-
-  <footer>
-    <h1>#VISITSEDONA</h1>
-
-    <button class="btn btn__social">Tweeter</button>
-    <button class="btn btn__social">Facebook</button>
-    <button class="btn btn__social">Youtube</button>
-
-    <p>Developed by</p>
-    <img class="footer-logo"> <!-- logo-button-->
-  </footer>
 </html>
