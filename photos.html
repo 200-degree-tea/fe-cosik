@@ -1,102 +1,109 @@
 <!DOCTYPE html>
-<html land='en'>
+<html lang='en'>
   <head>
     <meta charset='UTF-8'>
     <meta name='description'>
-    <title>Photos</title>
+    <title>Sedona Photos</title>
+    <link rel="stylesheet" href="">
   </head>
 
-  <header>
-    <header>
-      <nav class="nav"><!-- nav menu-->
-        <ul class="nav nav__list">
-          <li class="nav nav__item"><a href="index.html">Home</a></li>
-          <li class="nav nav__item">Photos and videos</li>
-          <li class="nav nav__item"><a href="form.html">Feedback Form</a></li>
-          <li class="nav nav__item">HTML Academy</li>
-        </ul>
-        <img class="nav nav__logo"> <!-- LOGO -->
-      </nav><!-- nav menu ends-->
-    </header>
-
   <body>
-    <section class="layout"><!-- intro -->
-      <div class="layout__intro">
-        <h1>SEDONA</h1>
-        <img class="image">
-      </div>
-    </section><!-- intro ends -->
+    <div class="wrapper"><!-- main page -->
+      <header class="page-header">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="index.html">Home</a></li>
+            <li class="main-nav__item main-nav__item--active"><a href="photos.html">Photos and videos</a></li>
+            <li class="main-nav__item"><a href="form.html">Feedback Form</a></li>
+            <li class="main-nav__item">HTML Academy</li>
+          </ul>
+          <button class="main-nav__toggle main-nav__toggle--close"></button>
+          <a class="main-nav__link" href="index.html"><img src="" class="main-nav__logo" alt="Sedona logo"></a>
+        </nav>
 
-
-    <div class="wrapper">
-      <section class="content">
-        <div class="content__paragraph">
-          <h1>Photos and videos</h1>
-          <p>Can not decide on a journey because of the course?</p>
+        <div calss="intro">
+          <ul class="intro-list">
+            <li class="intro-list__item intro-list__item--top">Welcome to the gorgeous</li>
+            <li class="intro-list__item intro-list__item--middle">Sedona</li>
+            <li class="intro-list__item intro-list__item--bottom">"Because the Grand Canyon sucks!"</li>
+          </ul>
         </div>
-      </section>
+      </header>
 
-      <section class="gallery">
-        <div class="gallery gallery__image">
-          <img class="image image__layout"><!-- photo-1-mobile.jpg -->
-          <p>non-native spaces</p>
-          <p>Photo author: Boris</p>
-          <img class="icon icon__social"><!-- like-icon.svg -->
-          <p>'amount of likes'</p>
+      <main class="main-content">
+        <section class="preamble">
+          <div class="preamble__inner">
+            <h2 class="preamble__header">Photo and video</h2>
+            <p class="preamble__paragraph">Can't decide to travel because of the right time? We hope photos will help you forget about politics and economics.</p>
+          </div>
+        </section>
+
+        <section class="gallery__main-photo">
+          <a class="gallery_main-img"></a>
+          <div class="gallery__inner">
+            <h3 class="gallery__title">Outback</h3>
+            <p class="gallery__author">Photo by: Boris</p>
+            <p class="gallery__likes">1350</p>
+          </div>
+        </section>
+
+        <section class="gallery__collection">
+          <section class="gallery__photo-vegetation">
+            <a class="gallery_vegetation-img"></a>
+            <div class="gallery__inner">
+              <h3 class="gallery__title">Local vegetation</h3>
+              <p class="gallery__author">Photo by: Sergey</p>
+              <p class="gallery__likes">143</p>
+            </div>
+          </section>
+
+          <section class="gallery__photo-road">
+            <a class="gallery_road-img"></a>
+            <div class="gallery__inner">
+              <h3 class="gallery__title">Road north</h3>
+              <p class="gallery__author">Photo by: Peter</p>
+              <p class="gallery__likes">96</p>
+            </div>
+          </section>
+
+          <section class="gallery__photo-bridge">
+            <a class="gallery_bridge-img"></a>
+            <div class="gallery__inner">
+              <h3 class="gallery__title">The Devil's Bridge</h3>
+              <p class="gallery__author">Photo by: Anton</p>
+              <p class="gallery__likes">254</p>
+            </div>
+          </section>
+        </section>
+
+        <section class="gallery__video">
+          <div class="video__inner">
+            <h2 class="gallery__header-video">Still not convinced?</h2>
+            <p class="gallery__paragraph-video">See the video presentation and more for tickets, until they have risen in price again!</p>
+            <video calss="gallery__video-source" src="" controls preload="auto" poster="">
+              <p class="gallery__vide--error">Your browser doesn't support HTML5 video tag.</p>
+            </video>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page-footer">
+        <div class="page-footer__inner">
+          <div class="page-footer__tag">
+            <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
+          </div>
+
+          <div class="page-footer__social">
+            <a href="" class="page-footer__social--tweeter">tweeter</a>
+            <a href="" class="page-footer__social--facebook">facebook</a>
+            <a href="" class="page-footer__social--youtube">youtube</a>
+          </div>
+
+          <div class="page-footer__developer">
+            <a href="" class="page-footer__logo">Developed by</a>
+          </div>
         </div>
-      </section>
-
-      <section class="gallery">
-        <div class="gallery gallery__image">
-          <img class="image image__layout"><!-- photo-2-mobile.jpg -->
-          <p>Local vegetation</p>
-          <p>Photo author: Sergey</p>
-          <img class="icon icon__social"><!-- like-icon.svg -->
-          <p>'amount of likes'</p>
-        </div>
-      </section>
-
-      <section class="gallery">
-        <div class="gallery gallery__image">
-          <img class="image image__layout"><!-- photo-3-mobile.jpg -->
-          <p>Road to the north</p>
-          <p>Photo author: Petr</p>
-          <img class="icon icon__social"><!-- like-icon.svg -->
-          <p>'amount of likes'</p>
-        </div>
-      </section>
-
-      <section class="gallery">
-        <div class="gallery gallery__image">
-          <img class="image image__layout"><!-- photo-4-mobile.jpg -->
-          <p>Devil's Bridge</p>
-          <p>Photo author: Anton</p>
-          <img class="icon icon__social"><!-- like-icon.svg -->
-          <p>'amount of likes'</p>
-        </div>
-      </section>
-
-      <section class="gallery">
-        <div class="gallery gallery__video">
-          <h1>Still in doubt?</h1>
-          <p> See the video presentation and rather for...</p>
-          <video calss="video"><!-- video-mobile -->
-            <source>
-          </video>
-        </div>
-      </section>
-
-    </div> <!-- main page ends -->
+      </footer>
+    </div><!-- main page ends-->
   </body>
-
-  <footer>
-    <h1>#VISITSEDONA</h1>
-
-    <button class="btn btn__social">Tweeter</button>
-    <button class="btn btn__social">Facebook</button>
-    <button class="btn btn__social">Youtube</button>
-
-    <p>Developed by</p>
-    <img class="footer-logo"> <!-- logo-button-->
-  </footer>
 </html>
