@@ -3,12 +3,13 @@
   <head>
     <meta charset='UTF-8'/>
     <meta name='description'>
+    <link rel="stylesheet" href="">
     <title>Form</title>
   </head>
   <body>
     <div class="wrapper"><!-- main page -->
       <header class="page-header">
-        <nav class="main-nav"><!-- nav menu-->
+        <nav class="main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="index.html">Home</a></li>
             <li class="main-nav__item"><a href="photos.html">Photos and videos</a></li>
@@ -17,7 +18,7 @@
           </ul>
           <button class="main-nav__toggle main-nav__toggle--close"></button>
           <a class="main-nav__link" href="index.html"><img src="" class="main-nav__logo" alt="Sedona logo"></a>
-        </nav><!-- nav menu ends-->
+        </nav>
 
         <div calss="intro">
           <ul class="intro-list">
@@ -27,125 +28,132 @@
           </ul>
         </div>
       </header>
-
-      <section class="form-page">
-        <div class="form-page__inner">
-          <h2 class="form-page__header">Leave your feedback</h2>
-          <p class="form-page__paragraph">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
-        </div>
-      </section>
-
-      <form class="form">
-        <section class="form__section">
-          <h2 class="form__section-header">Introduce youreself:</h2>
-          <div class="form__name">
-            <label class="form__label">Name:</label>
-            <input class="form__input" placeholder="Name" name="name" type='text'>
-          </div>
-          <div class="form__surname">
-            <label class="form__label">Surname:</label>
-            <input class="form__input" placeholder="Surname" name="surname" type='text'>
-          </div>
-          <div class="form__middle-name">
-            <label class="form__label">Middle name:</label>
-            <input class="form__input" placeholder="Middle name" name="second-name" type='text'>
+      <main class="main-content">
+        <section class="preamble">
+          <div class="preamble__inner">
+            <h2 class="preamble__header">Leave your feedback</h2>
+            <p class="preamble__paragraph">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
           </div>
         </section>
 
-        <section class="form__section">
-          <h2 class="form__section-header">Contact Information:</h2>
-          <div class="form__phone">
-            <label class="form__label">Contact number:</label>
-            <input class="form__input" placeholder="Phone number" name="phone" type="tel">
-            <p class="form__paragraph">Error, double-check the number</p>
-          </div>
-          <div class="form__email">
-            <label class="form__label">Email:</label>
-            <input class="form__input-email" placeholder="Email" name="email" type="email">
-          </div>
-        </section>
+        <form class="form" action="" method="get">
 
-        <section class="form__section">
-          <h2 class="form__header">Your General impression:</h2>
-          <ul class="form__radio-list">
-            <li class="form__radio-item">
-              <div class="form__positive-answer">
-                <label class="form__label">Rather positive</label>
-                <input class="form__input-radio" type='radio'>
-              </div>
-            </li>
-            <li class="form__radio-item">
-              <div class="form__negative-answer">
-                <label class="form__label">Rather negative</label>
-                <input class="form__input-radio" type='radio'>
-              </div>
-            </li>
-            <li class="form__radio-item">
-              <div class="form__difficult-answer">
-                <label class="form__label">Difficult to answer</label>
-                <input class="form__input-radio" type='radio'>
-              </div>
-            </li>
-          </ul>
-        </section>
+          <section class="form__section">
+            <h2 class="form__section-header">Introduce yourself:</h2>
+            <div class="form__name">
+              <label class="form__label-text" for="name">Name:</label>
+              <input class="form__input-text" id="name" placeholder="Name" name="name" type='text'>
+            </div>
+            <div class="form__surname">
+              <label class="form__label-text" for="surname">Surname:</label>
+              <input class="form__input-text" id="surname" placeholder="Surname" name="surname" type='text'>
+            </div>
+            <div class="form__middle-name">
+              <label class="form__label-text" for="second-name">Middle name:</label>
+              <input class="form__input-text" id="second-name" placeholder="Middle name" name="second-name" type='text'>
+            </div>
+          </section>
 
-        <section class="form__section">
-          <h2 class="form__header">Sights visited:</h2>
-          <ul class="form__checkbox-list">
-            <li class="form__checkbox-item">
-              <div class="form__visited-place">
-                <label class="form__label">The Devil's Bridge</label>
-                <input class="form__input-checkbox" type='checkbox'>
-              </div>
-            </li>
-            <li class="form__checkbox-item">
-              <div class="form__visited-place">
-                <label class="form__label">Slide-park</label>
-                <input class="form__input-checkbox" type='checkbox'>
-              </div>
-            </li>
-            <li class="form__checkbox-item">
-              <div class="form__visited-place">
-                <label class="form__label">Mountain-bell</label>
-                <input class="form__input-checkbox" type='checkbox'>
-              </div>
-            </li>
-            <li class="form__checkbox-item">
-              <div class="form__visited-place">
-                <label class="form__label">Red cliffs</label>
-                <input class="form__input-checkbox" type='checkbox'>
-              </div>
-            </li>
-          </ul>
-        </section>
+          <section class="form__section">
+            <h2 class="form__section-header">Contact Information:</h2>
+            <div class="form__phone">
+              <label class="form__label-tel" for="phone">Contact number:</label>
+              <input class="form__input-tel" placeholder="Phone number" name="phone" type="tel">
+              <p class="form__paragraph--error">Error, double-check the number</p>
+            </div>
+            <div class="form__email">
+              <label class="form__label-email" for="email">Email:</label>
+              <input class="form__input-email" id="email" placeholder="user@domain.co.uk" name="email" type="email">
+            </div>
+          </section>
 
-        <section class="form__section">
-          <div class="form__feedback">
-            <label class="form__label">Describe your emotions:</label>
-            <input class="form__input" placeholder="Message" name="message" type='text'>
-            <p class="form__paragraph">* - required fields</p>
-            <input class="form__submit" type="submit" value="POST REVIEW">
+          <section class="form__section">
+            <fieldset class="form__radio-list">
+              <legend class="form__radio-legend">Your General impression:</legend>
+              <ul class="form__radio-list">
+                <li class="form__radio-item">
+                  <div class="form__positive-answer">
+                    <input class="form__input-radio" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
+                    <label class="form__label-radio" for="answer-positive">Rather positive</label>
+                  </div>
+                </li>
+                <li class="form__radio-item">
+                  <div class="form__negative-answer">
+                    <input class="form__input-radio" id="answer-negative" name="answer" type="radio" value="rather-negative"/>
+                    <label class="form__label-radio" for="answer-negative">Rather negative</label>
+                  </div>
+                </li>
+                <li class="form__radio-item">
+                  <div class="form__difficult-answer">
+                    <input class="form__input-radio" id="answer-difficult" name="answer" type="radio" value="difficult-answer"/>
+                    <label class="form__label-radio" for="answer-difficult">Difficult to answer</label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </section>
+
+          <section class="form__section">
+            <h2 class="form__header">Sights visited:</h2>
+            <ul class="form__checkbox-list">
+              <li class="form__checkbox-item">
+                <div class="form__visited-places">
+                  <input class="form__input-checkbox" id="bridge" name="bridge" type="checkbox" value="devils-bridge">
+                  <label class="form__label-checkbox" for="bridge">The Devil's Bridge</label>
+                </div>
+              </li>
+              <li class="form__checkbox-item">
+                <div class="form__visited-places">
+                  <input class="form__input-checkbox" id="park" name="park" type="checkbox" value="slide-park">
+                  <label class="form__label-checkbox" for="park">Slide-park</label>
+                </div>
+              </li>
+              <li class="form__checkbox-item">
+                <div class="form__visited-places">
+                  <input class="form__input-checkbox" id="mountain" name="mountain" type="checkbox" value="mountain-bell">
+                  <label class="form__label-checkbox" for="mountain">Mountain-bell</label>
+                </div>
+              </li>
+              <li class="form__checkbox-item">
+                <div class="form__visited-places">
+                  <input class="form__input-checkbox" id="cliffs" name="cliffs" type="checkbox" value="red-cliffs">
+                  <label class="form__label-checkbox" for="cliffs">Red cliffs</label>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="form__section">
+            <div class="form__feedback">
+              <label class="form__label-textarea" for="feedback">Describe your emotions:</label>
+              <textarea class="form__input-textarea" id="feedback" name="feedback"></textarea>
+              <p class="form__paragraph--shaddow">* - required fields</p>
+            </div>
+          </section>
+
+          <section class="form__btn">
+            <button class="form__submit">POST REVIEW</button>
+          </section>
+        </form>
+
+        <footer class="page-footer">
+          <div class="page-footer__inner">
+            <div class="page-footer__tag">
+              <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
+            </div>
+
+            <div class="page-footer__social">
+              <a href="" class="page-footer__social--tweeter">tweeter</a>
+              <a href="" class="page-footer__social--facebook">facebook</a>
+              <a href="" class="page-footer__social--youtube">youtube</a>
+            </div>
+
+            <div class="page-footer__developer">
+              <a href="" class="page-footer__logo">Developed by</a>
+            </div>
           </div>
-        </section>
-      </form>
-
-      <footer class="page-footer">
-        <div class="page-footer__inner">
-          <div class="page-footer__tag">
-            <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
-          </div>
-
-          <div class="page-footer__social">
-            <a href="" class="page-footer__social--tweeter">tweeter</a>
-            <a href="" class="page-footer__social--facebook">facbook</a>
-            <a href="" class="page-footer__social--youtube">youtube</a>
-          </div>
-
-          <div class="page-footer__developer">
-            <a href="" class="page-footer__logo">Developed by</a>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </main>
     </div>
   </body>
 </html>
