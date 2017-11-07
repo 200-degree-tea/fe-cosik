@@ -28,6 +28,7 @@
           </ul>
         </div>
       </header>
+
       <main class="main-content">
         <section class="preamble">
           <div class="preamble__inner">
@@ -41,15 +42,15 @@
           <section class="form__section">
             <div class="form__personal">
               <h2 class="form__section-header">Introduce yourself:</h2>
-              <div class="form__name">
+              <div class="form__field-box">
                 <label class="form__label-text" for="name">Name:</label>
                 <input class="form__input-text" id="name" name="name" type="text">
               </div>
-              <div class="form__surname">
+              <div class="form__field-box">
                 <label class="form__label-text" for="surname">Surname:</label>
                 <input class="form__input-text" id="surname" name="surname" type="text">
               </div>
-              <div class="form__middle-name">
+              <div class="form__field-box">
                 <label class="form__label-text" for="second-name">Middle name:</label>
                 <input class="form__input-text" id="second-name" name="second-name" type="text">
               </div>
@@ -59,14 +60,14 @@
           <section class="form__section">
             <div class="form__contact">
               <h2 class="form__section-header">Contact Information:</h2>
-              <div class="form__phone">
+              <div class="form__field-box">
                 <label class="form__label-tel" for="phone">Contact number:</label>
                 <input class="form__input-tel" name="phone" type="tel">
                 <p class="form__error">Error, double-check the number</p>
               </div>
-              <div class="form__email">
+              <div class="form__field-box">
                 <label class="form__label-email" for="email">Email:</label>
-                <input class="form__input-email" id="email" name="email" type="email">
+                <input class="form__input-email" id="email" name="email" type="email" required>
               </div>
             </div>
           </section>
@@ -74,75 +75,63 @@
           <section class="form__section">
             <div class="form__date">
               <h2 class="form__section-header">
-                <div class="form__checkin">
-                  <label class="form__label-date" for="checkin">CHECKIN:</label>
+                <div class="form__field-box">
+                  <label class="form__label-date" for="checkin">Checkin:</label>
                   <input class="form__input-date" id="checkin" name="checkin" type="date">
                 </div>
-                <div class="form__stay">
-                  <label class="form__label-number-tablet" for="stay">DAYS OF STAY<p class="form__important">*</p></label>
-                  <label class="form__label-number" for="stay">LENGTH OF STAY<p class="form__important">*</p></label>
-                  <div class="form__input-inc"></div>
-                  <input class="form__input-number" id="stay" min="1" step="1" max="31" placeholder="day" type="number">
-                  <div class="form__input-dec"></div>
+                <div class="form__field-box">
+                  <label class="form__label-number-tablet" for="stay">Days of stay<p class="form__required">*</p></label>
+                  <label class="form__label-number" for="stay">Length of stay<p class="form__required">*</p></label>
+                  <button class="form__button-inc">+</button>
+                  <input class="form__input-number" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
+                  <button class="form__button-dec">-</button>
                 </div>
-                <div class="form__checkout">
-                  <label class="form__label-date" for="checkout">CHECKOUT:<p class="form__important">*</p></label>
-                  <input class="form__input-date" id="checkout" name="checkout" type="date">
+                <div class="form__field-box">
+                  <label class="form__label-date" for="checkout">Checkout:<p class="form__required">*</p></label>
+                  <input class="form__input-date" id="checkout" name="checkout" type="date" required>
                 </div>
             </div>
           </section>
 
           <section class="form__section">
             <div class="form__travellers">
-              <h2 class="form__section-header">NUMBER OF TRAVELLERS</h2>
-              <div class="form__ammount">
-                <label class="form__label-number" for="stay">NUMBER OF TRAVELLERS:<p class="form__important">*</p></label>
-                <div class="form__input-inc"></div>
-                <input class="form__input-number" id="stay" min="1" step="1" max="10" plceholder="person" type="number">
-                <div class="form__input-dec"></div>
+              <h2 class="form__section-header">Number of travellers</h2>
+              <div class="form__field-box">
+                <label class="form__label-number" for="stay">Number of travellers:<p class="form__required">*</p></label>
+                <button class="form__button-inc">+</button>
+                <input class="form__input-number" id="stay" min="1" step="1" max="10" plceholder="person" type="number" required>
+                <button class="form__button-dec">-</button>
               </div>
               <div class="form__person">
                 <div class="form__count"></div>
-                <div class="form__person-surname">
+                <div class="form__field-box">
                   <label class="form__label-text" for="person-surname">Surname:</label>
-                  <input class="form__input-text" id="person-surname" name="person-surname" type="text">
+                  <input class="form__input-text" id="person-surname" name="person-surname" type="text" required>
                 </div>
-                <div class="form__person-name">
+                <div class="form__field-box">
                   <label class="form__label-text" for="person-name">Name:</label>
-                  <input class="form__input-text" id="person-name" name="name" type="text">
+                  <input class="form__input-text" id="person-name" name="name" type="text" required>
                 </div>
-                <div class="form__person-middle-name">
+                <div class="form__field-box">
                   <label class="form__label-text" for="person-second-name">Middle name:</label>
-                  <input class="form__input-text" id="person-second-name" name="person-second-name" type="text">
+                  <input class="form__input-text" id="person-second-name" name="person-second-name" type="text" required>
                 </div>
               </div>
             </div>
           </section>
 
           <section class="form__section">
-            <div class="form__photos">
-              <h2 class="form__header">UPLOAD PHOTOS</h2>
-              <div>
-                <label class="form__label-file" for="file">CHOOSE PHOTOS</label>
-                <input class="form__input-file" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
-              </div>
-              <div class="form__display-photos">
-              </div>
-            </div>
-          </setction>
-
-          <section class="form__section">
             <div class="form__radio">
               <h2 class="form__section-header">Your General impression:</h2>
-              <div class="form__positive-answer">
+              <div class="form__field-box">
                 <input class="form__input-radio" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
                 <label class="form__label-radio" for="answer-positive">Rather positive</label>
               </div>
-              <div class="form__negative-answer">
+              <div class="form__field-box">
                 <input class="form__input-radio" id="answer-negative" name="answer" type="radio" value="rather-negative"/>
                 <label class="form__label-radio" for="answer-negative">Rather negative</label>
               </div>
-              <div class="form__difficult-answer">
+              <div class="form__field-box">
                 <input class="form__input-radio" id="answer-difficult" name="answer" type="radio" value="difficult-answer"/>
                 <label class="form__label-radio" for="answer-difficult">Difficult to answer</label>
               </div>
@@ -152,19 +141,19 @@
           <section class="form__section">
             <div class="form__checkbox">
               <h2 class="form__section-header">Sights visited:</h2>
-              <div class="form__visited-places">
+              <div class="form__field-box">
                 <input class="form__input-checkbox" id="bridge" name="bridge" type="checkbox" value="devils-bridge">
                 <label class="form__label-checkbox" for="bridge">The Devil's Bridge</label>
               </div>
-              <div class="form__visited-places">
+              <div class="form__field-box">
                 <input class="form__input-checkbox" id="park" name="park" type="checkbox" value="slide-park">
                 <label class="form__label-checkbox" for="park">Slide-park</label>
               </div>
-              <div class="form__visited-places">
+              <div class="form__field-box">
                 <input class="form__input-checkbox" id="mountain" name="mountain" type="checkbox" value="mountain-bell">
                 <label class="form__label-checkbox" for="mountain">Mountain-bell</label>
               </div>
-              <div class="form__visited-places">
+              <div class="form__field-box">
                 <input class="form__input-checkbox" id="cliffs" name="cliffs" type="checkbox" value="red-cliffs">
                 <label class="form__label-checkbox" for="cliffs">Red cliffs</label>
               </div>
@@ -172,7 +161,26 @@
           </section>
 
           <section class="form__section">
-            <div class="form__feedback">
+            <div class="form__photos">
+              <h2 class="form__header">Upload photos</h2>
+              <div class="form__field-box">
+                <label class="form__label-file" for="file">Choose photos</label>
+                <input class="form__input-file" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
+              </div>
+              <div class="form__display-photos">
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              </div>
+            </div>
+          </setction>
+
+          <section class="form__section">
+            <div class="form__field-box">
               <label class="form__label-textarea" for="feedback">Describe your emotions:</label>
               <textarea class="form__input-textarea" id="feedback" name="feedback"></textarea>
             </div>
@@ -183,25 +191,27 @@
             <button class="form__submit" type="submit">POST REVIEW</button>
           </section>
         </form>
-
-        <footer class="page-footer">
-          <div class="page-footer__inner">
-            <div class="page-footer__tag">
-              <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
-            </div>
-
-            <div class="page-footer__social">
-              <a href="" class="page-footer__social--tweeter">tweeter</a>
-              <a href="" class="page-footer__social--facebook">facebook</a>
-              <a href="" class="page-footer__social--youtube">youtube</a>
-            </div>
-
-            <div class="page-footer__developer">
-              <a href="" class="page-footer__logo">Developed by</a>
-            </div>
-          </div>
-        </footer>
       </main>
+
+      <footer class="page-footer">
+        <div class="page-footer__inner">
+          <div class="page-footer__tag">
+            <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
+          </div>
+
+          <div class="page-footer__social">
+            <a href="" class="page-footer__social--tweeter">tweeter</a>
+            <a href="" class="page-footer__social--facebook">facebook</a>
+            <a href="" class="page-footer__social--youtube">youtube</a>
+          </div>
+
+          <div class="page-footer__developer">
+            <a href="" class="page-footer__logo">Developed by</a>
+          </div>
+
+        </div>
+      </footer>
+
     </div>
   </body>
 </html>
