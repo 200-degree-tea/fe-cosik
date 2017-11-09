@@ -1,0 +1,17 @@
+@import "node_modules/normalize.scss/normalize.scss";
+
+$font-basic: PT Sans;
+
+// body{
+//   // background: yellow;
+//   background: red;
+// }
+
+.preamble{
+  &__inner{
+    // background: red;
+  }
+  &__header{
+    // font: 100% $font-basic;
+  }
+}
