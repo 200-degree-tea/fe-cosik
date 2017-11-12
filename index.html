@@ -4,6 +4,7 @@
     <meta charset='UTF-8'/>
     <meta name="description"/>
     <title>Sedona cosik</title>
+    <link rel="stylesheet" href="css/styles.css"/>
   </head>
 
   <body>
@@ -11,16 +12,20 @@
       <header class="page-header">
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active"><a href="index.html">Home</a></li>
+            <li class="main-nav__item main-nav__item--active"><a class="main-nav__anchor" href="index.html">Home</a></li>
             <li class="main-nav__item"><a href="photos.html">Photos and videos</a></li>
             <li class="main-nav__item"><a href="form.html">Feedback Form</a></li>
-            <li class="main-nav__item">HTML Academy</li>
+            <li class="main-nav__item"><a>HTML Academy</a></li>
           </ul>
-          <button class="main-nav__toggle main-nav__toggle--close"></button>
-          <a class="main-nav__link" href="index.html"><img src="" class="main-nav__logo" alt="Sedona logo"></a>
+          <div class="main-nav__toggle main-nav__toggle--close">
+            <div class="main-nav__menu-bar main-nav__menu-bar--top"></div>
+            <div class="main-nav__menu-bar main-nav__menu-bar--middle"></div>
+            <div class="main-nav__menu-bar main-nav__menu-bar--bottom"></div>
+          </div>
+          <a class="main-nav__link" href="index.html"><img src="images/logo.png" class="main-nav__logo" alt="Sedona logo"></a>
         </nav>
 
-        <div calss="intro">
+        <div class="intro">
           <ul class="intro-list">
             <li class="intro-list__item intro-list__item--top">Welcome to the gorgeous</li>
             <li class="intro-list__item intro-list__item--middle">Sedona</li>
