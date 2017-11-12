@@ -1,0 +1,181 @@
+.wrapper {
+  // display: block;
+  // flex-wrap: wrap;
+}
+
+.page-header {
+  display: block;
+  flex-wrap: wrap;
+}
+
+.main-nav {
+  margin-bottom: -29px;
+  // position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 100%;
+  display: block;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+
+  &__list {
+    background: $color-prmiary;
+    width: 100%;
+    position: relative;
+    display: block;
+    z-index: 2;
+  }
+
+  &__item:first-child {
+    border-top: 0;
+  }
+
+  &__item {
+    height: 56px;
+    position: relative;
+    display: block;
+    border-top: 1px solid $top-border;
+    border-bottom: 1px solid $bottom-border;
+    list-style-type: none;
+  }
+
+  &__item:last-child {
+    border-bottom: 0;
+    height: 55px;
+  }
+
+  &__item > a {
+    display: block;
+    color: $nav-text;
+    padding-top: 16px;
+    font-size: $font-size--nav;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__toggle {
+    position: absolute;
+    background-color: #FFFFFF;
+    margin-top: 17px;
+    right: 20px;
+  }
+
+  &__menu-bar {
+    width: 23px;
+    height: 4px;
+    background-color: $color-prmiary;
+    margin: 5px 0;
+  }
+
+  &__toggle--close {
+    position: fixed;
+    margin-top: 10px;
+  }
+
+  &__menu-bar--top {
+    // background-color: $nav-close-button;
+    background-color: $color-white;
+    top: 17px;
+    -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+
+  &__menu-bar--middle {
+    opacity: 0;
+  }
+
+  &__menu-bar--bottom {
+    // background-color: $nav-close-button;
+    background-color: $color-white;
+    -webkit-transform: rotate(45deg) translate(-8px, -5px);
+    transform: rotate(45deg) translate(-8px, -5px);
+  }
+
+  &__link {
+    // height: 59px;
+    // margin-bottom: 30px;
+  }
+}
+
+.intro {
+  // margin-top: -24px;
+  height: 387px;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  width: 100%;
+  background: url("../images/intro-background.png") center;
+  background-repeat:no-repeat;
+  background-size: cover;
+  // background-color: red;
+  // border: 2px solid red;
+  text-align: center;
+
+
+  &-list {
+    width: 100%;
+    // border: 2px solid red;
+    &__item {
+      text-decoration: none;
+      // border: 2px solid red;
+    }
+  }
+}
+
+.preamble {
+  height: 239px;
+  padding-top: 46px;
+  display: block;
+  text-align: center;
+
+  &__header {
+    font-size: $font-size--h2;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    font-size: $font-paragraph;
+  }
+}
+
+.sightseeing {
+  background: red;
+  height: 193px;
+  text-align: center;
+
+
+  &__header {
+    padding-top: 46px;
+    font-size: $font-size--h2;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    font-size: $font-paragraph;
+  }
+
+  &__counter-paragraph {
+    font-size: $font-paragraph;
+  }
+}
+
+.recommendations {
+  border: 1px solid black;
+
+  &__header {
+    font-size: $font-paragraph;
+  }
+
+  &__paragraph {
+    font-size: $font-paragraph;
+  }
+}
+
+.find-hotel {
+  border: 1px solid black;
+}
+
+.page-footer {
+  border: 1px solid black;
+}
