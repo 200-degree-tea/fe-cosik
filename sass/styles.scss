@@ -1,17 +1,16 @@
-@import "node_modules/normalize.scss/normalize.scss";
+@import "normalize.scss";
+@import "variables/variables.scss";
+@import "typography/typo.scss";
+@import "blocks/page-header/_page-header.scss";
 
-$font-basic: PT Sans;
 
-// body{
-//   // background: yellow;
-//   background: red;
-// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.preamble{
-  &__inner{
-    // background: red;
-  }
-  &__header{
-    // font: 100% $font-basic;
-  }
+html{
+    font-family: $font-family;
+    font-size: $font-size--base;
 }
