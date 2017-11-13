@@ -1,6 +1,4 @@
 .wrapper {
-  // display: block;
-  // flex-wrap: wrap;
 }
 
 .page-header {
@@ -9,21 +7,24 @@
 }
 
 .main-nav {
-  margin-bottom: -29px;
-  // position: fixed;
+  display: block;
+  position: relative;
   top: 0;
   left: 0;
-  font-size: 100%;
-  display: block;
-  text-align: center;
   width: 100%;
+
+  font-size: 100%;
+  text-align: center;
+
   z-index: 1;
 
   &__list {
-    background: $color-prmiary;
-    width: 100%;
-    position: relative;
     display: block;
+    position: relative;
+    width: 100%;
+
+    background: $color-prmiary;
+
     z-index: 2;
   }
 
@@ -32,23 +33,26 @@
   }
 
   &__item {
-    height: 56px;
-    position: relative;
     display: block;
+    position: relative;
+    height: 5.6rem;
+
     border-top: 1px solid $top-border;
     border-bottom: 1px solid $bottom-border;
+
     list-style-type: none;
   }
 
   &__item:last-child {
+    height: 5.5rem;
     border-bottom: 0;
-    height: 55px;
   }
 
   &__item > a {
     display: block;
+    padding-top: 1.6rem;
+
     color: $nav-text;
-    padding-top: 16px;
     font-size: $font-size--nav;
     text-decoration: none;
     text-transform: uppercase;
@@ -56,27 +60,28 @@
 
   &__toggle {
     position: absolute;
-    background-color: #FFFFFF;
-    margin-top: 17px;
-    right: 20px;
+    top: 1.2rem;
+    right: 1.7rem;
+    z-index: 2;
   }
 
   &__menu-bar {
-    width: 23px;
-    height: 4px;
+    width: 2.3rem;
+    height: 0.4rem;
+    // background-color: $nav-close-button;
     background-color: $color-prmiary;
-    margin: 5px 0;
+    margin: 0.5rem 0;
+    z-index: 2;
   }
 
   &__toggle--close {
-    position: fixed;
-    margin-top: 10px;
+    position: absolute;
   }
 
   &__menu-bar--top {
-    // background-color: $nav-close-button;
-    background-color: $color-white;
-    top: 17px;
+    z-index: 2;
+    width: 2.8rem;
+    background-color: $nav-close-button;
     -webkit-transform: rotate(-45deg) translate(-8px, 5px);
     transform: rotate(-45deg) translate(-8px, 5px);
   }
@@ -86,68 +91,73 @@
   }
 
   &__menu-bar--bottom {
-    // background-color: $nav-close-button;
-    background-color: $color-white;
+    z-index: 2;
+    width: 2.8rem;
+    background-color: $nav-close-button;
     -webkit-transform: rotate(45deg) translate(-8px, -5px);
     transform: rotate(45deg) translate(-8px, -5px);
   }
 
-  &__link {
-    // height: 59px;
-    // margin-bottom: 30px;
-  }
+  &__link {}
 }
 
 .intro {
-  // margin-top: -24px;
-  height: 387px;
   display: block;
-  text-align: center;
-  font-size: 100%;
+  margin-top: -2.9rem;
+  height: 38.7rem;
   width: 100%;
-  background: url("../images/intro-background.png") center;
-  background-repeat:no-repeat;
-  background-size: cover;
-  // background-color: red;
-  // border: 2px solid red;
-  text-align: center;
 
+  font-size: 100%;
+
+  background: url("../images/intro-background.png") center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &-list {
     width: 100%;
-    // border: 2px solid red;
+
     &__item {
-      text-decoration: none;
-      // border: 2px solid red;
+      text-indent: -9999px;
+    }
+
+    &__item--top {
+      height: 39.1rem;
+      width: 100%;
+      background: url("../images/intro-sedona-small.png") center no-repeat;
     }
   }
 }
 
 .preamble {
-  height: 239px;
-  padding-top: 46px;
   display: block;
+  height: 23.9rem;
+  padding-top: 4.6rem;
+
   text-align: center;
 
   &__header {
     font-size: $font-size--h2;
+    font-weight: $font-bolded;
+    line-height: $header-line-height;
     text-transform: uppercase;
   }
 
   &__paragraph {
     font-size: $font-paragraph;
+    line-height: $paragraph-one-line-height;
   }
 }
 
 .sightseeing {
-  background: red;
-  height: 193px;
+  display: block;
+  height: 19.3rem;
   text-align: center;
-
+  background-color: $color-prmiary;
 
   &__header {
-    padding-top: 46px;
+    padding-top: 4.6rem;
     font-size: $font-size--h2;
+    line-height: $header-line-height;
     text-transform: uppercase;
   }
 
