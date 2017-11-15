@@ -1,0 +1,27 @@
+.sightseeing {
+  display: block;
+  text-align: center;
+  background-color: $color-prmiary;
+
+  &__header {
+    padding-top: 4.1rem;
+    font-size: $font-size--h2;
+    line-height: $header-line-height;
+    text-transform: uppercase;
+  }
+
+  &__counter-paragraph {
+    padding-top: 1rem;
+    font-size: $font-paragraph;
+    line-height: $paragraph-two-line-height;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    padding-top: 1.3rem;
+    padding-bottom: 40px;
+    font-size: $font-paragraph;
+    line-height: $paragraph-two-line-height;
+    text-transform: uppercase;
+  }
+}

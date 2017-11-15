@@ -1,0 +1,29 @@
+.recommendations {
+  display: block;
+  height: 271px;
+  // border: 1px solid black;
+  &__inner {
+  }
+
+  &__header {
+    font-size: $font-size--h2;
+    line-height: $header-line-height;
+  }
+
+  &__paragraph {
+    font-size: $font-paragraph;
+    line-height: $paragraph-two-line-height;
+  }
+
+  &__item {
+    // background-color: red;
+  }
+
+  &__item--first {
+    // position: absolute;
+    left:10px;
+    background: url("../images/recom-house.png");
+    background-repeat: no-repeat;
+  }
+
+}

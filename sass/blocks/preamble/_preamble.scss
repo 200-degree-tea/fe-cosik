@@ -1,0 +1,20 @@
+.preamble {
+  display: block;
+  height: 24rem;
+  text-align: center;
+
+  &__header {
+    padding-top: 4.1rem;
+    font-size: $font-size--h2;
+    font-weight: $font-bolded;
+    line-height: $header-line-height;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    padding-top: 2.85rem;
+    font-size: $font-paragraph;
+    line-height: $paragraph-one-line-height;
+    text-transform: uppercase;
+  }
+}
