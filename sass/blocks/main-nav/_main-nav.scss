@@ -38,6 +38,10 @@
     &:last-child {}
   }
 
+  &__anchor:active {
+    color: $font-active-btn;
+  }
+
   &__toggle {
     position: absolute;
     top: 1.2rem;

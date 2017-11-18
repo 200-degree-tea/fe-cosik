@@ -27,4 +27,12 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
   }
+
+  &--bottom {
+    padding-top: 25.9rem;
+    width: 100%;
+    background: url("../images/rocks-main-content.png") center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
