@@ -1,3 +1,114 @@
 .page-footer {
-  border: 1px solid black;
+  &__inner {
+    display: block;
+    text-align: center;
+  }
+
+  &__tag {
+    position: relative;
+    margin-top: 36px;
+  }
+
+  &__tag-header {
+    font-size: $font-size--tag;
+    font-weight: $font-bolded;
+    line-height: $header-line-height;
+  }
+
+  &__social {
+    margin-top: 35px;
+    margin-left: 1px;
+
+    &--tweeter {
+      position: relative;
+      display: inline;
+      padding: 24px 23px;
+      margin-left: -3px;
+      margin-right: 4px;
+
+      border: none;
+      background: url("../images/tweeter.png") center;
+      background-repeat: no-repeat;
+    }
+
+    &--tweeter:hover {
+      background: url("../images/tweeter-hvr.png") center;
+    }
+
+    &--tweeter:active {
+      background: url("../images/tweeter-down.png");
+    }
+
+    &--facebook {
+      position: relative;
+      display: inline;
+      padding: 2.4rem 2.3rem;
+      margin-right: 4px;
+      border: none;
+      background-repeat: no-repeat;
+      background: url("../images/facebook.png") center;
+    }
+
+    &--facebook:hover {
+      background: url("../images/facebook-hvr.png") center;
+    }
+
+    &--facebook:active {
+      background: url("../images/facebook-down.png") center;
+    }
+
+    &--youtube {
+      position: relative;
+      display: inline;
+      padding: 24px 23px;
+      border: none;
+      background: url("../images/youtube.png") center;
+      background-repeat: no-repeat;
+    }
+
+    &--youtube:hover {
+      background: url("../images/youtube-hvr.png") center;
+    }
+
+    &--youtube:active {
+      background: url("../images/youtube-down.png") center;
+    }
+  }
+
+  &__developer {
+    display: block;
+    position: relative;
+    margin-top: 43px;
+    // margin-bottom: 20px;
+    margin-left: 94px;
+  }
+
+  &__paragraph {
+    font-size: $font-paragraph;
+    line-height: $paragraph-three-line-height;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__logo {
+    position: absolute;
+    display: block;
+    margin-top: -3px;
+    margin-left: 101px;
+    padding: 17px 15px;
+
+    background: url("../images/logo-footer.png") center;
+    background-repeat: no-repeat;
+  }
+
+  &__logo:hover{
+    padding: 17px 15px;
+    background: url("../images/logo-footer-hvr.png") center;
+    background-repeat: no-repeat;
+  }
+
+  &__logo:active {
+    background: url("../images/logo-footer-down.png") center;
+    background-repeat: no-repeat;
+  }
 }

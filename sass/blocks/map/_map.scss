@@ -1,0 +1,10 @@
+.map{
+  margin-top: 10.5rem;
+  &__image {
+    display: block;
+    height: 35rem;
+    width: 32rem;
+    background: url("../images/map-sedona.png") center;
+    background-repeat: no-repeat;
+  }
+}

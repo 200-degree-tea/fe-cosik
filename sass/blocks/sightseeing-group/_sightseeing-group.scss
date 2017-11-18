@@ -1,0 +1,52 @@
+.sightseeing-group {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-top: -1px;
+  background-color: $gray-bcakground;
+
+  &__inner {
+    position: relative;
+    display: block;
+    height: 167px;
+  }
+
+  &__header {
+    position: relative;
+    padding-top: 26px;
+    font-size: $font-size--h2;
+    line-height: $header-line-height;
+    text-transform: uppercase;
+  }
+
+  &__counter-paragraph {
+    position: relative;
+    padding-top: 1rem;
+    font-size: $font-paragraph;
+    line-height: $paragraph-two-line-height;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    position: relative;
+    padding-top: 1.4rem;
+    padding-bottom: 32px;
+    font-size: $font-paragraph;
+    line-height: $paragraph-two-line-height;
+    text-transform: uppercase;
+  }
+
+  &__paragraph:last-child {
+    padding-bottom:-12px;
+  }
+
+  &__divider {
+    display: block;
+    width: 87%;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: $gray-divider;
+  }
+}

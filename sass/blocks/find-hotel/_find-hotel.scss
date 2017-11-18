@@ -1,3 +1,39 @@
 .find-hotel {
-  border: 1px solid black;
+
+
+  &__inner{
+    display: block;
+    height: 18rem;
+    text-align: center;
+  }
+
+  &__header {
+    display: block;
+    padding-top: 2.7rem;
+    font-size: $font-size--hotel;
+    font-weight: $font-bolded;
+    line-height: $header-line-height;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    padding-top: 1.8rem;
+    display: block;
+    font-size: $font-paragraph;
+    line-height: $paragraph-one-line-height;
+    text-transform: uppercase;
+  }
+
+  &__btn {
+    top: 3.4rem;
+    position: relative;
+    padding: 1.55rem 5.6rem;
+    border: none;
+
+    font-size: $font-size--hotel;
+    color: $color-white;
+    text-transform: uppercase;
+    background-color: $color-prmiary;
+  }
+
 }
