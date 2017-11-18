@@ -1,10 +1,8 @@
 .recommendations {
   display: block;
-  height: 380px;
-  // border: 1px solid black;
-  // margin-bottom: -1px;
+  padding-bottom: 5.8rem;
+
   &__inner {
-    // margin-left: 50px;
     display: block;
   }
 
@@ -19,9 +17,8 @@
 
   &__paragraph {
     position: relative;
-    padding-top: 12px;
+    padding-top: 1.4rem;
     margin-left: 7rem;
-
     font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-align: left;
@@ -35,52 +32,48 @@
   &__item--first {
     display: block;
     position: relative;
-    margin-top: 35px;
+    margin-top: 3.5rem;
   }
 
-  &__item--second{
+  &__item--second {
     display: block;
     position: relative;
-    margin-top: 31px;
+    margin-top: 2.8rem;
   }
 
   &__item--third {
     display: block;
     position: relative;
-    margin-top: 30px;
+    margin-top: 2.8rem;
   }
 
   &__box--house {
     position: absolute;
-    height: 39px;
-    width: 37px;
-    margin-left: 21px;
-    top: -9px;
-
+    height: 3.9rem;
+    width: 3.7rem;
+    margin-left: 2.1rem;
+    top: -0.9rem;
     background: url("../images/recom-house.png");
     background-repeat: no-repeat;
   }
 
   &__box--gift {
     position: absolute;
-    height: 39px;
-    width: 38px;
-    margin-left: 25px;
-    top: -12px;
-
+    height: 3.9rem;
+    width: 3.8rem;
+    margin-left: 2.5rem;
+    top: -1.2rem;
     background: url("../images/recom-gift.png");
     background-repeat: no-repeat;
   }
 
-  &__box--food{
+  &__box--food {
     position: absolute;
-    height: 35px;
-    width: 40px;
-    margin-left: 19px;
-    // border: 1px solid red;
-    top: -6px;
+    height: 3.5rem;
+    width: 4.0rem;
+    margin-left: 1.9rem;
+    top: -0.6rem;
     background: url("../images/recom-food.png");
     background-repeat: no-repeat;
-
   }
 }

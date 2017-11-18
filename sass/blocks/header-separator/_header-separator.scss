@@ -1,0 +1,27 @@
+.header-separator {
+  position: relative;
+  background-color: $color-white;
+
+  &:before {
+    right: 50%;
+    border-right: 100rem solid transparent;
+    border-left: 100rem solid;
+  }
+
+  &:after {
+    left: 50%;
+    border-right: 100rem solid;
+    border-left: 100rem solid transparent;
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    z-index: 3;
+    border-bottom: 17rem solid $color-white;
+    transform: rotate(0.000001deg);
+  }
+}

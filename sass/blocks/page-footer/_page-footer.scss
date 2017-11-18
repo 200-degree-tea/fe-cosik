@@ -6,7 +6,7 @@
 
   &__tag {
     position: relative;
-    margin-top: 36px;
+    margin-top: 3.6rem;
   }
 
   &__tag-header {
@@ -16,16 +16,15 @@
   }
 
   &__social {
-    margin-top: 35px;
-    margin-left: 1px;
+    margin-top: 3.5rem;
+    margin-left: 0.1rem;
 
     &--tweeter {
       position: relative;
       display: inline;
-      padding: 24px 23px;
-      margin-left: -3px;
-      margin-right: 4px;
-
+      padding: 2.4rem 2.3rem;
+      margin-left: -0.3rem;
+      margin-right: 0.4rem;
       border: none;
       background: url("../images/tweeter.png") center;
       background-repeat: no-repeat;
@@ -43,7 +42,7 @@
       position: relative;
       display: inline;
       padding: 2.4rem 2.3rem;
-      margin-right: 4px;
+      margin-right: 0.4rem;
       border: none;
       background-repeat: no-repeat;
       background: url("../images/facebook.png") center;
@@ -60,7 +59,7 @@
     &--youtube {
       position: relative;
       display: inline;
-      padding: 24px 23px;
+      padding: 2.4rem 2.3rem;
       border: none;
       background: url("../images/youtube.png") center;
       background-repeat: no-repeat;
@@ -78,12 +77,12 @@
   &__developer {
     display: block;
     position: relative;
-    margin-top: 43px;
-    // margin-bottom: 20px;
-    margin-left: 94px;
+    margin-top: 4.3rem;
+    margin-left: 9.4rem;
   }
 
   &__paragraph {
+    padding-bottom: 3.6rem;
     font-size: $font-paragraph;
     line-height: $paragraph-three-line-height;
     text-align: left;
@@ -93,16 +92,15 @@
   &__logo {
     position: absolute;
     display: block;
-    margin-top: -3px;
-    margin-left: 101px;
-    padding: 17px 15px;
-
+    margin-top: -0.3rem;
+    margin-left: 10.1rem;
+    padding: 1.7rem 1.5rem;
     background: url("../images/logo-footer.png") center;
     background-repeat: no-repeat;
   }
 
-  &__logo:hover{
-    padding: 17px 15px;
+  &__logo:hover {
+    padding: 1.7rem 1.5rem;
     background: url("../images/logo-footer-hvr.png") center;
     background-repeat: no-repeat;
   }

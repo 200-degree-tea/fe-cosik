@@ -4,20 +4,16 @@
   top: 0;
   left: 0;
   width: 100%;
-
   font-weight: bold;
   font-size: 100%;
   text-align: center;
-
   z-index: 1;
 
   &__list {
     display: block;
     position: relative;
     width: 100%;
-
     background: $color-prmiary;
-
     z-index: 2;
   }
 
@@ -29,10 +25,8 @@
     display: block;
     position: relative;
     height: 5.6rem;
-
     border-top: 1px solid $top-border;
     border-bottom: 1px solid $bottom-border;
-
     list-style-type: none;
   }
 
@@ -41,14 +35,26 @@
     border-bottom: 0;
   }
 
-  &__item > a {
+  &__item:hover {
+    background: $color-hover-btn;
+    color: yellow;
+  }
+
+  &__item:active {
+    background: $color-active-btn;
+  }
+
+  &__anchor {
     display: block;
     padding-top: 1.6rem;
-
     color: $nav-text;
     font-size: $font-size--nav;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  &__anchor:active {
+    color: $font-active-btn;
   }
 
   &__toggle {

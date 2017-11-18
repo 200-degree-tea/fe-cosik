@@ -1,7 +1,11 @@
 .preamble {
   display: block;
-  height: 24rem;
   text-align: center;
+  overflow: hidden;
+  &__inner{
+    position: relative;
+    height: 24rem;
+  }
 
   &__header {
     padding-top: 4.1rem;
