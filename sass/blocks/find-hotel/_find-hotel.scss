@@ -34,11 +34,11 @@
   }
 
   &__btn:hover{
-    background: $color-hover;
+    background: $color-hover-btn;
   }
 
   &__btn:active {
-    background: $color-active;
+    background: $color-active-btn;
     color: $font-active-btn;
   }
 

@@ -4,8 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  font-weight: bold;
-  font-size: 100%;
+  font-weight: $font-bolded;
   text-align: center;
   z-index: 1;
 
@@ -17,17 +16,18 @@
     z-index: 2;
   }
 
-  &__item:first-child {
-    border-top: 0;
-  }
-
   &__item {
     display: block;
     position: relative;
     height: 5.6rem;
+    line-height: 5.6rem;
     border-top: 1px solid $top-border;
     border-bottom: 1px solid $bottom-border;
     list-style-type: none;
+  }
+
+  &__item:first-child {
+    border-top: 0;
   }
 
   &__item:last-child {
@@ -46,7 +46,6 @@
 
   &__anchor {
     display: block;
-    padding-top: 1.6rem;
     color: $nav-text;
     font-size: $font-size--nav;
     text-decoration: none;

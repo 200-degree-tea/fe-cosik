@@ -22,21 +22,23 @@ $paragraph-three-line-height: 2.6rem;
 $color-prmiary: #81B3D2;
 $color-white: #FFFFFF;
 
-$color-hover: #669ec0;
-$color-hover-btn: saturate(darken($color-hover, 2%), 1%);
+$color-hover-btn: #669ec0;
 
-$color-active: #5496bd;
-$color-active-btn: saturate(darken($color-active, 2%), 1%);
+$color-active-btn: #5496bd;
+// $color-active-btn: saturate(darken($color-active, 2%), 1%);
 
 $color-disabled: #e5e5e5;
 
-$font-active: #7BA8CA;
-$font-active-btn: lighten($font-active, 7%);
+$font-active: #FFFFFF;
+$font-active-btn: rgba($font-active, 0.3);
 
 $bottom-border-color: #010101;
+$bottom-border: rgba($bottom-border-color, 0.2);
+
 $top-border-color: #FFFFFF;
-$top-border: darken($top-border-color, 23%);
-$bottom-border: lighten($bottom-border-color, 54%);
+$top-border: rgba($top-border-color, 0.2);
+
+
 $gray-bcakground: darken($color-white, 7%);
 $gray-divider: darken($color-white, 10%);
 
