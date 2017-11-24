@@ -24,36 +24,36 @@
     border-top: 1px solid $top-border;
     border-bottom: 1px solid $bottom-border;
     list-style-type: none;
-  }
 
-  &__item:first-child {
-    border-top: 0;
-  }
+    & > a {
+      display: block;
+      color: $nav-text;
+      font-size: $font-size--nav;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
 
-  &__item:last-child {
-    height: 5.5rem;
-    border-bottom: 0;
-  }
+    & > a:active {
+      color: $font-active-btn;
+    }
 
-  &__item:hover {
-    background: $color-hover-btn;
-    color: yellow;
-  }
+    &:first-child {
+      border-top: 0;
+    }
 
-  &__item:active {
-    background: $color-active-btn;
-  }
+    &:last-child {
+      height: 5.5rem;
+      border-bottom: 0;
+    }
 
-  &__anchor {
-    display: block;
-    color: $nav-text;
-    font-size: $font-size--nav;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+    &:hover {
+      background: $color-hover-btn;
+      color: yellow;
+    }
 
-  &__anchor:active {
-    color: $font-active-btn;
+    &:active {
+      background: $color-active-btn;
+    }
   }
 
   &__toggle {
@@ -61,38 +61,35 @@
     top: 1.2rem;
     right: 1.7rem;
     z-index: 2;
+
+    &--close {
+      position: absolute;
+    }
   }
 
   &__menu-bar {
     width: 2.3rem;
     height: 0.4rem;
-    // background-color: $nav-close-button;
     background-color: $color-prmiary;
     margin: 0.5rem 0;
     z-index: 2;
-  }
 
-  &__toggle--close {
-    position: absolute;
-  }
+    &--top {
+      z-index: 2;
+      width: 2.8rem;
+      background-color: $nav-close-button;
+      transform: rotate(-45deg) translate(-8px, 5px);
+    }
 
-  &__menu-bar--top {
-    z-index: 2;
-    width: 2.8rem;
-    background-color: $nav-close-button;
-    transform: rotate(-45deg) translate(-8px, 5px);
-  }
+    &--middle {
+      opacity: 0;
+    }
 
-  &__menu-bar--middle {
-    opacity: 0;
+    &--bottom {
+      z-index: 2;
+      width: 2.8rem;
+      background-color: $nav-close-button;
+      transform: rotate(45deg) translate(-8px, -5px);
+    }
   }
-
-  &__menu-bar--bottom {
-    z-index: 2;
-    width: 2.8rem;
-    background-color: $nav-close-button;
-    transform: rotate(45deg) translate(-8px, -5px);
-  }
-
-  &__link {}
 }

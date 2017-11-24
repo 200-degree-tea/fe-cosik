@@ -1,25 +1,26 @@
 .sightseeing {
   display: block;
+  position: relative;
   text-align: center;
   color: $color-white;
   background-color: $color-prmiary;
 
   &__header {
-    padding-top: 4.0rem;
     font-size: $font-size--h2;
     line-height: $header-line-height;
     text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
   &__counter-paragraph {
-    padding-top: 0.9rem;
     font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
+    margin-bottom: 13px;
   }
 
   &__paragraph {
-    padding-top: 1.45rem;
+    // padding-top: 1.45rem;
     padding-bottom: 4rem;
     font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;

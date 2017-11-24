@@ -14,5 +14,16 @@
     height: 39.1rem;
     width: 100%;
     background: url("../images/intro-sedona-small.png") center no-repeat;
+
+    &__header {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      height: 1px;
+      width: 1px;
+    }
   }
 }
