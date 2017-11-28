@@ -1,0 +1,33 @@
+// Typography
+// --------------------------------------------------
+
+// Headings
+//----------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+  font-weight: $font-bolded;
+  line-height: $header-line-height;
+}
+
+h2 {
+  font-size: $font-size--h2;
+}
+
+// Body text
+//----------
+
+P {
+  font-size: $font-size;
+}
+
+// separators
+//----------
+hr {
+  background-color: $gray-divider;
+}

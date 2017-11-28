@@ -1,24 +1,25 @@
 .preamble {
-  display: block;
-  text-align: center;
+  position: relative;
   overflow: hidden;
-  margin-bottom: 3.1rem;
-  &__inner{
+
+  &__inner {
     position: relative;
+    display: block;
+    height: 20rem;
+    padding-top: 40px;
+    text-align: center;
   }
 
   &__header {
-    font-size: $font-size--h2;
+    margin-top: 0;
+    margin-bottom: 2.85rem;
     font-weight: $font-bolded;
     line-height: $header-line-height;
     text-transform: uppercase;
-    margin-bottom: 2.85rem;
   }
 
   &__paragraph {
-    font-size: $font-paragraph;
     line-height: $paragraph-one-line-height;
     text-transform: uppercase;
-    // margin-bottom: 5px;
   }
 }

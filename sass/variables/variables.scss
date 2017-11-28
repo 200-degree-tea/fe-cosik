@@ -1,7 +1,12 @@
-$font-size--base:   10px;
-$font-size:         1.4rem;
 
-$font-size--h1:     2rem;
+// Font vaiables
+//----------
+$font-family: PT Sans, sans-serif;
+$font-size--base:   10px !default;
+$font-size:         1.4rem;
+$line-height-base:  2.4rem;
+
+$font-size--h1:     3rem;
 $font-size--h2:     1.8rem;
 $font-size--nav:    1.8rem;
 $font-size--hotel:  2.1rem;
@@ -19,28 +24,31 @@ $paragraph-one-line-height: 2.4rem;
 $paragraph-two-line-height: 2.1rem;
 $paragraph-three-line-height: 2.6rem;
 
-$color-prmiary: #81B3D2;
-$color-white: #FFFFFF;
 
+// Colours
+//----------
+$color-prmiary: #81b3d2;
+$color-white: #FFF;
+
+// -- button
+$color-button: #81b3d2;
 $color-hover-btn: #669ec0;
-
 $color-active-btn: #5496bd;
-// $color-active-btn: saturate(darken($color-active, 2%), 1%);
+$color-disabled-btn: #e5e5e5;
+$nav-close-button: #FFF;
 
-$color-disabled: #e5e5e5;
-
-$font-active: #FFFFFF;
+// -- font
+$font-hover: #FFF;
+$font-active: #FFF;
 $font-active-btn: rgba($font-active, 0.3);
+$font-text-color: #FFF;
 
+// -- borders
 $bottom-border-color: #010101;
 $bottom-border: rgba($bottom-border-color, 0.2);
 
-$top-border-color: #FFFFFF;
+$top-border-color: #FFF;
 $top-border: rgba($top-border-color, 0.2);
-
 
 $gray-bcakground: darken($color-white, 7%);
 $gray-divider: darken($color-white, 10%);
-
-$nav-text: #FFFFFF;
-$nav-close-button: #FFFFFF;

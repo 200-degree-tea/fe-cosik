@@ -1,0 +1,44 @@
+html {
+  font-size: $font-size--base;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size--base;
+  line-height: $line-height-base;
+}
+// Links
+//----------
+
+a {
+  text-decoration: none;
+  color: $font-text-color;
+
+  &:hover {
+    color: $font-hover;
+    // background-color: $color-hover-btn;
+  }
+
+  &:active {
+    color: $font-active-btn;
+    background: $color-active-btn;
+  }
+}
+
+// Buttons
+//----------
+button {
+  background-color: $color-button;
+
+  &:hover {
+    background-color: $color-hover-btn;
+  }
+
+  &:active {
+    background-color: $color-active-btn;
+  }
+
+  &:disabled {
+    background-color: $color-disabled-btn;
+  }
+}

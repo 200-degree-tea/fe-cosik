@@ -1,88 +1,89 @@
 .page-footer {
   &__inner {
+    position: relative;
     display: block;
+    margin-bottom: 3.6rem;
+    padding-top: 1.9rem;
     text-align: center;
   }
 
   &__tag {
     position: relative;
-    margin-top: 3.6rem;
   }
 
   &__tag-header {
+    // margin-bottom: 3.1rem;
     font-size: $font-size--tag;
     font-weight: $font-bolded;
     line-height: $header-line-height;
   }
 
   &__social {
-    margin-top: 3.5rem;
-    margin-left: 0.1rem;
+    text-align: left;
+    padding-top: 3.1rem;
+    // margin-bottom: px;
 
     &--tweeter {
+      margin-left: 84px;
       position: relative;
       display: inline;
-      padding: 2.4rem 2.3rem;
-      margin-left: -0.3rem;
-      margin-right: 0.4rem;
-      border: none;
-      background: url("../images/tweeter.png") center;
-      background-repeat: no-repeat;
-    }
+      padding: 2rem 1.4rem 1.3rem 1.3rem;
+      background-color: $color-prmiary;
 
-    &--tweeter:hover {
-      background: url("../images/tweeter-hvr.png") center;
-    }
+      &:hover {
+        background-color: $color-hover-btn;
+      }
 
-    &--tweeter:active {
-      background: url("../images/tweeter-down.png");
+      &:active {
+        // don't know how to change color for active.
+        // the icon supposed to chane colour for $color-active-btn
+      }
     }
 
     &--facebook {
       position: relative;
       display: inline;
-      padding: 2.4rem 2.3rem;
-      margin-right: 0.4rem;
-      border: none;
-      background-repeat: no-repeat;
-      background: url("../images/facebook.png") center;
-    }
+      margin-left: 5px;
+      padding: 2rem 1.8rem 1.3rem;
+      background-color: $color-prmiary;
 
-    &--facebook:hover {
-      background: url("../images/facebook-hvr.png") center;
-    }
+      &:hover {
+        background-color: $color-hover-btn;
+      }
 
-    &--facebook:active {
-      background: url("../images/facebook-down.png") center;
+      &:active {
+        // don't know how to change color for active.
+        // the icon supposed to chane colour for $color-active-btn
+      }
     }
 
     &--youtube {
       position: relative;
       display: inline;
-      padding: 2.4rem 2.3rem;
-      border: none;
-      background: url("../images/youtube.png") center;
-      background-repeat: no-repeat;
-    }
+      margin-left: 5px;
+      padding: 2rem 1.2rem 1.3rem 1.3rem;
+      background-color: $color-prmiary;
 
-    &--youtube:hover {
-      background: url("../images/youtube-hvr.png") center;
-    }
+      &:hover {
+        background-color: $color-hover-btn;
+      }
 
-    &--youtube:active {
-      background: url("../images/youtube-down.png") center;
+      &:active {
+        // don't know how to change color for active.
+        // the icon supposed to chane colour for $color-active-btn
+      }
     }
   }
 
   &__developer {
     display: block;
     position: relative;
-    margin-top: 4.3rem;
+    padding-top: 3.7rem;
+    // padding-left: 9.4rem;
     margin-left: 9.4rem;
   }
 
   &__paragraph {
-    padding-bottom: 3.6rem;
     font-size: $font-paragraph;
     line-height: $paragraph-three-line-height;
     text-align: left;
@@ -92,21 +93,21 @@
   &__logo {
     position: absolute;
     display: block;
-    margin-top: -0.3rem;
-    margin-left: 10.1rem;
+    top: 4.9rem;
+    left: 10.1rem;
     padding: 1.7rem 1.5rem;
     background: url("../images/logo-footer.png") center;
     background-repeat: no-repeat;
-  }
 
-  &__logo:hover {
-    padding: 1.7rem 1.5rem;
-    background: url("../images/logo-footer-hvr.png") center;
-    background-repeat: no-repeat;
-  }
+    &:hover {
+      padding: 1.7rem 1.5rem;
+      background: url("../images/logo-footer-hvr.png") center;
+      background-repeat: no-repeat;
+    }
 
-  &__logo:active {
-    background: url("../images/logo-footer-down.png") center;
-    background-repeat: no-repeat;
+    &:active {
+      background: url("../images/logo-footer-down.png") center;
+      background-repeat: no-repeat;
+    }
   }
 }
