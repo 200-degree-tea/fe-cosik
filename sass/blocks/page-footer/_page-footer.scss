@@ -9,22 +9,21 @@
 
   &__tag {
     position: relative;
+    margin-bottom: 4.8rem;
   }
 
   &__tag-header {
-    // margin-bottom: 3.1rem;
     font-size: $font-size--tag;
     font-weight: $font-bolded;
     line-height: $header-line-height;
   }
 
   &__social {
-    text-align: left;
-    padding-top: 3.1rem;
-    // margin-bottom: px;
+    position: relative;
+    width: 100%;
+    height: 2.7rem;
 
     &--tweeter {
-      margin-left: 84px;
       position: relative;
       display: inline;
       padding: 2rem 1.4rem 1.3rem 1.3rem;
@@ -43,6 +42,7 @@
     &--facebook {
       position: relative;
       display: inline;
+      // display: inline-block;
       margin-left: 5px;
       padding: 2rem 1.8rem 1.3rem;
       background-color: $color-prmiary;
@@ -60,6 +60,7 @@
     &--youtube {
       position: relative;
       display: inline;
+      // height: 5rem;
       margin-left: 5px;
       padding: 2rem 1.2rem 1.3rem 1.3rem;
       background-color: $color-prmiary;
@@ -76,31 +77,28 @@
   }
 
   &__developer {
-    display: block;
     position: relative;
-    padding-top: 3.7rem;
-    // padding-left: 9.4rem;
-    margin-left: 9.4rem;
+    padding-top: 3.3rem;
   }
 
   &__paragraph {
+    display: inline-block;
     font-size: $font-paragraph;
     line-height: $paragraph-three-line-height;
-    text-align: left;
     text-transform: uppercase;
   }
 
   &__logo {
-    position: absolute;
-    display: block;
-    top: 4.9rem;
-    left: 10.1rem;
-    padding: 1.7rem 1.5rem;
+    position: relative;
+    display: inline-block;
+    height: 3.6rem;
+    width: 3rem;
+    top: 1.4rem;
+    left: 0.3rem;
     background: url("../images/logo-footer.png") center;
     background-repeat: no-repeat;
 
     &:hover {
-      padding: 1.7rem 1.5rem;
       background: url("../images/logo-footer-hvr.png") center;
       background-repeat: no-repeat;
     }

@@ -12,14 +12,15 @@
 
   &__header {
     margin-top: 0;
-    margin-bottom: 2.85rem;
+    margin-bottom: 2.8rem;
     font-weight: $font-bolded;
     line-height: $header-line-height;
     text-transform: uppercase;
   }
 
   &__paragraph {
-    line-height: $paragraph-one-line-height;
+    padding: 0 10%;
+    line-height: $paragraph-three-line-height;
     text-transform: uppercase;
   }
 }

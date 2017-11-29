@@ -9,7 +9,7 @@
 
   &__header {
     position: relative;
-    padding-top: 28px;
+    padding-top: 2.7rem;
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: $font-size--h2;
@@ -28,8 +28,8 @@
 
   &__paragraph {
     position: relative;
-    // margin-top: 0;
     margin-bottom: 2.6rem;
+    padding: 0 11.8%;
     font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
@@ -39,12 +39,9 @@
     position: relative;
     display: block;
     width: 85%;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: $gray-divider;
+    height: 1px;
+    margin: 0 auto;
+    border: 0;
+    background-color: $gray-divider;
   }
 }
