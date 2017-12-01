@@ -5,6 +5,16 @@
     display: block;
     text-align: center;
     background-color: $gray-bcakground;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 6%;
+      height: 1px;
+      width: 87%;
+      background-color: $gray-divider;
+    }
   }
 
   &__header {
@@ -12,7 +22,6 @@
     padding-top: 2.7rem;
     margin-top: 0;
     margin-bottom: 1rem;
-    font-size: $font-size--h2;
     line-height: $header-line-height;
     text-transform: uppercase;
   }
@@ -21,27 +30,15 @@
     position: relative;
     margin-top: 0;
     margin-bottom: 1.4rem;
-    font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
   }
 
   &__paragraph {
     position: relative;
-    margin-bottom: 2.6rem;
+    margin-bottom: 3rem;
     padding: 0 11.8%;
-    font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
-  }
-
-  &__divider {
-    position: relative;
-    display: block;
-    width: 85%;
-    height: 1px;
-    margin: 0 auto;
-    border: 0;
-    background-color: $gray-divider;
   }
 }
