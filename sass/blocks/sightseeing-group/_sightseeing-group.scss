@@ -2,7 +2,6 @@
   &__inner {
     position: relative;
     height: 16.8rem;
-    display: block;
     text-align: center;
     background-color: $gray-bcakground;
 
@@ -18,16 +17,14 @@
   }
 
   &__header {
-    position: relative;
-    padding-top: 2.7rem;
     margin-top: 0;
     margin-bottom: 1rem;
+    padding-top: 2.6rem;
     line-height: $header-line-height;
     text-transform: uppercase;
   }
 
   &__counter-paragraph {
-    position: relative;
     margin-top: 0;
     margin-bottom: 1.4rem;
     line-height: $paragraph-two-line-height;
@@ -35,7 +32,6 @@
   }
 
   &__paragraph {
-    position: relative;
     margin-bottom: 3rem;
     padding: 0 11.8%;
     line-height: $paragraph-two-line-height;

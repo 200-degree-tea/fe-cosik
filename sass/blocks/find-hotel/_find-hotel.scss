@@ -1,18 +1,14 @@
 .find-hotel {
   &__inner {
     position: relative;
-    display: block;
-    padding-top: 2.8rem;
+    padding-top: 2.7rem;
     padding-bottom: 4.9rem;
     text-align: center;
   }
 
   &__header {
-    display: block;
     margin-top: 0;
     margin-bottom: 1.9rem;
-    font-size: $font-size--hotel;
-    font-weight: $font-bolded;
     line-height: $header-line-height;
     text-transform: uppercase;
   }
@@ -21,14 +17,13 @@
     display: block;
     margin-bottom: 3.5rem;
     padding: 0 10%;
-    font-size: $font-paragraph;
+    // font-size: $font-paragraph;
     line-height: $paragraph-one-line-height;
     text-transform: uppercase;
   }
 
   &__btn {
     position: relative;
-    display: inline;
     padding: 1.7rem 5.6rem;
     font-size: $font-size--hotel;
     color: $color-white;

@@ -1,0 +1,30 @@
+.developer {
+    position: relative;
+    &__paragraph {
+      display: inline-block;
+      font-size: $font-paragraph;
+      line-height: $paragraph-three-line-height;
+      text-transform: uppercase;
+    }
+
+    &__logo {
+      position: relative;
+      display: inline-block;
+      height: 3.6rem;
+      width: 3rem;
+      top: 1.4rem;
+      left: 0.3rem;
+      background: url("../images/logo-footer.png") center;
+      background-repeat: no-repeat;
+
+      &:hover {
+        background: url("../images/logo-footer-hvr.png") center;
+        background-repeat: no-repeat;
+      }
+
+      &:active {
+        background: url("../images/logo-footer-down.png") center;
+        background-repeat: no-repeat;
+      }
+    }
+  }

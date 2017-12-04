@@ -1,41 +1,32 @@
 .recommendations {
-  display: block;
-  position: relative;
   margin-bottom: 5.7rem;
 
   &__inner {
-    display: block;
     position: relative;
-    padding-top: 1.9rem;
+    padding-top: 1.8rem;
   }
 
   &__header {
-    position: relative;
     margin-bottom: 1.4rem;
-    // font-size: $font-size--h2;
     font-weight: $font-bolded;
     line-height: $header-line-height;
     text-transform: uppercase;
   }
 
   &__paragraph {
-    position: relative;
     margin-bottom: 2.8rem;
     padding-right: 16.4%;
-    // font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-align: left;
     text-transform: uppercase;
   }
 
   &__item {
-    display: block;
-    position: relative;
     margin-left: 7rem;
   }
 
   &__box {
-    position: absolute;
+    position: relative;
 
     &--house {
       position: absolute;

@@ -1,0 +1,72 @@
+.social {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.8rem;
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    padding: 2.1rem 2.3rem 2.5rem;
+
+    &--twitter {
+      background: url("../images/tweeter-icon.png") center;
+      background-repeat: no-repeat;
+      background-color: $color-prmiary;
+      margin-right: 4px;
+
+      &:hover {
+        background-color: $color-hover-btn;
+      }
+
+      &:active {
+        background: url("../images/tweeter-down.png") center;
+        background-repeat: no-repeat;
+        background-color: $color-active-btn;
+      }
+    }
+
+    &--facebook {
+      background: url("../images/facebook-icon.png") center;
+      background-repeat: no-repeat;
+      background-color: $color-prmiary;
+      margin-right: 4px;
+
+      &:hover {
+        background-color: $color-hover-btn;
+      }
+
+      &:active {
+        background: url("../images/facebook-down.png") center;
+        background-repeat: no-repeat;
+        background-color: $color-active-btn;
+      }
+    }
+
+    &--youtube {
+      background: url("../images/youtube-icon.png") center;
+      background-repeat: no-repeat;
+      background-color: $color-prmiary;
+
+      &:hover {
+        background-color: $color-hover-btn;
+      }
+
+      &:active {
+        background: url("../images/youtube-down.png") center;
+        background-repeat: no-repeat;
+        background-color: $color-active-btn;
+      }
+    }
+  }
+
+  &__paragraph {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}

@@ -28,7 +28,7 @@
 
       &:active {
         color: $font-active-btn;
-        background-color: $color-hover-btn;
+        background-color: $color-active-btn;
       }
     }
 
@@ -36,11 +36,7 @@
       border-top: 0;
     }
 
-    &:last-child {
-      height: 5.5rem;
-      border-bottom: 0;
-      // need to have a gradient border bottom. Then th size will mach the other nav bar cells
-    }
+    &:last-child {}
   }
 
   &__toggle {
@@ -78,6 +74,6 @@
   }
 
   &__logo {
-    margin-bottom: -3.7rem;
+      margin-bottom: -3.7rem;
   }
 }
