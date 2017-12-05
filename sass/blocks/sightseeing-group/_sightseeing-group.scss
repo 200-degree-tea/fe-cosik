@@ -19,21 +19,24 @@
   &__header {
     margin-top: 0;
     margin-bottom: 1rem;
-    padding-top: 2.6rem;
+    padding-top: 2.7rem;
+    padding-left: 18%;
+    padding-right: 18%;
     line-height: $header-line-height;
     text-transform: uppercase;
   }
 
   &__counter-paragraph {
     margin-top: 0;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.5rem;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
   }
 
   &__paragraph {
     margin-bottom: 3rem;
-    padding: 0 11.8%;
+    padding-left: 11.8%;
+    padding-right: 11.8%;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
   }

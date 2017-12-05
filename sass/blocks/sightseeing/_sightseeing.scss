@@ -2,7 +2,7 @@
   &__inner {
     display: block;
     padding-bottom: 3.9rem;
-    padding-top: 3.9rem;
+    padding-top: 4rem;
     text-align: center;
     background-color: $color-prmiary;
   }
@@ -10,6 +10,8 @@
   &__header {
     margin-top: 0;
     margin-bottom: 0.9rem;
+    padding-left: 10%;
+    padding-right: 10%;
     color: $color-white;
     line-height: $header-line-height;
     text-transform: uppercase;
@@ -17,9 +19,8 @@
 
   &__counter-paragraph {
     margin-top: 0;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.5rem;
     color: $color-white;
-    font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
   }
@@ -27,10 +28,9 @@
   &__paragraph {
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 33px;
-    padding-right: 33px;
+    padding-left: 11%;
+    padding-right: 11%;
     color: $color-white;
-    font-size: $font-paragraph;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;
   }
