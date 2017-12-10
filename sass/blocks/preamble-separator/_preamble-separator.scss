@@ -1,38 +1,40 @@
 .preamble-separator {
-  position: relative;
-  display: block;
-  background-color: $color-prmiary;
-  
-  &:before {
-    right: 50%;
-    border-right: 1000px solid transparent;
-    border-left: 1000px solid;
-  }
-
-  &:after {
-    left: 50%;
-    border-right: 1000px solid;
-    border-left: 1000px solid transparent;
-  }
-
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    z-index: 3;
-    border-bottom: 100px solid $color-prmiary;
-    transform: rotate(0.000001deg);
-  }
+  // border: 1px solid red;
+  // position: relative;
+  // display: block;
+  //
+  // &:before {
+  //   right: 50%;
+  //   border-right: 1000px solid transparent;
+  //   border-left: 1000px solid;
+  // }
+  //
+  // &:after {
+  //   left: 50%;
+  //   border-right: 1000px solid;
+  //   border-left: 1000px solid transparent;
+  // }
+  //
+  // &:after,
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 50%;
+  //   z-index: 3;
+  //   border-bottom: 100px solid $color-prmiary;
+  //   transform: rotate(0.000001deg);
+  // }
   // Tried to do that with svg but it dosen't work well
   // ------
   // position: relative;
-  // background-color: $color-prmiary;
+  // background-color: white;
+  // // background-color: $color-prmiary;
   //
   // &__svg {
   //   position: relative;
   //   fill: $color-white;
+  //   fill: $color-prmiary;
   //   stroke: $color-white;
   // }
 }

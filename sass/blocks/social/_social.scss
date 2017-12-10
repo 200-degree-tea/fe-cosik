@@ -1,60 +1,63 @@
 .social {
   position: relative;
   width: 100%;
-  margin-bottom: 1.8rem;
+  padding-top: 1.7rem;
+  padding-bottom: 1.8rem;
 
   &__icon {
-    position: relative;
     display: inline-block;
     padding: 2.1rem 2.3rem 2.5rem;
+    margin-right: 0.4rem;
+    background-color: $color-prmiary;
 
     &--twitter {
-      background: url("../images/tweeter-icon.png") center;
+      background-image: url("../images/tweeter-icon.png");
+      background-position: center;
       background-repeat: no-repeat;
-      background-color: $color-prmiary;
-      margin-right: 4px;
 
       &:hover {
         background-color: $color-hover-btn;
       }
 
       &:active {
-        background: url("../images/tweeter-down.png") center;
-        background-repeat: no-repeat;
         background-color: $color-active-btn;
+        background-image: url("../images/tweeter-down.png");
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
 
     &--facebook {
-      background: url("../images/facebook-icon.png") center;
+      background-image: url("../images/facebook-icon.png");
+      background-position: center;
       background-repeat: no-repeat;
-      background-color: $color-prmiary;
-      margin-right: 4px;
 
       &:hover {
         background-color: $color-hover-btn;
       }
 
       &:active {
-        background: url("../images/facebook-down.png") center;
-        background-repeat: no-repeat;
         background-color: $color-active-btn;
+        background-image: url("../images/facebook-down.png");
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
 
     &--youtube {
-      background: url("../images/youtube-icon.png") center;
+      background-image: url("../images/youtube-icon.png");
+      background-position: center;
       background-repeat: no-repeat;
-      background-color: $color-prmiary;
 
       &:hover {
         background-color: $color-hover-btn;
       }
 
       &:active {
-        background: url("../images/youtube-down.png") center;
-        background-repeat: no-repeat;
         background-color: $color-active-btn;
+        background-image: url("../images/youtube-down.png");
+        background-position: center;
+        background-repeat: no-repeat;
       }
     }
   }

@@ -1,18 +1,17 @@
 .page-footer {
   &__inner {
-    position: relative;
-    display: block;
-    margin-bottom: 3.6rem;
     padding-top: 1.5em;
+    padding-bottom: 3.6rem;
     text-align: center;
   }
 
   &__tag {
-    position: relative;
-    margin-bottom: 3.6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     &-header {
-      padding: 0 28.7%;
+      margin-top: 0;
+      margin-bottom: 0;
       font-size: $font-size--tag;
       line-height: $header-line-height;
     }

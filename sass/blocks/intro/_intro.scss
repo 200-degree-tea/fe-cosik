@@ -1,23 +1,31 @@
 .intro {
   height: 39rem;
   overflow: hidden;
-  background: url("../images/intro-background.png") center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url("../images/intro-welcome.png"),
+              url("../images/intro-sedonaa.png"),
+              url("../images/intro-beautiful.png"),
+              url("../images/intro-background.png");
+  background-repeat: no-repeat,
+                     no-repeat,
+                     no-repeat,
+                     no-repeat;
+  background-size: 156px 52px,
+                   282px 49px,
+                   180px 46px,
+                   cover;
+  background-position: 49% 27%,
+                       48% 51%,
+                       46% 74%,
+                       center;
 
-  &-images {
-    height: 92%;
-    background: url("../images/intro-sedona-small.png") center no-repeat;
-
-    &__header {
-      position: absolute;
-      height: 1px;
-      width: 1px;
-      margin: -1px;
-      padding: 0;
-      border: 0;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-    }
+  &__header {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
   }
 }

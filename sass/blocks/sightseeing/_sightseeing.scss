@@ -1,17 +1,15 @@
 .sightseeing {
+  text-align: center;
+  background-color: $color-prmiary;
+
   &__inner {
     display: block;
-    padding-bottom: 3.9rem;
-    padding-top: 4rem;
-    text-align: center;
-    background-color: $color-prmiary;
+    padding: 4rem 10%;
   }
 
   &__header {
     margin-top: 0;
     margin-bottom: 0.9rem;
-    padding-left: 10%;
-    padding-right: 10%;
     color: $color-white;
     line-height: $header-line-height;
     text-transform: uppercase;
@@ -28,8 +26,6 @@
   &__paragraph {
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 11%;
-    padding-right: 11%;
     color: $color-white;
     line-height: $paragraph-two-line-height;
     text-transform: uppercase;

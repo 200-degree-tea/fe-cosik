@@ -1,38 +1,38 @@
 .header-separator {
-  position: relative;
-  background-color: $color-prmiary;
-
-  &:before {
-    right: 50%;
-    border-right: 100rem solid transparent;
-    border-left: 100rem solid;
-  }
-
-  &:after {
-    left: 50%;
-    border-right: 100rem solid;
-    border-left: 100rem solid transparent;
-  }
-
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    z-index: 3;
-    border-bottom: 17rem solid $color-white;
-    transform: rotate(0.000001deg);
-  }
+  // position: relative;
+  // background-color: $color-prmiary;
+  //
+  // &:before {
+  //   right: 50%;
+  //   border-right: 100rem solid transparent;
+  //   border-left: 100rem solid;
+  // }
+  //
+  // &:after {
+  //   left: 50%;
+  //   border-right: 100rem solid;
+  //   border-left: 100rem solid transparent;
+  // }
+  //
+  // &:after,
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 50%;
+  //   z-index: 3;
+  //   border-bottom: 17rem solid $color-white;
+  //   transform: rotate(0.000001deg);
+  // }
   // Tried to do that with svg but it's not working well
   //--------
-  // &__svg {
-  //   position: absolute;
-  //   height: auto;
-  //   left: 0;
-  //   bottom: 0;
-  //   width: 100%;
-  //   fill: $color-white;
-  //   stroke: $color-white;
-  // }
+  &__svg {
+    position: absolute;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    fill: $color-white;
+    stroke: $color-white;
+  }
 }

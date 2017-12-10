@@ -1,48 +1,44 @@
 .find-hotel {
+  text-align: center;
+
   &__inner {
     position: relative;
-    padding-top: 2.7rem;
-    padding-bottom: 4.9rem;
-    text-align: center;
+    padding: 2.8rem 6.5% 4.9rem;
   }
 
   &__header {
     margin-top: 0;
     margin-bottom: 1.9rem;
-    padding: 0 15%;
     line-height: $header-line-height;
     text-transform: uppercase;
   }
 
   &__paragraph {
-    display: block;
     margin-bottom: 3.5rem;
-    padding: 0 9%;
-    // font-size: $font-paragraph;
     line-height: $paragraph-one-line-height;
     text-transform: uppercase;
   }
 
   &__btn {
-    position: relative;
-    padding: 1.7rem 5.6rem;
+    height: 5.9rem;
+    width: 100%;
     font-size: $font-size--hotel;
     color: $color-white;
     text-transform: uppercase;
     background-color: $color-prmiary;
     border: none;
-  }
 
-  &__btn:hover {
-    background: $color-hover-btn;
-  }
+    &:hover {
+      background-color: $color-hover-btn;
+    }
 
-  &__btn:active {
-    color: $font-active-btn;
-    background: $color-active-btn;
-  }
+    &:active {
+      color: $font-active-btn;
+      background-color: $color-active-btn;
+    }
 
-  &__btn:disabled {
-    background: $color-disabled-btn;
+    &:disabled {
+      background-color: $color-disabled-btn;
+    }
   }
 }
