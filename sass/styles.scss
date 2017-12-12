@@ -1,15 +1,32 @@
 // Reset for all browsers
 @import "normalize.scss";
-@import "variables/variables.scss";
-@import "typography/typo.scss";
-@import "blocks/page-header/_page-header.scss";
-
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+@import "variables/variables.scss";
+@import "typography/typo.scss";
+
+html{
+    font-family: $font-family;
+    font-size: $font-size--base;
+}
+
+@import "blocks/wrapper/_wrapper.scss";
+@import "blocks/page-header/_page-header.scss";
+@import "blocks/main-nav/main-nav.scss";
+@import "blocks/intro/_intro.scss";
+@import "blocks/preamble/_preamble.scss";
+@import "blocks/sightseeing/_sightseeing.scss";
+@import "blocks/image-wrapper/_image-wrapper.scss";
+@import "blocks/recommendations/_recommendations.scss";
+@import "blocks/find-hotel/_find-hotel.scss";
+@import "blocks/page-footer/_page-footer.scss";
+
+
 
 html{
     font-family: $font-family;
