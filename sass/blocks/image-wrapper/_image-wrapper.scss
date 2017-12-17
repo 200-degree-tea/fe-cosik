@@ -27,22 +27,4 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
   }
-
-  &--bottom {
-    background-image: url("../images/rocks-main-content.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  &__caption {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
 }

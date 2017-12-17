@@ -4,7 +4,6 @@
   "description": " Visit Sedona - tourist website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "stylelint": "stylelint \"sass/**/*.scss\" --syntax scss"
   },
   "pre-commit": [
