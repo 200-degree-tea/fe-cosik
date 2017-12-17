@@ -1,7 +1,8 @@
 
 // Font vaiables
 //----------
-$font-family: PT Sans, sans-serif;
+/* stylelint-disable-next-line value-keyword-case */
+$font-family: "PT Sans", Tahoma, Verdana, Segoe, sans-serif;
 $font-size--base:   10px !default;
 $font-size:         1.4rem;
 $line-height-base:  2.4rem;
@@ -29,26 +30,26 @@ $paragraph-three-line-height: 2.6rem;
 // Colours
 //----------
 $color-prmiary: #81b3d2;
-$color-white: #FFF;
+$color-white: #ffffff;
 
 // -- button
 $color-button: #81b3d2;
 $color-hover-btn: #669ec0;
 $color-active-btn: #5496bd;
 $color-disabled-btn: #e5e5e5;
-$nav-close-button: #FFF;
+$nav-close-button: #ffffff;
 
 // -- font
-$font-hover: #FFF;
-$font-active: #FFF;
+$font-hover: #ffffff;
+$font-active: #ffffff;
 $font-active-btn: rgba($font-active, 0.3);
-$font-text-color: #FFF;
+$font-text-color: #ffffff;
 
 // -- borders
 $bottom-border-color: #010101;
 $bottom-border: rgba($bottom-border-color, 0.2);
 
-$top-border-color: #FFF;
+$top-border-color: #ffffff;
 $top-border: rgba($top-border-color, 0.2);
 
 $gray-bcakground: darken($color-white, 7%);

@@ -2,21 +2,21 @@
   height: 39rem;
   overflow: hidden;
   background: url("../images/intro-welcome.png"),
-              url("../images/intro-sedonaa.png"),
-              url("../images/intro-beautiful.png"),
-              url("../images/intro-background.png");
+    url("../images/intro-sedonaa.png"),
+    url("../images/intro-beautiful.png"),
+    url("../images/intro-background.png");
   background-repeat: no-repeat,
-                     no-repeat,
-                     no-repeat,
-                     no-repeat;
+    no-repeat,
+    no-repeat,
+    no-repeat;
   background-size: 156px 52px,
-                   282px 49px,
-                   180px 46px,
-                   cover;
+    282px 49px,
+    180px 46px,
+    cover;
   background-position: 49% 27%,
-                       48% 51%,
-                       46% 74%,
-                       center;
+    48% 51%,
+    46% 74%,
+    center;
 
   &__header {
     position: absolute;

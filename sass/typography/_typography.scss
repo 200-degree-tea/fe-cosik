@@ -1,6 +1,5 @@
 // Typography
 // --------------------------------------------------
-
 // Headings
 //----------
 
@@ -22,16 +21,15 @@ h2 {
 h3 {
   font-size: $font-size--h3;
 }
-
 // Body text
 //----------
 
-P {
+p {
   font-size: $font-size;
 }
-
 // separators
 //----------
+
 hr {
   background-color: $gray-divider;
 }

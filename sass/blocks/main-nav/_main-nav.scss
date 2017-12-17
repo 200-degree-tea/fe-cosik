@@ -34,8 +34,6 @@
     &:first-child {
       border-top: 0;
     }
-
-    &:last-child {}
   }
 
   &__anchor:active {
@@ -47,8 +45,6 @@
     top: 1.2rem;
     right: 1.7rem;
     z-index: 2;
-
-    &--close {}
   }
 
   &__menu-bar {
