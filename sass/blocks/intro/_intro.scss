@@ -28,4 +28,16 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
   }
+
+  &--form-photo {
+    height: 16rem;
+    background: url("../images/intro-sedona-small-form-photo.png"),
+      url("../images/intro-background-form-photo.png");
+    background-repeat: no-repeat,
+      no-repeat;
+    background-size: auto,
+      auto;
+    background-position: 49% 44%,
+      50% 100%;
+  }
 }

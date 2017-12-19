@@ -13,14 +13,16 @@ $font-size--h3:     1.8rem;
 $font-size--nav:    1.8rem;
 $font-size--hotel:  2.1rem;
 $font-size--tag:    2.1rem;
+$font-size--label:  1.4rem;
+$font-size--input:  1.8rem;
 
 $font-paragraph:    1.4rem;
 $font-btn:          2.1rem;
-$font-label:        1.4rem;
-$font-input:        1.8rem;
 
 $font-bolded: 700;
 $header-line-height: 2.6rem;
+$label-line-height: 2.6rem;
+$input-line-height: 2.6rem;
 
 $paragraph-one-line-height: 2.4rem;
 $paragraph-two-line-height: 2.1rem;
@@ -39,6 +41,12 @@ $color-active-btn: #5496bd;
 $color-disabled-btn: #e5e5e5;
 $nav-close-button: #ffffff;
 
+// -- input-fields
+$color-input: #f2f2f2;
+$color-hover-input: #e5e5e5;
+$color-active-border: #e5e5e5;
+$color-active-input: #ffffff;
+
 // -- font
 $font-hover: #ffffff;
 $font-active: #ffffff;
@@ -54,3 +62,4 @@ $top-border: rgba($top-border-color, 0.2);
 
 $gray-bcakground: darken($color-white, 7%);
 $gray-divider: #d6d6d6;
+$form-divider: #e5e5e5;
