@@ -1,7 +1,8 @@
 .personal {
   &__inner {
     position: relative;
-    padding: 1.5rem 6.25%;
+    padding: 1.8rem 6.25% 0.8rem 6.25%;
+    text-transform: uppercase;
   }
 
   &__header {
@@ -9,20 +10,34 @@
     text-align: center;
   }
 
+  &__name,
+  &__second-name,
+  &__surname {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-top: 0.3rem;
+    padding-bottom: 1.6rem;
+  }
+
   &__label {
-    display: inline-block;
+    width: auto;
+    padding-top: 1.7rem;
+    padding-bottom: 1.5rem;
+    padding-right: 4%;
     font-size: $font-size--label;
     line-height: $label-line-height;
+    white-space: nowrap;
   }
 
   &__input {
     box-sizing: border-box;
     height: 5.9rem;
     width: 100%;
-    border: none;
     font-size: $font-size--input;
     line-height: $input-line-height;
     background-color: $color-input;
+    border: none;
     outline: none;
 
     &:hover {
