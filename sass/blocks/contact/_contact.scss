@@ -1,0 +1,61 @@
+.contact {
+  &__inner {
+    padding: 1.8rem 6.25% 2.8rem;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__tel {
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+  }
+
+  &__label {
+    display: block;
+    width: auto;
+    padding: 0 7.85% 0.6rem;
+    font-size: $font-size--label;
+    line-height: $label-line-height;
+    white-space: nowrap;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    height: 5.9rem;
+    width: 100%;
+    padding-bottom: 0.1rem;
+    font-size: $font-size--input;
+    line-height: $input-line-height;
+    background-color: $color-input;
+    border: none;
+    outline: none;
+
+    &:hover {
+      background-color: $color-hover-input;
+    }
+
+    &:focus {
+      background-color: $color-active-input;
+      border: 4px solid $color-active-border;
+    }
+  }
+
+  &__error {
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
+    padding-left: 7.85%;
+    line-height: 2.6rem;
+    color: $color-input--error;
+    text-transform: none;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    border-top: 1px solid $form-divider;
+  }
+}
