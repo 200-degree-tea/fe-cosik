@@ -5,7 +5,9 @@
 $font-family: "PT Sans", Tahoma, Verdana, Segoe, sans-serif;
 $font-size--base:   10px !default;
 $font-size:         1.4rem;
+
 $line-height-base:  2.4rem;
+$header-line-height: 2.6rem;
 
 $font-size--h1:     3rem;
 $font-size--h2:     2.1rem;
@@ -13,21 +15,15 @@ $font-size--h3:     1.8rem;
 $font-size--nav:    1.8rem;
 $font-size--hotel:  2.1rem;
 $font-size--tag:    2.1rem;
-$font-size--label:  1.4rem;
-$font-size--input:  1.8rem;
 
 $font-paragraph:    1.4rem;
 $font-btn:          2.1rem;
 
 $font-bolded: 700;
-$header-line-height: 2.6rem;
-$label-line-height: 2.6rem;
-$input-line-height: 2.6rem;
 
 $paragraph-one-line-height: 2.4rem;
 $paragraph-two-line-height: 2.1rem;
 $paragraph-three-line-height: 2.6rem;
-
 
 // Colours
 //----------
@@ -47,6 +43,7 @@ $color-hover-input: #e5e5e5;
 $color-active-border: #e5e5e5;
 $color-active-input: #ffffff;
 $color-input--error: #ff5c5c;
+$color-icon-background: #e6e6e6;
 
 // -- font
 $font-hover: #ffffff;

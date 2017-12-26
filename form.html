@@ -39,169 +39,178 @@
 
     <main class="main-content">
       <section class="preamble">
-        <div class="preamble__inner preamble__inner--form-photo">
-          <h3 class="preamble__header preamble__header--form-photo">Leave your feedback</h3>
-          <p class="preamble__paragraph preamble__paragraph--form-photo">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
+        <div class="preamble__inner preamble__inner--small">
+          <h3 class="preamble__header preamble__header--small">Leave your feedback</h3>
+          <p class="preamble__paragraph preamble__paragraph--high">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
         </div>
       </section>
 
       <form class="form" action="" method="get">
 
-        <section class="personal__section">
-          <div class="personal">
-            <div class="personal__inner">
-              <h3 class="personal__header">Introduce yourself:</h3>
-              <div class="personal__name">
-                <label class="personal__label" for="name">Name:</label>
-                <input class="personal__input" id="name" name="name" type="text">
+        <section class="form__section">
+          <div class="form__inner">
+            <!-- <div class="form__personal"> -->
+              <h3 class="form__header">Introduce yourself:</h3>
+              <div class="form__field form__field--flexgrid">
+                <label class="form__label form__label--stretch" for="name">Name:</label>
+                <input class="form__input" id="name" name="name" type="text">
               </div>
-              <div class="personal__surname">
-                <label class="personal__label" for="surname">Surname:</label>
-                <input class="personal__input" id="surname" name="surAname" type="text">
+              <div class="form__field form__field--flexgrid">
+                <label class="form__label form__label--stretch" for="surname">Surname:</label>
+                <input class="form__input" id="surname" name="surAname" type="text">
               </div>
-              <div class="personal__second-name">
-                <label class="personal__label" for="second-name">Middle name:</label>
-                <input class="personal__input" id="second-name" name="second-name" type="text">
+              <div class="form__field form__field--flexgrid">
+                <label class="form__label form__label--stretch" for="second-name">Middle name:</label>
+                <input class="form__input" id="second-name" name="second-name" type="text">
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </section>
 
-        <section class="contact__section">
-          <div class="contact">
-            <div class="contact__inner">
-              <h3 class="contact__header">Contact Information:</h3>
-              <div class="contact__tel">
-                <label class="contact__label" for="phone">Contact number:</label>
-                <input class="contact__input" name="phone" type="tel">
-                <p class="contact__error">Error, double-check the number</p>
+        <section class="form__section">
+          <div class="form__inner">
+            <div class="form__contact">
+              <h3 class="form__header">Contact Information:</h3>
+              <div class="form__field form__field--phone">
+                <label class="form__label form__label--block" for="phone">Contact number:</label>
+                <input class="form__input form__input--block" name="phone" type="tel">
+                <p class="form__error">Error, double-check the number</p>
               </div>
-              <div class="contact__email">
-                <label class="contact__label" for="email">Email:</label>
-                <input class="contact__input" id="email" name="email" type="email" required>
+              <div class="form__field form__field--envelope">
+                <label class="form__label form__label--block" for="email">Email:</label>
+                <input class="form__input form__input--block" id="email" name="email" type="email" required>
               </div>
             </div>
           </div>
         </section>
 
         <section class="form__section">
-          <div class="form__date">
-            <h2 class="form__section-header"></h2>
-                <div class="form__field-box">
-                  <label class="form__label-date" for="checkin">Checkin:</label>
-                  <input class="form__input-date" id="checkin" name="checkin" type="date">
-                </div>
-                <div class="form__field-box">
-                  <label class="form__label-number-tablet" for="stay">Days of stay<p class="form__required">*</p></label>
-                  <label class="form__label-number" for="stay">Length of stay<p class="form__required">*</p></label>
-                  <button class="form__button-inc">+</button>
-                  <input class="form__input-number" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
-                  <button class="form__button-dec">-</button>
-                </div>
-                <div class="form__field-box">
-                  <label class="form__label-date" for="checkout">Checkout:<p class="form__required">*</p></label>
-                  <input class="form__input-date" id="checkout" name="checkout" type="date" required>
-                </div>
+          <div class="form__inner">
+            <div class="form__dates">
+              <h3 class="form__header">Travel Dates:</h3>
+              <div class="form__field">
+                <label class="form__label form__label--aligne" for="checkin">Checkin:<p class="form__required--aligne">*</p></label>
+                <input class="form__input" id="checkin" name="checkin" type="date">
+              </div>
+              <div class="form__field form__field--middle">
+                <label class="form__label form__label--aligne" for="stay">Length of stay:<p class="form__required--aligne">*</p></label>
+                <button class="form__btn form__btn--dec">-</button>
+                <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
+                <button class="form__btn form__btn--inc">+</button>
+              </div>
+              <div class="form__field form__field--higher">
+                <label class="form__label form__label--aligne" for="checkout">Checkout:<p class="form__required--aligne">*</p></label>
+                <input class="form__input" id="checkout" name="checkout" type="date" required>
+              </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="form__section">
+        <section class="form__section">
+          <div class="form__inner">
             <div class="form__travellers">
-              <h2 class="form__section-header">Number of travellers</h2>
-            <div class="form__field-box">
-              <label class="form__label-number" for="stay">Number of travellers:<p class="form__required">*</p></label>
-              <button class="form__button-inc">+</button>
-              <input class="form__input-number" id="stay" min="1" step="1" max="10" plceholder="person" type="number" required>
-              <button class="form__button-dec">-</button>
-            </div>
-            <div class="form__person">
-              <div class="form__count"></div>
+              <h3 class="form__header">Number of travellers</h3>
               <div class="form__field-box">
-                <label class="form__label-text" for="person-surname">Surname:</label>
-                <input class="form__input-text" id="person-surname" name="person-surname" type="text" required>
+                <label class="form__label" for="stay">Number of travellers:<p class="form__required">*</p></label>
+                <button class="form__btn form__btn--increment">+</button>
+                <input class="form__input" id="stay" min="1" step="1" max="10" plceholder="person" type="number" required>
+                <button class="form__btn form__btn--decrement">-</button>
               </div>
-              <div class="form__field-box">
-                <label class="form__label-text" for="person-name">Name:</label>
-                <input class="form__input-text" id="person-name" name="name" type="text" required>
-              </div>
-              <div class="form__field-box">
-                <label class="form__label-text" for="person-second-name">Middle name:</label>
-                <input class="form__input-text" id="person-second-name" name="person-second-name" type="text" required>
+              <div class="form__person">
+                <div class="form__count"></div>
+                <div class="form__field-box">
+                  <label class="form__label" for="person-surname">Surname:</label>
+                  <input class="form__input" id="person-surname" name="person-surname" type="text" required>
+                </div>
+                <div class="form__field-box">
+                  <label class="form__label" for="person-name">Name:</label>
+                  <input class="form__input" id="person-name" name="name" type="text" required>
+                </div>
+                <div class="form__field-box">
+                  <label class="form__label" for="person-second-name">Middle name:</label>
+                  <input class="form__input" id="person-second-name" name="person-second-name" type="text" required>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section class="form__section">
-          <div class="form__radio">
-            <h2 class="form__section-header">Your General impression:</h2>
-            <div class="form__field-box">
-              <input class="form__input-radio" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
-              <label class="form__label-radio" for="answer-positive">Rather positive</label>
-            </div>
-            <div class="form__field-box">
-              <input class="form__input-radio" id="answer-negative" name="answer" type="radio" value="rather-negative" />
-              <label class="form__label-radio" for="answer-negative">Rather negative</label>
-            </div>
-            <div class="form__field-box">
-              <input class="form__input-radio" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
-              <label class="form__label-radio" for="answer-difficult">Difficult to answer</label>
-            </div>
-          </div>
-        </section>
-
-        <section class="form__section">
-          <div class="form__checkbox">
-            <h2 class="form__section-header">Sights visited:</h2>
-            <div class="form__field-box">
-              <input class="form__input-checkbox" id="bridge" name="bridge" type="checkbox" value="devils-bridge">
-              <label class="form__label-checkbox" for="bridge">The Devil's Bridge</label>
-            </div>
-            <div class="form__field-box">
-              <input class="form__input-checkbox" id="park" name="park" type="checkbox" value="slide-park">
-              <label class="form__label-checkbox" for="park">Slide-park</label>
-            </div>
-            <div class="form__field-box">
-              <input class="form__input-checkbox" id="mountain" name="mountain" type="checkbox" value="mountain-bell">
-              <label class="form__label-checkbox" for="mountain">Mountain-bell</label>
-            </div>
-            <div class="form__field-box">
-              <input class="form__input-checkbox" id="cliffs" name="cliffs" type="checkbox" value="red-cliffs">
-              <label class="form__label-checkbox" for="cliffs">Red cliffs</label>
+          <div class="form__inner">
+            <div class="form__radio">
+              <h3 class="form__header">Your General impression:</h3>
+              <div class="form__field-box">
+                <input class="form__input" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
+                <label class="form__label" for="answer-positive">Rather positive</label>
+              </div>
+              <div class="form__field-box">
+                <input class="form__input" id="answer-negative" name="answer" type="radio" value="rather-negative" />
+                <label class="form__label" for="answer-negative">Rather negative</label>
+              </div>
+              <div class="form__field-box">
+                <input class="form__input" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
+                <label class="form__label" for="answer-difficult">Difficult to answer</label>
+              </div>
             </div>
           </div>
         </section>
 
         <section class="form__section">
-          <div class="form__photos">
-            <h2 class="form__header">Upload photos</h2>
-            <div class="form__field-box">
-              <label class="form__label-file" for="file">Choose photos</label>
-              <input class="form__input-file" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
-            </div>
-            <div class="form__display-photos">
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+          <div class="form__inner">
+            <div class="form__checkbox">
+              <h3 class="form__header">Sights visited:</h3>
+              <div class="form__field-box">
+                <input class="form__input" id="bridge" name="bridge" type="checkbox" value="devils-bridge">
+                <label class="form__label" for="bridge">The Devil's Bridge</label>
+              </div>
+              <div class="form__field-box">
+                <input class="form__input" id="park" name="park" type="checkbox" value="slide-park">
+                <label class="form__label" for="park">Slide-park</label>
+              </div>
+              <div class="form__field-box">
+                <input class="form__input" id="mountain" name="mountain" type="checkbox" value="mountain-bell">
+                <label class="form__label" for="mountain">Mountain-bell</label>
+              </div>
+              <div class="form__field-box">
+                <input class="form__input" id="cliffs" name="cliffs" type="checkbox" value="red-cliffs">
+                <label class="form__label" for="cliffs">Red cliffs</label>
+              </div>
             </div>
           </div>
-          </setction>
+        </section>
 
-          <section class="form__section">
-            <div class="form__field-box">
-              <label class="form__label-textarea" for="feedback">Describe your emotions:</label>
-              <textarea class="form__input-textarea" id="feedback" name="feedback"></textarea>
-            </div>
-          </section>
+        <section class="form__section">
+          <div class="form__inner">
+            <div class="form__photos">
+              <h2 class="form__header">Upload photos</h2>
+              <div class="form__field-box">
+                <label class="form__label" for="file">Choose photos</label>
+                <input class="form__input" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
+              </div>
+              <div class="form__display-photos">
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              </div>
+            <!-- </div> -->
+          </div>
+        </section>
 
-          <section class="form__btn">
-            <p class="form__shaddow">* - required fields</p>
-            <button class="form__submit" type="submit">POST REVIEW</button>
-          </section>
+        <section class="form__section">
+          <div class="form__field-box">
+            <label class="form__label-textarea" for="feedback">Describe your emotions:</label>
+            <textarea class="form__input-textarea" id="feedback" name="feedback"></textarea>
+          </div>
+        </section>
+
+        <section class="form__btn">
+          <p class="form__shaddow">* - required fields</p>
+          <button class="form__submit" type="submit">POST REVIEW</button>
+        </section>
       </form>
     </main>
 
