@@ -49,132 +49,123 @@
 
         <section class="form__section">
           <div class="form__inner">
-            <!-- <div class="form__personal"> -->
-              <h3 class="form__header">Introduce yourself:</h3>
-              <div class="form__field form__field--flexgrid">
-                <label class="form__label form__label--stretch" for="name">Name:</label>
-                <input class="form__input" id="name" name="name" type="text">
-              </div>
-              <div class="form__field form__field--flexgrid">
-                <label class="form__label form__label--stretch" for="surname">Surname:</label>
-                <input class="form__input" id="surname" name="surAname" type="text">
-              </div>
-              <div class="form__field form__field--flexgrid">
-                <label class="form__label form__label--stretch" for="second-name">Middle name:</label>
-                <input class="form__input" id="second-name" name="second-name" type="text">
-              </div>
-            <!-- </div> -->
-          </div>
-        </section>
-
-        <section class="form__section">
-          <div class="form__inner">
-            <div class="form__contact">
-              <h3 class="form__header">Contact Information:</h3>
-              <div class="form__field form__field--phone">
-                <label class="form__label form__label--block" for="phone">Contact number:</label>
-                <input class="form__input form__input--block" name="phone" type="tel">
-                <p class="form__error">Error, double-check the number</p>
-              </div>
-              <div class="form__field form__field--envelope">
-                <label class="form__label form__label--block" for="email">Email:</label>
-                <input class="form__input form__input--block" id="email" name="email" type="email" required>
-              </div>
+            <h3 class="form__header">Introduce yourself:</h3>
+            <div class="form__field form__field--flexgrid">
+              <label class="form__label form__label--stretch" for="name">Name:</label>
+              <input class="form__input" id="name" name="name" type="text">
+            </div>
+            <div class="form__field form__field--flexgrid">
+              <label class="form__label form__label--stretch" for="surname">Surname:</label>
+              <input class="form__input" id="surname" name="surAname" type="text">
+            </div>
+            <div class="form__field form__field--flexgrid">
+              <label class="form__label form__label--stretch" for="second-name">Middle name:</label>
+              <input class="form__input" id="second-name" name="second-name" type="text">
             </div>
           </div>
         </section>
 
         <section class="form__section">
           <div class="form__inner">
-            <div class="form__dates">
-              <h3 class="form__header">Travel Dates:</h3>
-              <div class="form__field">
-                <label class="form__label form__label--aligne" for="checkin">Checkin:<p class="form__required--aligne">*</p></label>
-                <input class="form__input" id="checkin" name="checkin" type="date">
-              </div>
-              <div class="form__field form__field--middle">
-                <label class="form__label form__label--aligne" for="stay">Length of stay:<p class="form__required--aligne">*</p></label>
-                <button class="form__btn form__btn--dec">-</button>
-                <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
-                <button class="form__btn form__btn--inc">+</button>
-              </div>
-              <div class="form__field form__field--higher">
-                <label class="form__label form__label--aligne" for="checkout">Checkout:<p class="form__required--aligne">*</p></label>
-                <input class="form__input" id="checkout" name="checkout" type="date" required>
-              </div>
+            <h3 class="form__header">Contact Information:</h3>
+            <div class="form__field form__field--phone">
+              <label class="form__label form__label--block" for="phone">Contact number:</label>
+              <input class="form__input form__input--block" name="phone" type="tel">
+              <p class="form__error">Error, double-check the number</p>
+            </div>
+            <div class="form__field form__field--envelope">
+              <label class="form__label form__label--block" for="email">Email:</label>
+              <input class="form__input form__input--block" id="email" name="email" type="email" required>
             </div>
           </div>
         </section>
 
         <section class="form__section">
           <div class="form__inner">
-            <div class="form__travellers">
-              <h3 class="form__header">Number of travellers</h3>
-              <div class="form__field-box">
-                <label class="form__label" for="stay">Number of travellers:<p class="form__required">*</p></label>
-                <button class="form__btn form__btn--increment">+</button>
-                <input class="form__input" id="stay" min="1" step="1" max="10" plceholder="person" type="number" required>
-                <button class="form__btn form__btn--decrement">-</button>
-              </div>
-              <div class="form__person">
-                <div class="form__count"></div>
-                <div class="form__field-box">
-                  <label class="form__label" for="person-surname">Surname:</label>
-                  <input class="form__input" id="person-surname" name="person-surname" type="text" required>
-                </div>
-                <div class="form__field-box">
-                  <label class="form__label" for="person-name">Name:</label>
-                  <input class="form__input" id="person-name" name="name" type="text" required>
-                </div>
-                <div class="form__field-box">
-                  <label class="form__label" for="person-second-name">Middle name:</label>
-                  <input class="form__input" id="person-second-name" name="person-second-name" type="text" required>
-                </div>
-              </div>
+            <h3 class="form__header">Travel Dates:</h3>
+            <div class="form__field">
+              <label class="form__label form__label--aligne" for="checkin">Checkin:<p class="form__required form__required--aligne">*</p></label>
+              <input class="form__input" id="checkin" name="checkin" type="date">
+            </div>
+            <div class="form__field form__field--middle">
+              <label class="form__label form__label--aligne" for="stay">Length of stay:<p class="form__required form__required--aligne">*</p></label>
+              <button class="form__btn form__btn--dec">-</button>
+              <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
+              <button class="form__btn form__btn--inc">+</button>
+            </div>
+            <div class="form__field form__field--higher">
+              <label class="form__label form__label--aligne" for="checkout">Checkout:<p class="form__required form__required--aligne">*</p></label>
+              <input class="form__input" id="checkout" name="checkout" type="date" required>
             </div>
           </div>
         </section>
 
         <section class="form__section">
           <div class="form__inner">
-            <div class="form__radio">
-              <h3 class="form__header">Your General impression:</h3>
-              <div class="form__field-box">
-                <input class="form__input" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
-                <label class="form__label" for="answer-positive">Rather positive</label>
+            <h3 class="form__header">Number of travellers</h3>
+            <div class="form__field form__field--higher">
+              <label class="form__label form__label--aligne" for="stay">Number of travellers:<p class="form__required form__required--aligne">*</p></label>
+              <button class="form__btn form__btn--dec">-</button>
+              <input class="form__input form__input--small" id="stay" min="1" step="1" max="10" placeholder="person" type="number" required>
+              <button class="form__btn form__btn--inc">+</button>
+            </div>
+            <div class="form__count">
+              <p class="form__label-count">№</p>
+              <div class="form__input-count">1</div>
+            </div>
+            <div class="form__inner-narrow">
+              <div class="form__field form__field--flex-container">
+                <label class="form__label form__label--aligne" for="person-surname">Surname:<p class="form__required form__required--aligne">*</p></label>
+                <input class="form__input" id="person-surname" name="person-surname" type="text" required>
               </div>
-              <div class="form__field-box">
-                <input class="form__input" id="answer-negative" name="answer" type="radio" value="rather-negative" />
-                <label class="form__label" for="answer-negative">Rather negative</label>
+              <div class="form__field form__field--flex-container">
+                <label class="form__label form__label--aligne" for="person-name">Name:<p class="form__required form__required--aligne">*</p></label>
+                <input class="form__input" id="person-name" name="name" type="text" required>
               </div>
-              <div class="form__field-box">
-                <input class="form__input" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
-                <label class="form__label" for="answer-difficult">Difficult to answer</label>
+              <div class="form__field form__field--flex-container form__field--higher">
+                <label class="form__label form__label--aligne" for="person-second-name">Middle name:</label>
+                <input class="form__input" id="person-second-name" name="person-second-name" type="text" required>
               </div>
             </div>
           </div>
         </section>
 
         <section class="form__section">
+          <div class="form__inner form__inner--spacing-bottom">
+            <h3 class="form__header">Your General impression:</h3>
+            <div class="form__field form__field--radio-box">
+              <input class="form__input form__input--radio" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
+              <label class="form__label form__label--bolded" for="answer-positive">Rather positive</label>
+            </div>
+            <div class="form__field form__field--radio-box">
+              <input class="form__input form__input--radio" id="answer-negative" name="answer" type="radio" value="rather-negative" />
+              <label class="form__label form__label--bolded" for="answer-negative">Rather negative</label>
+            </div>
+            <div class="form__field form__field--radio-box">
+              <input class="form__input form__input--radio" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
+              <label class="form__label form__label--bolded" for="answer-difficult">Difficult to answer</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section">
           <div class="form__inner">
-            <div class="form__checkbox">
-              <h3 class="form__header">Sights visited:</h3>
-              <div class="form__field-box">
-                <input class="form__input" id="bridge" name="bridge" type="checkbox" value="devils-bridge">
-                <label class="form__label" for="bridge">The Devil's Bridge</label>
-              </div>
-              <div class="form__field-box">
-                <input class="form__input" id="park" name="park" type="checkbox" value="slide-park">
-                <label class="form__label" for="park">Slide-park</label>
-              </div>
-              <div class="form__field-box">
-                <input class="form__input" id="mountain" name="mountain" type="checkbox" value="mountain-bell">
-                <label class="form__label" for="mountain">Mountain-bell</label>
-              </div>
-              <div class="form__field-box">
-                <input class="form__input" id="cliffs" name="cliffs" type="checkbox" value="red-cliffs">
-                <label class="form__label" for="cliffs">Red cliffs</label>
-              </div>
+            <h3 class="form__header">Sights visited:</h3>
+            <div class="form__field form__field--checkbox">
+              <input class="form__checkbox" id="bridge" name="bridge" type="checkbox" value="devils-bridge">
+              <label class="form__label form__label--bolded" for="bridge">The Devil's Bridge</label>
+            </div>
+            <div class="form__field form__field--checkbox">
+              <input class="form__checkbox" id="park" name="park" type="checkbox" value="slide-park">
+              <label class="form__label form__label--bolded" for="park">Slide-park</label>
+            </div>
+            <div class="form__field form__field--checkbox">
+              <input class="form__checkbox" id="mountain" name="mountain" type="checkbox" value="mountain-bell">
+              <label class="form__label form__label--bolded" for="mountain">Mountain-bell</label>
+            </div>
+            <div class="form__field form__field--checkbox">
+              <input class="form__checkbox" id="cliffs" name="cliffs" type="checkbox" value="red-cliffs">
+              <label class="form__label form__label--bolded" for="cliffs">Red cliffs</label>
             </div>
           </div>
         </section>
@@ -196,8 +187,8 @@
                 <div class="form__grid"><img class="form__photo" src="" alt=""></div>
                 <div class="form__grid"><img class="form__photo" src="" alt=""></div>
               </div>
-            <!-- </div> -->
-          </div>
+              <!-- </div> -->
+            </div>
         </section>
 
         <section class="form__section">
@@ -233,7 +224,7 @@
       </div>
     </footer>
 
-  </div>
+    </div>
 </body>
 
 </html>

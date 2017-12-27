@@ -10,6 +10,10 @@
   &__inner {
     position: relative;
     padding: 1.8rem 6.25% 0.8rem;
+
+    &--spacing-bottom {
+      padding-bottom: 19px;
+    }
   }
 
   &__field {
@@ -66,6 +70,116 @@
     &--higher {
       padding-bottom: 2.3rem;
     }
+
+    &--narrow {
+      // float: right;
+      width: 100%;
+    }
+
+    &--flex-container {
+      padding-top: 0;
+      padding-bottom: 1rem;
+    }
+
+    &--radio-box {
+      // padding-top: 1px;
+      padding-bottom: 7px;
+
+      & input[type="radio"] {
+        opacity: 0;
+      }
+
+      & label {
+        position: relative;
+        display: inline-block;
+        padding-top: 20px;
+        padding-left: 28%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: 0;
+          height: 5.6rem;
+          width: 5.6rem;
+          background-color: $color-input;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 23px;
+          left: 18px;
+          height: 20px;
+          width: 20px;
+          background-color: $color-radio-mark;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+
+      & input[type="radio"] + label::after {
+        content: none;
+      }
+
+      & input[type="radio"]:checked + label::after {
+        content: "";
+      }
+    }
+
+    &--checkbox {
+      padding-bottom: 24px;
+
+      & input[type="checkbox"] {
+        opacity: 0;
+      }
+
+      & label {
+        position: relative;
+        display: inline-block;
+        padding-top: 14px;
+        padding-left: 22%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -18px;
+          height: 56px;
+          width: 56px;
+          background-color: $color-input;
+          border-radius: 10%;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 17px;
+          left: 2px;
+          display: inline-block;
+          height: 11px;
+          width: 17px;
+          border-left: 3px solid;
+          border-bottom: 3px solid;
+          border-color: $color-checkbox-ticked;
+          transform: rotate(-45deg);
+        }
+      }
+
+      & input[type="checkbox"] + label::after {
+        content: none;
+      }
+
+      & input[type="checkbox"]:checked + label::after {
+        content: "";
+      }
+    }
+  }
+
+  &__inner-narrow {
+    margin-left: 24%;
   }
 
   &__header {
@@ -95,9 +209,13 @@
     &--aligne {
       display: flex;
       padding-top: 0.2rem;
-      padding-bottom: 0.7rem;
+      padding-bottom: 0.6rem;
       white-space: nowrap;
       overflow-wrap: none;
+    }
+
+    &--bolded {
+      font-weight: $font-bolded;
     }
   }
 
@@ -128,6 +246,12 @@
     &--small {
       width: 51%;
       margin-left: 2%;
+      text-align: center;
+    }
+
+    &--radio {
+      position: absolute;
+      opacity: 1;
     }
   }
 
@@ -140,12 +264,13 @@
   }
 
   &__required {
+    color: $color-input--error;
+
     &--aligne {
       display: flex;
       margin-top: 0;
       margin-bottom: 0;
       margin-left: 7px;
-      color: $color-input--error;
     }
   }
 
@@ -157,7 +282,7 @@
     margin: 0;
     padding: 0;
     font-size: 50px;
-    color: #a4a4a4;
+    color: $color-input-font;
     background-color: $color-input;
     border: none;
     outline: none;
@@ -165,5 +290,35 @@
     &--inc {
       margin-left: 2%;
     }
+  }
+
+  &__count {
+    float: left;
+    margin-right: 3%;
+
+    &::after {
+      content: "";
+      clear: both;
+    }
+  }
+
+  &__label-count {
+    margin: 0;
+    padding-top: 3px;
+    margin-bottom: 7px;
+    font-size: $font-size;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__input-count {
+    display: inline-block;
+    height: 57px;
+    width: 58px;
+    font-size: $font-size--h3;
+    line-height: 57px;
+    color: $color-input-font;
+    text-align: center;
+    background-color: $color-input;
   }
 }
