@@ -48,7 +48,7 @@
       <form class="form" action="" method="get">
 
         <section class="form__section">
-          <div class="form__inner">
+          <div class="form__inner form__inner--lower">
             <h3 class="form__header">Introduce yourself:</h3>
             <div class="form__field form__field--flexgrid">
               <label class="form__label form__label--stretch" for="name">Name:</label>
@@ -69,13 +69,13 @@
           <div class="form__inner">
             <h3 class="form__header">Contact Information:</h3>
             <div class="form__field form__field--phone">
-              <label class="form__label form__label--block" for="phone">Contact number:</label>
-              <input class="form__input form__input--block" name="phone" type="tel">
-              <p class="form__error">Error, double-check the number</p>
+              <label class="form__label" for="phone">Contact number:</label>
+              <input class="form__input" name="phone" type="tel">
+              <span class="form__error">Error, double-check the number</span>
             </div>
             <div class="form__field form__field--envelope">
-              <label class="form__label form__label--block" for="email">Email:</label>
-              <input class="form__input form__input--block" id="email" name="email" type="email" required>
+              <label class="form__label" for="email">Email:</label>
+              <input class="form__input" id="email" name="email" type="email" required>
             </div>
           </div>
         </section>
@@ -84,17 +84,17 @@
           <div class="form__inner">
             <h3 class="form__header">Travel Dates:</h3>
             <div class="form__field">
-              <label class="form__label form__label--aligne" for="checkin">Checkin:<p class="form__required form__required--aligne">*</p></label>
+              <label class="form__label" for="checkin">Checkin:<span class="form__required form__required--aligne">*</span></label>
               <input class="form__input" id="checkin" name="checkin" type="date">
             </div>
-            <div class="form__field form__field--middle">
-              <label class="form__label form__label--aligne" for="stay">Length of stay:<p class="form__required form__required--aligne">*</p></label>
+            <div class="form__field">
+              <label class="form__label" for="stay">Length of stay:<span class="form__required form__required--aligne">*</span></label>
               <button class="form__btn form__btn--dec">-</button>
               <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
               <button class="form__btn form__btn--inc">+</button>
             </div>
-            <div class="form__field form__field--higher">
-              <label class="form__label form__label--aligne" for="checkout">Checkout:<p class="form__required form__required--aligne">*</p></label>
+            <div class="form__field">
+              <label class="form__label" for="checkout">Checkout:<span class="form__required form__required--aligne">*</span></label>
               <input class="form__input" id="checkout" name="checkout" type="date" required>
             </div>
           </div>
@@ -104,7 +104,7 @@
           <div class="form__inner">
             <h3 class="form__header">Number of travellers</h3>
             <div class="form__field form__field--higher">
-              <label class="form__label form__label--aligne" for="stay">Number of travellers:<p class="form__required form__required--aligne">*</p></label>
+              <label class="form__label" for="stay">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
               <button class="form__btn form__btn--dec">-</button>
               <input class="form__input form__input--small" id="stay" min="1" step="1" max="10" placeholder="person" type="number" required>
               <button class="form__btn form__btn--inc">+</button>
@@ -114,16 +114,16 @@
               <div class="form__input-count">1</div>
             </div>
             <div class="form__inner-narrow">
-              <div class="form__field form__field--flex-container">
-                <label class="form__label form__label--aligne" for="person-surname">Surname:<p class="form__required form__required--aligne">*</p></label>
+              <div class="form__field form__field--column">
+                <label class="form__label" for="person-surname">Surname:<span class="form__required form__required--aligne">*</span></label>
                 <input class="form__input" id="person-surname" name="person-surname" type="text" required>
               </div>
-              <div class="form__field form__field--flex-container">
-                <label class="form__label form__label--aligne" for="person-name">Name:<p class="form__required form__required--aligne">*</p></label>
+              <div class="form__field form__field--column">
+                <label class="form__label" for="person-name">Name:<span class="form__required form__required--aligne">*</span></label>
                 <input class="form__input" id="person-name" name="name" type="text" required>
               </div>
-              <div class="form__field form__field--flex-container form__field--higher">
-                <label class="form__label form__label--aligne" for="person-second-name">Middle name:</label>
+              <div class="form__field form__field--column">
+                <label class="form__label" for="person-second-name">Middle name:</label>
                 <input class="form__input" id="person-second-name" name="person-second-name" type="text" required>
               </div>
             </div>
@@ -131,18 +131,18 @@
         </section>
 
         <section class="form__section">
-          <div class="form__inner form__inner--spacing-bottom">
+          <div class="form__inner">
             <h3 class="form__header">Your General impression:</h3>
             <div class="form__field form__field--radio-box">
-              <input class="form__input form__input--radio" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
+              <input class="form__radio" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
               <label class="form__label form__label--bolded" for="answer-positive">Rather positive</label>
             </div>
             <div class="form__field form__field--radio-box">
-              <input class="form__input form__input--radio" id="answer-negative" name="answer" type="radio" value="rather-negative" />
+              <input class="form__radio" id="answer-negative" name="answer" type="radio" value="rather-negative" />
               <label class="form__label form__label--bolded" for="answer-negative">Rather negative</label>
             </div>
             <div class="form__field form__field--radio-box">
-              <input class="form__input form__input--radio" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
+              <input class="form__radio" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
               <label class="form__label form__label--bolded" for="answer-difficult">Difficult to answer</label>
             </div>
           </div>
@@ -172,35 +172,35 @@
 
         <section class="form__section">
           <div class="form__inner">
-            <div class="form__photos">
-              <h2 class="form__header">Upload photos</h2>
-              <div class="form__field-box">
-                <label class="form__label" for="file">Choose photos</label>
-                <input class="form__input" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
-              </div>
-              <div class="form__display-photos">
-                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-                <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              </div>
-              <!-- </div> -->
+            <h3 class="form__header">Upload photos</h3>
+            <div class="form__field">
+              <label class="form__label form__label--file" for="file">Choose photos</label>
+              <input class="form__input form__input--hidden" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
             </div>
-        </section>
-
-        <section class="form__section">
-          <div class="form__field-box">
-            <label class="form__label-textarea" for="feedback">Describe your emotions:</label>
-            <textarea class="form__input-textarea" id="feedback" name="feedback"></textarea>
+            <div class="form__display-photos">
+              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+            </div>
           </div>
         </section>
 
-        <section class="form__btn">
-          <p class="form__shaddow">* - required fields</p>
-          <button class="form__submit" type="submit">POST REVIEW</button>
+        <section class="form__section form__section--no-divider">
+          <div class="form__inner form__inner--lower">
+            <h3 class="form__header">Describe your emotions:</h3>
+            <div class="form__field">
+              <textarea class="form__input form__input--textarea" id="feedback" name="feedback"></textarea>
+            </div>
+          </div>
+        </section>
+        <section class="form__section form__section--no-divider">
+          <div class="form__inner form__inner--high">
+            <button class="form__submit" type="submit">POST REVIEW</button>
+          </div>
         </section>
       </form>
     </main>
@@ -208,23 +208,29 @@
     <footer class="page-footer">
       <div class="page-footer__inner">
         <div class="page-footer__tag">
-          <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
+          <h3 class="page-footer__tag-header">#VISITSEDONA</h3>
         </div>
 
-        <div class="page-footer__social">
-          <a href="" class="page-footer__social--tweeter">tweeter</a>
-          <a href="" class="page-footer__social--facebook">facebook</a>
-          <a href="" class="page-footer__social--youtube">youtube</a>
+        <div class="social">
+          <a href="#" class="social__icon social__icon--twitter">
+            <span class="social__text">twitter account</span>
+          </a>
+          <a href="#" class="social__icon social__icon--facebook">
+            <span class="social__text">facebook account</span>
+          </a>
+          <a href="#" class="social__icon social__icon--youtube">
+            <span class="social__text">youtube account</span>
+          </a>
         </div>
 
-        <div class="page-footer__developer">
-          <a href="" class="page-footer__logo">Developed by</a>
+        <div class="developer">
+          <p class="developer__paragraph">Developed by</p>
+          <a href="#" class="developer__logo"></a>
         </div>
-
       </div>
     </footer>
 
-    </div>
+  </div>
 </body>
 
 </html>

@@ -5,18 +5,35 @@
       display: block;
       border-top: 1px solid $form-divider;
     }
+
+    &--no-divider {
+      &::after {
+        content: none;
+      }
+    }
   }
 
   &__inner {
     position: relative;
-    padding: 1.8rem 6.25% 0.8rem;
+    padding: 1.8rem 6.25% 2.9rem;
 
-    &--spacing-bottom {
-      padding-bottom: 19px;
+    &--lower {
+      padding-bottom: 2.4rem;
+    }
+
+    &--narrow {
+      padding-left: 5.9%;
+      padding-right: 6.85;
+    }
+
+    &--high {
+      padding-bottom: 3.9rem;
+      padding-right: 7%;
     }
   }
 
   &__field {
+    position: relative;
     display: block;
     width: 100%;
 
@@ -25,16 +42,21 @@
       align-items: stretch;
       padding-top: 0.4rem;
       padding-bottom: 1.6rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
 
     &--phone {
       padding-top: 0;
+      width: 100%;
 
       &::before {
         content: "";
         position: absolute;
-        top: 9.7rem;
-        left: 24.3rem;
+        top: 3.6rem;
+        left: 22.3rem;
         height: 5.7rem;
         width: 5.8rem;
         background-color: $color-icon-background;
@@ -45,14 +67,11 @@
     }
 
     &--envelope {
-      padding-top: 1rem;
-      padding-bottom: 2.1rem;
-
       &::before {
         content: "";
         position: absolute;
-        top: 23rem;
-        left: 24.1rem;
+        top: 3.6rem;
+        left: 22.3rem;
         height: 5.7rem;
         width: 5.8rem;
         background-color: $color-icon-background;
@@ -62,28 +81,21 @@
       }
     }
 
-    &--middle {
-      padding-top: 1.2rem;
-      padding-bottom: 1rem;
-    }
-
-    &--higher {
-      padding-bottom: 2.3rem;
-    }
-
-    &--narrow {
-      // float: right;
-      width: 100%;
-    }
-
-    &--flex-container {
+    &--column {
       padding-top: 0;
       padding-bottom: 1rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
 
     &--radio-box {
-      // padding-top: 1px;
-      padding-bottom: 7px;
+      padding-bottom: 1.5rem;
+
+      &:last-child {
+        padding-bottom: 0.5rem;
+      }
 
       & input[type="radio"] {
         opacity: 0;
@@ -92,31 +104,30 @@
       & label {
         position: relative;
         display: inline-block;
-        padding-top: 20px;
-        padding-left: 28%;
+        padding-top: 2rem;
+        padding-left: 22%;
+        font-size: $font-size--h3;
 
         &::before {
           content: "";
           position: absolute;
-          top: 4px;
-          left: 0;
+          top: 0.4rem;
+          left: -1.6rem;
           height: 5.6rem;
           width: 5.6rem;
           background-color: $color-input;
           border-radius: 50%;
-          cursor: pointer;
         }
 
         &::after {
           content: "";
           position: absolute;
-          top: 23px;
-          left: 18px;
-          height: 20px;
-          width: 20px;
+          top: 2.3rem;
+          left: 0.2rem;
+          height: 2rem;
+          width: 2rem;
           background-color: $color-radio-mark;
           border-radius: 50%;
-          cursor: pointer;
         }
       }
 
@@ -127,10 +138,18 @@
       & input[type="radio"]:checked + label::after {
         content: "";
       }
+
+      & input[type="radio"]:hover + label::before {
+        background-color: $color-disabled-btn;
+      }
+
+      & input[type="radio"]:active + label::before {
+        background-color: $color-radio-down;
+      }
     }
 
     &--checkbox {
-      padding-bottom: 24px;
+      padding-bottom: 3.2rem;
 
       & input[type="checkbox"] {
         opacity: 0;
@@ -139,30 +158,35 @@
       & label {
         position: relative;
         display: inline-block;
-        padding-top: 14px;
+        padding-top: 1.4rem;
         padding-left: 22%;
+        font-size: $font-size--h3;
 
         &::before {
           content: "";
           position: absolute;
           top: 0;
-          left: -18px;
-          height: 56px;
-          width: 56px;
+          left: -1.6rem;
+          height: 5.6rem;
+          width: 5.6rem;
           background-color: $color-input;
           border-radius: 10%;
+
+          &:hover {
+            background-color: $color-disabled-btn;
+          }
         }
 
         &::after {
           content: "";
           position: absolute;
-          top: 17px;
-          left: 2px;
+          top: 1.7rem;
+          left: 0.2rem;
           display: inline-block;
-          height: 11px;
-          width: 17px;
-          border-left: 3px solid;
-          border-bottom: 3px solid;
+          height: 1.1rem;
+          width: 1.7rem;
+          border-left: 0.3px solid;
+          border-bottom: 0.3px solid;
           border-color: $color-checkbox-ticked;
           transform: rotate(-45deg);
         }
@@ -174,6 +198,14 @@
 
       & input[type="checkbox"]:checked + label::after {
         content: "";
+      }
+
+      & input[type="checkbox"]:hover + label::before {
+        background-color: $color-disabled-btn;
+      }
+
+      & input[type="checkbox"]:active + label::before {
+        background-color: $color-radio-down;
       }
     }
   }
@@ -189,8 +221,9 @@
   }
 
   &__label {
+    display: block;
     width: auto;
-    padding: 1.6rem 4% 1.6rem 7.85%;
+    padding: 0.2rem 4% 0.8rem 7.85%;
     font-size: $font-size;
     line-height: $header-line-height;
     white-space: nowrap;
@@ -200,28 +233,36 @@
       padding: 1.6rem 7.85% 1.6rem 0;
     }
 
-    &--block {
-      display: block;
-      padding-top: 0.2rem;
-      padding-bottom: 0.7rem;
-    }
-
-    &--aligne {
-      display: flex;
-      padding-top: 0.2rem;
-      padding-bottom: 0.6rem;
-      white-space: nowrap;
-      overflow-wrap: none;
-    }
-
     &--bolded {
       font-weight: $font-bolded;
+      text-transform: capitalize;
+    }
+
+    &--file {
+      width: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: $font-btn;
+      line-height: $header-line-height;
+      color: $color-input-font;
+      text-align: center;
+      background-color: $color-input;
+
+      &:hover {
+        background-color: $color-disabled-btn;
+      }
+
+      &:active {
+        background-color: $color-radio-down;
+      }
     }
   }
 
   &__input {
-    height: 4.7rem;
-    width: 97%;
+    box-sizing: border-box;
+    top: -0.1rem;
+    height: 5.7rem;
+    width: 100%;
     font-size: $font-size--h3;
     line-height: $header-line-height;
     background-color: $color-input;
@@ -238,50 +279,54 @@
       border-color: $color-active-border;
     }
 
-    &--block {
-      display: block;
-      width: 77%;
-    }
-
     &--small {
+      display: inline-block;
       width: 51%;
+      vertical-align: middle;
       margin-left: 2%;
       text-align: center;
     }
 
-    &--radio {
-      position: absolute;
-      opacity: 1;
+    &--hidden {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      line-height: 0;
+      border: none;
+    }
+
+    &--textarea {
+      display: inline-block;
+      min-height: 15.8rem;
+      width: 100%;
+      resize: none;
     }
   }
 
   &__error {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.8rem;
     padding-left: 7%;
+    font-size: $font-size;
     line-height: 2.6rem;
     color: $color-input--error;
   }
 
   &__required {
     color: $color-input--error;
-
-    &--aligne {
-      display: flex;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 7px;
-    }
+    margin-left: 0.7rem;
   }
 
   &__btn {
     position: relative;
-    top: 12px;
-    height: 57px;
-    width: 20%;
+    display: inline-block;
+    height: 5.7rem;
+    width: 21.5%;
+    vertical-align: middle;
     margin: 0;
     padding: 0;
-    font-size: 50px;
+    font-size: 5rem;
     color: $color-input-font;
     background-color: $color-input;
     border: none;
@@ -304,8 +349,8 @@
 
   &__label-count {
     margin: 0;
-    padding-top: 3px;
-    margin-bottom: 7px;
+    padding-top: 0.3rem;
+    margin-bottom: 0.7rem;
     font-size: $font-size;
     text-transform: uppercase;
     text-align: center;
@@ -313,12 +358,31 @@
 
   &__input-count {
     display: inline-block;
-    height: 57px;
-    width: 58px;
+    height: 5.7rem;
+    width: 5.8rem;
     font-size: $font-size--h3;
-    line-height: 57px;
+    line-height: 5.7rem;
     color: $color-input-font;
     text-align: center;
     background-color: $color-input;
+  }
+
+  &__submit {
+    height: 5.8rem;
+    width: 100%;
+    font-size: $font-size--hotel;
+    color: $color-white;
+    text-transform: uppercase;
+    background-color: $color-prmiary;
+    border: none;
+
+    &:hover {
+      background-color: $color-hover-btn;
+    }
+
+    &:active {
+      color: $font-active-btn;
+      background-color: $color-active-btn;
+    }
   }
 }

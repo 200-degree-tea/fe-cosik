@@ -19,48 +19,49 @@ $font-size--tag:    2.1rem;
 $font-paragraph:    1.4rem;
 $font-btn:          2.1rem;
 
-$font-bolded: 700;
+$font-bolded:       700;
 
-$paragraph-one-line-height: 2.4rem;
-$paragraph-two-line-height: 2.1rem;
-$paragraph-three-line-height: 2.6rem;
+$paragraph-one-line-height:       2.4rem;
+$paragraph-two-line-height:       2.1rem;
+$paragraph-three-line-height:     2.6rem;
 
 // Colours
 //----------
-$color-prmiary: #81b3d2;
-$color-white: #ffffff;
+$color-prmiary:     #81b3d2;
+$color-white:       #ffffff;
 
 // -- button
-$color-button: #81b3d2;
-$color-hover-btn: #669ec0;
-$color-active-btn: #5496bd;
-$color-disabled-btn: #e5e5e5;
-$nav-close-button: #ffffff;
+$color-button:        #81b3d2;
+$color-hover-btn:     #669ec0;
+$color-active-btn:    #5496bd;
+$color-disabled-btn:  #e5e5e5;
+$nav-close-button:    #ffffff;
 
 // -- input-fields
-$color-input: #f2f2f2;
-$color-hover-input: #e5e5e5;
-$color-active-border: #e5e5e5;
-$color-active-input: #ffffff;
-$color-input--error: #ff5c5c;
+$color-input:           #f2f2f2;
+$color-hover-input:     #e5e5e5;
+$color-active-border:   #e5e5e5;
+$color-active-input:    #ffffff;
+$color-input--error:    #ff5c5c;
 $color-icon-background: #e6e6e6;
-$color-input-font: #aaaaaa;
-$color-radio-mark: #333333;
+$color-input-font:      #aaaaaa;
+$color-radio-mark:      #333333;
 $color-checkbox-ticked: #231f20;
+$color-radio-down:      #d5d5d5;
 
 // -- font
-$font-hover: #ffffff;
-$font-active: #ffffff;
+$font-hover:      #ffffff;
+$font-active:     #ffffff;
 $font-active-btn: rgba($font-active, 0.3);
 $font-text-color: #ffffff;
 
 // -- borders
-$bottom-border-color: #010101;
-$bottom-border: rgba($bottom-border-color, 0.2);
+$bottom-border-color:   #010101;
+$bottom-border:         rgba($bottom-border-color, 0.2);
 
-$top-border-color: #ffffff;
-$top-border: rgba($top-border-color, 0.2);
+$top-border-color:    #ffffff;
+$top-border:          rgba($top-border-color, 0.2);
 
-$gray-bcakground: darken($color-white, 7%);
-$gray-divider: #d6d6d6;
-$form-divider: #e5e5e5;
+$gray-bcakground:     darken($color-white, 7%);
+$gray-divider:        #d6d6d6;
+$form-divider:        #e5e5e5;
