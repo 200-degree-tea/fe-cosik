@@ -8,6 +8,10 @@
     &--small {
       padding: 3.8rem 7% 1.7rem;
     }
+
+    &--high {
+      padding: 3.8rem 7% 2.7rem;
+    }
   }
 
   &__header {
@@ -25,6 +29,7 @@
   &__paragraph {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: $font-size;
     line-height: $header-line-height;
     text-transform: uppercase;
 

@@ -1,0 +1,93 @@
+.gallery {
+  &__item {
+    &::after {
+      content: "";
+      display: block;
+      border-top: 1px solid $form-divider;
+    }
+  }
+
+  &__inner {
+    padding: 23px 5.75% 17px 6.25%;
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    height: 280px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--main {
+      background-image: url("../img/photo-sunset-mobile@1x.jpg");
+    }
+
+    &--vegetation {
+      background-image: url("../img/photo-cactus-mobile@1x.jpg");
+    }
+
+    &--road {
+      background-image: url("../img/photo-roads-mobile@1x.jpg");
+    }
+
+    &--bridge {
+      background-image: url("../img/photo-bridge-mobile@1x.jpg");
+    }
+  }
+
+  &__caption {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55px;
+      left: 1px;
+      height: 20px;
+      width: 20px;
+      background-image: url("../img/icon-like.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  // &__video-intro {
+  //   padding-left: 12.8%;
+  //   padding-right: 12.8%;
+  // }
+
+  &__title {
+    margin-bottom: 0;
+    font-size: $font-size;
+    line-height: $line-height-base;
+    text-transform: uppercase;
+  }
+
+  &__author {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: $font-size;
+    line-height: $line-height-base;
+  }
+
+  &__likes {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 37px;
+  }
+
+  // &__header-video {
+  //   font-size: $font-size--h3;
+  //   line-height: $header-line-height;
+  //   text-align: center;
+  //   text-transform: uppercase;
+  // }
+
+  // &__paragraph-video {
+  //   font-size: $font-size;
+  //   line-height: $line-height-base;
+  //   text-align: center;
+  //   text-transform: uppercase;
+  // }
+}

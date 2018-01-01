@@ -1,111 +1,145 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='UTF-8'>
-    <meta name='description'>
-    <title>Sedona Photos</title>
-    <link rel="stylesheet" href="">
-  </head>
 
-  <body>
-    <div class="wrapper"><!-- main page -->
-      <header class="page-header">
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="index.html">Home</a></li>
-            <li class="main-nav__item main-nav__item--active"><a href="photos.html">Photos and videos</a></li>
-            <li class="main-nav__item"><a href="form.html">Feedback Form</a></li>
-            <li class="main-nav__item">HTML Academy</li>
-          </ul>
-          <button class="main-nav__toggle main-nav__toggle--close"></button>
-          <a class="main-nav__link" href="index.html"><img src="" class="main-nav__logo" alt="Sedona logo"></a>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Front end development project">
+  <title>Sedona Photos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 
-        <div calss="intro">
-          <ul class="intro-list">
-            <li class="intro-list__item intro-list__item--top">Welcome to the gorgeous</li>
-            <li class="intro-list__item intro-list__item--middle">Sedona</li>
-            <li class="intro-list__item intro-list__item--bottom">"Because the Grand Canyon sucks!"</li>
-          </ul>
+<body>
+  <div class="wrapper">
+    <!-- main page -->
+    <header class="page-header">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active"><a href="index.html">Home</a></li>
+          <li class="main-nav__item"><a href="photos.html">Photos and videos</a></li>
+          <li class="main-nav__item"><a href="form.html">Feedback Form</a></li>
+          <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+        </ul>
+        <div class="main-nav__toggle main-nav__toggle--close">
+          <div class="main-nav__menu-bar main-nav__menu-bar--top"></div>
+          <div class="main-nav__menu-bar main-nav__menu-bar--middle"></div>
+          <div class="main-nav__menu-bar main-nav__menu-bar--bottom"></div>
         </div>
-      </header>
+        <a class="main-nav__link" href="index.html"><img class="main-nav__logo" src="images/logo.png"  alt="Sedona logo"></a>
+      </nav>
 
-      <main class="main-content">
-        <section class="preamble">
-          <div class="preamble__inner">
-            <h2 class="preamble__header">Photo and video</h2>
-            <p class="preamble__paragraph">Can't decide to travel because of the right time? We hope photos will help you forget about politics and economics.</p>
+      <div class="intro intro--smaller header-separator">
+        <h3 class="intro__header">Welcome to gorgeous Sedona. "Because the Grand Canyon sucks!"</h3>
+        <svg class="header-separator__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="50" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <polygon points="0 2, 50 10, 100 2, 100 500, 0 500"></polygon>
+            </svg>
+      </div>
+    </header>
+
+
+    <main class="main-content">
+      <section class="preamble">
+        <div class="preamble__inner preamble__inner--high">
+          <h2 class="preamble__header preamble__header--small">Photo and video</h2>
+          <p class="preamble__paragraph preamble__paragraph--high">Can't decide to travel because of the right time? We hope photos will help you forget about politics and economics.</p>
+        </div>
+      </section>
+
+      <div class="gallery">
+        <section class="gallery__item">
+          <div class="gallery__inner">
+            <a class="gallery__image gallery__image--main"></a>
+            <div class="gallery__caption">
+              <h3 class="gallery__title">Outback</h3>
+              <p class="gallery__author">Photo by: Boris</p>
+              <p class="gallery__likes gallery__likes--icon">1350</p>
+            </div>
           </div>
         </section>
 
-        <div class="gallery">
+        <section class="gallery__collection">
           <section class="gallery__item">
-            <a class="gallery__image galley__image--main"></a>
             <div class="gallery__inner">
-              <h3 class="gallery__title">Outback</h3>
-              <p class="gallery__author">Photo by: Boris</p>
-              <p class="gallery__likes">1350</p>
-            </div>
-          </section>
-
-          <section class="gallery__collection">
-            <section class="gallery__item">
-              <a class="gallery__image galley__image--vegetation"></a>
-              <div class="gallery__inner">
+              <a class="gallery__image gallery__image--vegetation"></a>
+              <div class="gallery__caption">
                 <h3 class="gallery__title">Local vegetation</h3>
                 <p class="gallery__author">Photo by: Sergey</p>
-                <p class="gallery__likes">143</p>
+                <p class="gallery__likes gallery__likes--icon">143</p>
               </div>
-            </section>
-
-            <section class="gallery__item">
-              <a class="gallery__image galley__image--road"></a>
-              <div class="gallery__inner">
-                <h3 class="gallery__title">Road north</h3>
-                <p class="gallery__author">Photo by: Peter</p>
-                <p class="gallery__likes">96</p>
-              </div>
-            </section>
-
-            <section class="gallery__item">
-              <a class="gallery__image galley__image--bridge"></a>
-              <div class="gallery__inner">
-                <h3 class="gallery__title">The Devil's Bridge</h3>
-                <p class="gallery__author">Photo by: Anton</p>
-                <p class="gallery__likes">254</p>
-              </div>
-            </section>
-          </section>
-
-          <section class="gallery__video">
-            <h2 class="gallery__header-video">Still not convinced?</h2>
-            <p class="gallery__paragraph-video">See the video presentation and more for tickets, until they have risen in price again!</p>
-            <div class="video__inner">
-              <video calss="gallery__video-source" src="" controls preload="auto" poster="">
-                <p class="gallery__vide--error">Your browser doesn't support HTML5 video tag.</p>
-              </video>
             </div>
           </section>
+
+          <section class="gallery__item">
+            <div class="gallery__inner">
+              <a class="gallery__image gallery__image--road"></a>
+              <div class="gallery__caption">
+                <h3 class="gallery__title">Road north</h3>
+                <p class="gallery__author">Photo by: Peter</p>
+                <p class="gallery__likes gallery__likes--icon">96</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="gallery__item">
+            <div class="gallery__inner">
+              <a class="gallery__image gallery__image--bridge"></a>
+              <div class="gallery__caption">
+                <h3 class="gallery__title">The Devil's Bridge</h3>
+                <p class="gallery__author">Photo by: Anton</p>
+                <p class="gallery__likes gallery__likes--icon">254</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="video">
+          <div class="video__intro">
+            <h3 class="video__header">Still not convinced?</h3>
+            <p class="video__paragraph">See the video presentation and more for tickets, until they have risen in price again!</p>
+          </div>
+          <div class="video__inner">
+            <video calss="video__source" src="" control=false preload="auto" poster="img/video-mobile@1x.jpg">
+              <source>
+              <p class="video__error">Your browser doesn't support HTML5 video tag.</p>
+            </video>
+            <div class="video__control">
+              <div class="video__bar"></div>
+              <div class="video__btn-control">
+                <div class="video__icon video__icon--play" title="Play/Pause video"></div>
+                <div class="video__icon video__icon--subtitles"></div>
+                <div class="video__icon video__icon--full-src" title="Full screen"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__tag">
+          <h3 class="page-footer__tag-header">#VISITSEDONA</h3>
         </div>
-      </main>
 
-      <footer class="page-footer">
-        <div class="page-footer__inner">
-          <div class="page-footer__tag">
-            <h2 class="page-footer__tag-header">#VISITSEDONA</h2>
-          </div>
-
-          <div class="page-footer__social">
-            <a href="" class="page-footer__social--tweeter">tweeter</a>
-            <a href="" class="page-footer__social--facebook">facebook</a>
-            <a href="" class="page-footer__social--youtube">youtube</a>
-          </div>
-
-          <div class="page-footer__developer">
-            <a href="" class="page-footer__logo">Developed by</a>
-          </div>
+        <div class="social">
+          <a href="#" class="social__icon social__icon--twitter">
+            <span class="social__text">twitter account</span>
+          </a>
+          <a href="#" class="social__icon social__icon--facebook">
+            <span class="social__text">facebook account</span>
+          </a>
+          <a href="#" class="social__icon social__icon--youtube">
+            <span class="social__text">youtube account</span>
+          </a>
         </div>
-      </footer>
-    </div><!-- main page ends-->
-  </body>
+
+        <div class="developer">
+          <p class="developer__paragraph">Developed by</p>
+          <a href="#" class="developer__logo"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- main page ends-->
+</body>
 </html>

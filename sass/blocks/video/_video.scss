@@ -1,0 +1,79 @@
+.video {
+  &__intro {
+    padding: 15px 12.8% 10px;
+  }
+
+  &__header {
+    padding-bottom: 8px;
+    font-size: $font-size--h3;
+    line-height: $header-line-height;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    margin-top: 0;
+    font-size: $font-size;
+    line-height: $line-height-base;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__inner {
+    height: 308px;
+    padding-top: 10px;
+  }
+
+  &__control {
+    position: relative;
+    top: -53px;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+  }
+
+  &__bar {
+    position: relative;
+    height: 53px;
+    width: 100%;
+    background-color: rgba($bottom-border-color, 0.5);
+  }
+
+  &__btn-control {
+    position: relative;
+    top: -8px;
+    height: 66px;
+    background-color: $color-input;
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    &--play {
+      top: 33%;
+      left: 9%;
+      height: 20px;
+      width: 16px;
+      background-image: url("../img/icon-video-replay.svg");
+    }
+
+    &--subtitles {
+      top: 35%;
+      left: 56%;
+      height: 20px;
+      width: 32px;
+      background-image: url("../img/icon-video-subtitles.svg");
+    }
+
+    &--full-src {
+      top: 35%;
+      left: 66%;
+      height: 20px;
+      width: 20px;
+      background-image: url("../img/icon-video-fullscreen.svg");
+    }
+  }
+}
