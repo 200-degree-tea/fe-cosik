@@ -36,6 +36,17 @@
     height: 53px;
     width: 100%;
     background-color: rgba($bottom-border-color, 0.5);
+
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      top: 41%;
+      left: 23px;
+      width: 23.5rem;
+      height: 0.3rem;
+      background-color: $top-border;
+    }
   }
 
   &__btn-control {
