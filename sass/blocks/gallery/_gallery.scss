@@ -51,12 +51,10 @@
       background-position: center;
     }
   }
-
   // &__video-intro {
   //   padding-left: 12.8%;
   //   padding-right: 12.8%;
   // }
-
   &__title {
     margin-bottom: 0;
     font-size: $font-size;
@@ -76,18 +74,20 @@
     margin-bottom: 0;
     margin-left: 37px;
   }
-
   // &__header-video {
   //   font-size: $font-size--h3;
   //   line-height: $header-line-height;
   //   text-align: center;
   //   text-transform: uppercase;
   // }
-
   // &__paragraph-video {
   //   font-size: $font-size;
   //   line-height: $line-height-base;
   //   text-align: center;
   //   text-transform: uppercase;
   // }
+  &__pic {
+    height: auto;
+    width: 100%;
+  }
 }
