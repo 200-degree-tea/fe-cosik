@@ -15,20 +15,19 @@
 
   &__inner {
     position: relative;
-    padding: 1.8rem 6.25% 2.9rem;
+    padding: 1.8rem 6.25% 2.8rem;
 
-    &--lower {
-      padding-bottom: 2.4rem;
-    }
-
-    &--narrow {
-      padding-left: 5.9%;
-      padding-right: 6.85;
+    &--smaller {
+      padding-bottom: 0.4rem;
     }
 
     &--high {
-      padding-bottom: 3.9rem;
+      padding-bottom: 3.7rem;
       padding-right: 7%;
+    }
+
+    &--lower {
+      padding-bottom: 2.4rem;
     }
   }
 
@@ -39,9 +38,8 @@
 
     &--flexgrid {
       display: flex;
-      align-items: stretch;
-      padding-top: 0.4rem;
-      padding-bottom: 1.6rem;
+      align-items: center;
+      margin-bottom: 2.1rem;
 
       &:last-child {
         padding-bottom: 0;
@@ -49,14 +47,11 @@
     }
 
     &--phone {
-      padding-top: 0;
-      width: 100%;
-
       &::before {
         content: "";
         position: absolute;
-        top: 3.6rem;
-        left: 22.3rem;
+        top: 3.4rem;
+        right: 0;
         height: 5.7rem;
         width: 5.8rem;
         background-color: $color-icon-background;
@@ -70,8 +65,8 @@
       &::before {
         content: "";
         position: absolute;
-        top: 3.6rem;
-        left: 22.3rem;
+        top: 3.4rem;
+        right: 0;
         height: 5.7rem;
         width: 5.8rem;
         background-color: $color-icon-background;
@@ -91,10 +86,10 @@
     }
 
     &--radio-box {
-      padding-bottom: 1.5rem;
+      padding-bottom: 1.8rem;
 
       &:last-child {
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.7rem;
       }
 
       & input[type="radio"] {
@@ -104,8 +99,8 @@
       & label {
         position: relative;
         display: inline-block;
-        padding-top: 2rem;
-        padding-left: 22%;
+        padding-top: 1.7rem;
+        padding-left: 6.2rem;
         font-size: $font-size--h3;
 
         &::before {
@@ -122,7 +117,7 @@
         &::after {
           content: "";
           position: absolute;
-          top: 2.3rem;
+          top: 2.1rem;
           left: 0.2rem;
           height: 2rem;
           width: 2rem;
@@ -149,7 +144,7 @@
     }
 
     &--checkbox {
-      padding-bottom: 3.2rem;
+      padding-bottom: 3.5rem;
 
       & input[type="checkbox"] {
         opacity: 0;
@@ -158,14 +153,14 @@
       & label {
         position: relative;
         display: inline-block;
-        padding-top: 1.4rem;
-        padding-left: 22%;
+        padding-top: 1.1rem;
+        padding-left: 6.2rem;
         font-size: $font-size--h3;
 
         &::before {
           content: "";
           position: absolute;
-          top: 0;
+          top: -2px;
           left: -1.6rem;
           height: 5.6rem;
           width: 5.6rem;
@@ -210,27 +205,72 @@
     }
   }
 
-  &__inner-narrow {
-    margin-left: 24%;
+  &__number {
+    &--flexgrid {
+      display: flex;
+    }
+  }
+
+  &__flex-block {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+  }
+
+  &__column {
+    &--sm {
+      width: 5.7rem;
+      margin-right: 10px;
+    }
+
+    &--bg {
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+  }
+
+  &__label-count {
+    margin: 0;
+    padding-top: 0.3rem;
+    margin-bottom: 0.7rem;
+    font-size: $font-size;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__input-count {
+    font-size: $font-size--h3;
+    line-height: 5.7rem;
+    color: $color-input-font;
+    text-align: center;
+    background-color: $color-input;
   }
 
   &__header {
     margin-top: 0;
+    margin-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
+
+    &--space-bottom {
+      margin-bottom: 22px;
+    }
   }
 
   &__label {
     display: block;
     width: auto;
-    padding: 0.2rem 4% 0.8rem 7.85%;
+    padding-right: 2.1rem;
+    padding-left: 2.1rem;
+    padding-bottom: 0.8rem;
     font-size: $font-size;
     line-height: $header-line-height;
     white-space: nowrap;
     text-transform: uppercase;
 
     &--stretch {
-      padding: 1.6rem 7.85% 1.6rem 0;
+      padding: 0;
+      margin-right: 2.3rem;
     }
 
     &--bolded {
@@ -280,10 +320,10 @@
     }
 
     &--small {
-      display: inline-block;
-      width: 51%;
+      flex-grow: 1;
+      width: auto;
       vertical-align: middle;
-      margin-left: 2%;
+      margin-left: 8px;
       text-align: center;
     }
 
@@ -306,8 +346,8 @@
   &__error {
     display: block;
     padding-top: 0.5rem;
-    padding-bottom: 0.8rem;
-    padding-left: 7%;
+    padding-bottom: 1.1rem;
+    padding-left: 2rem;
     font-size: $font-size;
     line-height: 2.6rem;
     color: $color-input--error;
@@ -319,52 +359,25 @@
   }
 
   &__btn {
-    position: relative;
-    display: inline-block;
-    height: 5.7rem;
-    width: 21.5%;
-    vertical-align: middle;
+    width: 5.7rem;
     margin: 0;
     padding: 0;
-    font-size: 5rem;
     color: $color-input-font;
     background-color: $color-input;
     border: none;
     outline: none;
 
     &--inc {
-      margin-left: 2%;
+      margin-left: 0.8rem;
     }
   }
 
-  &__count {
-    float: left;
-    margin-right: 3%;
-
-    &::after {
-      content: "";
-      clear: both;
-    }
-  }
-
-  &__label-count {
-    margin: 0;
-    padding-top: 0.3rem;
-    margin-bottom: 0.7rem;
-    font-size: $font-size;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  &__input-count {
-    display: inline-block;
-    height: 5.7rem;
-    width: 5.8rem;
-    font-size: $font-size--h3;
-    line-height: 5.7rem;
-    color: $color-input-font;
-    text-align: center;
-    background-color: $color-input;
+  &__svg {
+    position: relative;
+    top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    fill: $color-input-font;
   }
 
   &__submit {

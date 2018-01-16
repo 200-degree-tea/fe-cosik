@@ -41,15 +41,15 @@
       <section class="preamble">
         <div class="preamble__inner preamble__inner--small">
           <h3 class="preamble__header preamble__header--small">Leave your feedback</h3>
-          <p class="preamble__paragraph preamble__paragraph--high">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
+          <p class="preamble__paragraph">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
         </div>
       </section>
 
       <form class="form" action="" method="get">
 
         <section class="form__section">
-          <div class="form__inner form__inner--lower">
-            <h3 class="form__header">Introduce yourself:</h3>
+          <div class="form__inner form__inner--smaller">
+            <h3 class="form__header form__header--space-bottom">Introduce yourself:</h3>
             <div class="form__field form__field--flexgrid">
               <label class="form__label form__label--stretch" for="name">Name:</label>
               <input class="form__input" id="name" name="name" type="text">
@@ -70,12 +70,12 @@
             <h3 class="form__header">Contact Information:</h3>
             <div class="form__field form__field--phone">
               <label class="form__label" for="phone">Contact number:</label>
-              <input class="form__input" name="phone" type="tel">
+              <input class="form__input form__input--phone" name="phone" type="tel">
               <span class="form__error">Error, double-check the number</span>
             </div>
             <div class="form__field form__field--envelope">
               <label class="form__label" for="email">Email:</label>
-              <input class="form__input" id="email" name="email" type="email" required>
+              <input class="form__input form__input--envelope" id="email" name="email" type="email" required>
             </div>
           </div>
         </section>
@@ -89,9 +89,21 @@
             </div>
             <div class="form__field">
               <label class="form__label" for="stay">Length of stay:<span class="form__required form__required--aligne">*</span></label>
-              <button class="form__btn form__btn--dec">-</button>
-              <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
-              <button class="form__btn form__btn--inc">+</button>
+              <div class="form__number form__number--flexgrid">
+                <button class="form__btn form__btn--dec">
+                  <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                 width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" enable-background="new 0 0 9.917 1.917" xml:space="preserve">
+                   <rect width="9.917" height="1.917"/>
+                 </svg>
+                </button>
+                <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
+                <button class="form__btn form__btn--inc">
+                  <svg class="form__svg" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                   width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" enable-background="new 0 0 9.917 9.917" xml:space="preserve">
+                     <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917" />
+                   </svg>
+                 </button>
+              </div>
             </div>
             <div class="form__field">
               <label class="form__label" for="checkout">Checkout:<span class="form__required form__required--aligne">*</span></label>
@@ -103,28 +115,45 @@
         <section class="form__section">
           <div class="form__inner">
             <h3 class="form__header">Number of travellers</h3>
-            <div class="form__field form__field--higher">
+            <div class="form__field">
               <label class="form__label" for="stay">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
-              <button class="form__btn form__btn--dec">-</button>
-              <input class="form__input form__input--small" id="stay" min="1" step="1" max="10" placeholder="person" type="number" required>
-              <button class="form__btn form__btn--inc">+</button>
-            </div>
-            <div class="form__count">
-              <p class="form__label-count">№</p>
-              <div class="form__input-count">1</div>
-            </div>
-            <div class="form__inner-narrow">
-              <div class="form__field form__field--column">
-                <label class="form__label" for="person-surname">Surname:<span class="form__required form__required--aligne">*</span></label>
-                <input class="form__input" id="person-surname" name="person-surname" type="text" required>
+              <div class="form__number form__number--flexgrid">
+                <button class="form__btn form__btn--dec">
+                  <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                 width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" enable-background="new 0 0 9.917 1.917" xml:space="preserve">
+                   <rect width="9.917" height="1.917"/>
+                 </svg>
+                </button>
+                <input class="form__input form__input--small" id="stay" min="1" step="1" max="10" placeholder="person" type="number" required>
+                <button class="form__btn form__btn--inc">
+                  <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                   width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" enable-background="new 0 0 9.917 9.917" xml:space="preserve">
+                     <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917"/>
+                   </svg>
+                </button>
               </div>
-              <div class="form__field form__field--column">
-                <label class="form__label" for="person-name">Name:<span class="form__required form__required--aligne">*</span></label>
-                <input class="form__input" id="person-name" name="name" type="text" required>
+            </div>
+
+            <div class="form__flex-block">
+
+              <div class="form__column form__column--sm">
+                <p class="form__label-count">№</p>
+                <div class="form__input-count">1</div>
               </div>
-              <div class="form__field form__field--column">
-                <label class="form__label" for="person-second-name">Middle name:</label>
-                <input class="form__input" id="person-second-name" name="person-second-name" type="text" required>
+
+              <div class="form__column form__column--bg">
+                <div class="form__field form__field--column">
+                  <label class="form__label" for="person-surname">Surname:<span class="form__required form__required--aligne">*</span></label>
+                  <input class="form__input" id="person-surname" name="person-surname" type="text" required>
+                </div>
+                <div class="form__field form__field--column">
+                  <label class="form__label" for="person-name">Name:<span class="form__required form__required--aligne">*</span></label>
+                  <input class="form__input" id="person-name" name="name" type="text" required>
+                </div>
+                <div class="form__field form__field--column">
+                  <label class="form__label" for="person-second-name">Middle name:</label>
+                  <input class="form__input" id="person-second-name" name="person-second-name" type="text" required>
+                </div>
               </div>
             </div>
           </div>
