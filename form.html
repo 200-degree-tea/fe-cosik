@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Front end development project">
   <link rel="stylesheet" href="">
   <title>Feedback Form</title>
@@ -90,14 +92,15 @@
             <div class="form__field">
               <label class="form__label" for="stay">Length of stay:<span class="form__required form__required--aligne">*</span></label>
               <div class="form__number form__number--flexgrid">
-                <button class="form__btn form__btn--dec">
+                <button class="form__btn form__btn--dec" type="button">
                   <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                 width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" enable-background="new 0 0 9.917 1.917" xml:space="preserve">
                    <rect width="9.917" height="1.917"/>
                  </svg>
                 </button>
-                <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" placeholder="day" type="number" required>
-                <button class="form__btn form__btn--inc">
+                <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" type="number" value="1" required readonly="readonly">
+                <div class="form__type-parallel">day</div>
+                <button class="form__btn form__btn--inc" type="button">
                   <svg class="form__svg" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                   width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" enable-background="new 0 0 9.917 9.917" xml:space="preserve">
                      <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917" />
@@ -118,14 +121,15 @@
             <div class="form__field">
               <label class="form__label" for="stay">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
               <div class="form__number form__number--flexgrid">
-                <button class="form__btn form__btn--dec">
+                <button class="form__btn form__btn--dec" type="button">
                   <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                 width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" enable-background="new 0 0 9.917 1.917" xml:space="preserve">
                    <rect width="9.917" height="1.917"/>
                  </svg>
                 </button>
-                <input class="form__input form__input--small" id="stay" min="1" step="1" max="10" placeholder="person" type="number" required>
-                <button class="form__btn form__btn--inc">
+                <input class="form__input form__input--small" id="stay" min="1" step="1" max="10" value="1" placeholder="person" type="number" required readonly="readonly">
+                  <div class="form__type-parallel">person</div>
+                <button class="form__btn form__btn--inc" type="button">
                   <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                   width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" enable-background="new 0 0 9.917 9.917" xml:space="preserve">
                      <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917"/>

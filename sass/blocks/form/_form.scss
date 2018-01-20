@@ -15,7 +15,7 @@
 
   &__inner {
     position: relative;
-    padding: 1.8rem 6.25% 2.8rem;
+    padding: 1.8rem 6.25% 0.9rem;
 
     &--smaller {
       padding-bottom: 0.4rem;
@@ -35,12 +35,12 @@
     position: relative;
     display: block;
     width: 100%;
+    margin-bottom: 2.1rem;
 
     &--flexgrid {
       display: flex;
       align-items: center;
-      margin-bottom: 2.1rem;
-
+      // margin-bottom: 2.1rem;
       &:last-child {
         padding-bottom: 0;
       }
@@ -76,17 +76,8 @@
       }
     }
 
-    &--column {
-      padding-top: 0;
-      padding-bottom: 1rem;
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-    }
-
     &--radio-box {
-      padding-bottom: 1.8rem;
+      margin-bottom: 1.8rem;
 
       &:last-child {
         padding-bottom: 0.7rem;
@@ -100,14 +91,14 @@
         position: relative;
         display: inline-block;
         padding-top: 1.7rem;
-        padding-left: 6.2rem;
+        padding-left: 4.2rem;
         font-size: $font-size--h3;
 
         &::before {
           content: "";
           position: absolute;
-          top: 0.4rem;
-          left: -1.6rem;
+          top: 0.3rem;
+          left: -3.6rem;
           height: 5.6rem;
           width: 5.6rem;
           background-color: $color-input;
@@ -118,7 +109,7 @@
           content: "";
           position: absolute;
           top: 2.1rem;
-          left: 0.2rem;
+          left: -1.8rem;
           height: 2rem;
           width: 2rem;
           background-color: $color-radio-mark;
@@ -141,10 +132,18 @@
       & input[type="radio"]:active + label::before {
         background-color: $color-radio-down;
       }
+
+      & input[type="radio"]:active + label::after {
+        background-color: $color-input-font;
+      }
     }
 
     &--checkbox {
-      padding-bottom: 3.5rem;
+      margin-bottom: 3.5rem;
+
+      &:last-child {
+        margin-bottom: 2.6rem;
+      }
 
       & input[type="checkbox"] {
         opacity: 0;
@@ -154,14 +153,14 @@
         position: relative;
         display: inline-block;
         padding-top: 1.1rem;
-        padding-left: 6.2rem;
+        padding-left: 4.2rem;
         font-size: $font-size--h3;
 
         &::before {
           content: "";
           position: absolute;
           top: -2px;
-          left: -1.6rem;
+          left: -3.7rem;
           height: 5.6rem;
           width: 5.6rem;
           background-color: $color-input;
@@ -175,15 +174,14 @@
         &::after {
           content: "";
           position: absolute;
-          top: 1.7rem;
-          left: 0.2rem;
+          top: 1.8rem;
+          left: -2.2rem;
           display: inline-block;
-          height: 1.1rem;
-          width: 1.7rem;
-          border-left: 0.3px solid;
-          border-bottom: 0.3px solid;
-          border-color: $color-checkbox-ticked;
-          transform: rotate(-45deg);
+          height: 1.7rem;
+          width: 2.4rem;
+          background-image: url("../img/icon-tick.svg");
+          background-repeat: no-repeat;
+          background-position: center;
         }
       }
 
@@ -201,6 +199,12 @@
 
       & input[type="checkbox"]:active + label::before {
         background-color: $color-radio-down;
+      }
+
+      & input[type="checkbox"]:active + label::after {
+        background-image: url("../img/icon-tick--active.svg");
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }
@@ -260,9 +264,9 @@
   &__label {
     display: block;
     width: auto;
-    padding-right: 2.1rem;
-    padding-left: 2.1rem;
-    padding-bottom: 0.8rem;
+    margin-right: 2.1rem;
+    margin-left: 2.1rem;
+    margin-bottom: 0.8rem;
     font-size: $font-size;
     line-height: $header-line-height;
     white-space: nowrap;
@@ -271,6 +275,7 @@
     &--stretch {
       padding: 0;
       margin-right: 2.3rem;
+      margin-bottom: 0;
     }
 
     &--bolded {
@@ -303,6 +308,8 @@
     top: -0.1rem;
     height: 5.7rem;
     width: 100%;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
     font-size: $font-size--h3;
     line-height: $header-line-height;
     background-color: $color-input;
@@ -322,6 +329,7 @@
     &--small {
       flex-grow: 1;
       width: auto;
+      padding: 0;
       vertical-align: middle;
       margin-left: 8px;
       text-align: center;
@@ -343,11 +351,22 @@
     }
   }
 
+  &__type-parallel {
+    height: 5.7rem;
+    width: 65px;
+    font-size: $font-size--h3;
+    color: $color-input-font;
+    font-weight: $font-bolded;
+    line-height: 5.7rem;
+    text-align: center;
+    background-color: $color-input;
+  }
+
   &__error {
     display: block;
-    padding-top: 0.5rem;
-    padding-bottom: 1.1rem;
-    padding-left: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     font-size: $font-size;
     line-height: 2.6rem;
     color: $color-input--error;
