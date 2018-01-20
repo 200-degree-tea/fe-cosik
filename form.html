@@ -72,7 +72,7 @@
             <h3 class="form__header">Contact Information:</h3>
             <div class="form__field form__field--phone">
               <label class="form__label" for="phone">Contact number:</label>
-              <input class="form__input form__input--phone" name="phone" type="tel">
+              <input class="form__input form__input--phone" id="phone" name="phone" type="tel">
               <span class="form__error">Error, double-check the number</span>
             </div>
             <div class="form__field form__field--envelope">
@@ -119,7 +119,7 @@
           <div class="form__inner">
             <h3 class="form__header">Number of travellers</h3>
             <div class="form__field">
-              <label class="form__label" for="stay">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
+              <label class="form__label" for="travellers">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
               <div class="form__number form__number--flexgrid">
                 <button class="form__btn form__btn--dec" type="button">
                   <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -127,7 +127,7 @@
                    <rect width="9.917" height="1.917"/>
                  </svg>
                 </button>
-                <input class="form__input form__input--small" id="stay" min="1" step="1" max="10" value="1" placeholder="person" type="number" required readonly="readonly">
+                <input class="form__input form__input--small" id="travellers" min="1" step="1" max="10" value="1" placeholder="person" type="number" required readonly="readonly">
                   <div class="form__type-parallel">person</div>
                 <button class="form__btn form__btn--inc" type="button">
                   <svg class="form__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -167,15 +167,15 @@
           <div class="form__inner">
             <h3 class="form__header">Your General impression:</h3>
             <div class="form__field form__field--radio-box">
-              <input class="form__radio" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
+              <input class="form__input form__input--radio form__input--hidden" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
               <label class="form__label form__label--bolded" for="answer-positive">Rather positive</label>
             </div>
             <div class="form__field form__field--radio-box">
-              <input class="form__radio" id="answer-negative" name="answer" type="radio" value="rather-negative" />
+              <input class="form__input form__input--radio form__input--hidden" id="answer-negative" name="answer" type="radio" value="rather-negative" />
               <label class="form__label form__label--bolded" for="answer-negative">Rather negative</label>
             </div>
             <div class="form__field form__field--radio-box">
-              <input class="form__radio" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
+              <input class="form__input form__input--radio form__input--hidden" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
               <label class="form__label form__label--bolded" for="answer-difficult">Difficult to answer</label>
             </div>
           </div>
@@ -210,14 +210,14 @@
               <label class="form__label form__label--file" for="file">Choose photos</label>
               <input class="form__input form__input--hidden" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
             </div>
-            <div class="form__display-photos">
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
-              <div class="form__grid"><img class="form__photo" src="" alt=""></div>
+            <div class="form`__display-photos`">
+              <div class="form__grid-item"><button class="form__remove-btn" type="button"></button><img class="form__photo" src="img/thumbnail_sq.png" alt="thumbnail"></div>
+              <div class="form__grid-item"><img class="form__photo" src="img/thumbnail_sq.png" alt="thumbnail"></div>
+              <div class="form__grid-item"><img class="form__photo" src="img/thumbnail_sq.png" alt="thumbnail"></div>
+              <div class="form__grid-item"><img class="form__photo" src="img/thumbnail_sq.png" alt="thumbnail"></div>
+              <div class="form__grid-item"><img class="form__photo" src="img/thumbnail_sq.png" alt="thumbnail"></div>
+              <div class="form__grid-item"><img class="form__photo" src="img/thumbnail_sq.png" alt="thumbnail"></div>
+              <div class="form__grid-item"><img class="form__photo" src="img/thumbnail_sq.png" alt="thumbnail"></div>
             </div>
           </div>
         </section>
