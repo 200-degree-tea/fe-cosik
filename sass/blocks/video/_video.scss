@@ -20,7 +20,7 @@
   }
 
   &__inner {
-    height: 308px;
+    height: 30.8rem;
     padding-top: 10px;
   }
 
@@ -59,8 +59,6 @@
   &__icon {
     position: relative;
     display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
 
     &--play {
@@ -68,7 +66,6 @@
       left: 9%;
       height: 20px;
       width: 16px;
-      background-image: url("../img/icon-video-replay.svg");
     }
 
     &--subtitles {
@@ -76,15 +73,25 @@
       left: 56%;
       height: 20px;
       width: 32px;
-      background-image: url("../img/icon-video-subtitles.svg");
     }
 
-    &--full-src {
+    &--full-scr {
       top: 35%;
       left: 66%;
       height: 20px;
       width: 20px;
-      background-image: url("../img/icon-video-fullscreen.svg");
+    }
+  }
+
+  &__svg {
+    fill: $dark-gray;
+
+    &:hover {
+      fill: $color-radio-mark;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
