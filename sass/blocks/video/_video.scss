@@ -1,10 +1,10 @@
 .video {
   &__intro {
-    padding: 15px 12.8% 10px;
+    padding: 1.5rem 6.25% 1rem;
   }
 
   &__header {
-    padding-bottom: 8px;
+    margin-bottom: 2.6rem;
     font-size: $font-size--h3;
     line-height: $header-line-height;
     text-align: center;
@@ -21,29 +21,30 @@
 
   &__inner {
     height: 30.8rem;
-    padding-top: 10px;
+    padding-top: 1rem;
   }
 
   &__control {
     position: relative;
-    top: -53px;
+    top: -5.3rem;
     padding-left: 6.25%;
     padding-right: 6.25%;
   }
 
   &__bar {
     position: relative;
-    height: 53px;
+    height: 5.3rem;
     width: 100%;
     background-color: rgba($bottom-border-color, 0.5);
 
-    &::after {
+    &::before {
       content: "";
       display: block;
       position: relative;
       top: 41%;
-      left: 23px;
-      width: 23.5rem;
+      margin-left: 2.2rem;
+      margin-right: 2.2rem;
+      width: auto;
       height: 0.3rem;
       background-color: $top-border;
     }
@@ -51,35 +52,43 @@
 
   &__btn-control {
     position: relative;
-    top: -8px;
-    height: 66px;
+    top: -0.8rem;
+    height: 6.6rem;
     background-color: $color-input;
   }
 
   &__icon {
     position: relative;
     display: inline-block;
+    padding: 0;
     cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: $color-input;
+
+    &:hover {
+      background-color: $color-input;
+    }
 
     &--play {
       top: 33%;
       left: 9%;
-      height: 20px;
-      width: 16px;
+      height: 2rem;
+      width: 1.6rem;
     }
 
     &--subtitles {
       top: 35%;
       left: 56%;
-      height: 20px;
-      width: 32px;
+      height: 2rem;
+      width: 3.2rem;
     }
 
     &--full-scr {
       top: 35%;
       left: 66%;
-      height: 20px;
-      width: 20px;
+      height: 2rem;
+      width: 2rem;
     }
   }
 
