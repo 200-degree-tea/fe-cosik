@@ -148,15 +148,18 @@
             <p class="video__paragraph">See the video presentation and more for tickets, until they have risen in price again!</p>
           </div>
           <div class="video__inner">
-            <div class="video__picture" <picture>
-              <source media="(min-width: 769px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-              <source media="(min-width: 480px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-              <source srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x">
-              <img src="img/video-mobile@1x.jpg" alt="The Devil's Bridge">
+            <div class="video__picture">
+              <picture>
+                <source media="(min-width: 769px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 480px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                <source srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x">
+                <img src="img/video-mobile@1x.jpg" alt="The Devil's Bridge">
               </picture>
             </div>
             <div class="video__control">
-              <div class="video__bar"></div>
+              <div class="video__bar">
+                <span class="video__pointer"></span>
+              </div>
               <div class="video__btn-control">
                 <button class="video__icon video__icon--play" title="Play/Pause video">
                   <svg class="video__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="20px" viewBox="0 0 16 20" enable-background="new 0 0 16 20" xml:space="preserve">
