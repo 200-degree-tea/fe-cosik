@@ -2,12 +2,12 @@
   padding-left: 6%;
   padding-right: 6%;
   text-align: center;
-  background-color: $gray-bcakground;
+  background-color: $color-gray-lighter;
 
   &::after {
     content: "";
     display: block;
-    border-top: 0.1rem solid $gray-divider;
+    border-top: 0.1rem solid $color-gray-dark;
   }
 
   &:last-child::after {
@@ -21,20 +21,20 @@
   &__header {
     margin-top: 0;
     margin-bottom: 1rem;
-    line-height: $header-line-height;
+    line-height: $line-height-three;
     text-transform: uppercase;
   }
 
   &__counter-paragraph {
     margin-top: 0;
     margin-bottom: 1.4rem;
-    line-height: $paragraph-two-line-height;
+    line-height: $line-height-two;
     text-transform: uppercase;
   }
 
   &__paragraph {
     margin-top: 0;
-    line-height: $paragraph-two-line-height;
+    line-height: $line-height-two;
     text-transform: uppercase;
   }
 }

@@ -6,28 +6,28 @@
   &__list {
     margin: 0;
     padding: 0;
-    background: $color-prmiary;
+    background: $color-blue;
   }
 
   &__item {
     line-height: 5.4rem;
     list-style-type: none;
-    border-top: 0.1rem solid $top-border;
-    border-bottom: 0.1rem solid $bottom-border;
+    border-top: 0.1rem solid $color-white-dimm-two;
+    border-bottom: 0.1rem solid $color-black-brighten;
 
     & > a {
       display: block;
-      font-weight: $font-bolded;
-      font-size: $font-size--nav;
+      font-weight: $font-weight-bolded;
+      font-size: $font-size-three;
       text-transform: uppercase;
 
       &:hover {
-        background-color: $color-hover-btn;
+        background-color: $color-blue-dark;
       }
 
       &:active {
-        color: $font-active-btn;
-        background-color: $color-active-btn;
+        color: $color-white-dimm;
+        background-color: $color-blue-darker;
       }
     }
 
@@ -37,7 +37,7 @@
   }
 
   &__anchor:active {
-    color: $font-active-btn;
+    color: $color-white-dimm;
   }
 
   &__toggle {

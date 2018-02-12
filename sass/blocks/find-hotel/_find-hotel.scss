@@ -9,7 +9,7 @@
   &__header {
     margin-top: 0;
     margin-bottom: 1.9rem;
-    line-height: $header-line-height;
+    line-height: $line-height-three;
     text-transform: uppercase;
   }
 
@@ -17,30 +17,30 @@
     margin-bottom: 3.5rem;
     padding-left: 3%;
     padding-right: 3%;
-    line-height: $paragraph-one-line-height;
+    line-height: $line-height-one;
     text-transform: uppercase;
   }
 
   &__btn {
     height: 5.9rem;
     width: 100%;
-    font-size: $font-size--hotel;
+    font-size: $font-size-two;
     color: $color-white;
     text-transform: uppercase;
-    background-color: $color-prmiary;
+    background-color: $color-blue;
     border: none;
 
     &:hover {
-      background-color: $color-hover-btn;
+      background-color: $color-blue-dark;
     }
 
     &:active {
-      color: $font-active-btn;
-      background-color: $color-active-btn;
+      color: $color-white-dimm;
+      background-color: $color-blue-darker;
     }
 
     &:disabled {
-      background-color: $color-disabled-btn;
+      background-color: $color-gray;
     }
   }
 }

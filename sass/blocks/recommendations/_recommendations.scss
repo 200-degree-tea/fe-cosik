@@ -8,15 +8,15 @@
   &__header {
     margin-top: 0;
     margin-bottom: 1.4rem;
-    font-weight: $font-bolded;
-    line-height: $header-line-height;
+    font-weight: $font-weight-bolded;
+    line-height: $line-height-three;
     text-transform: uppercase;
   }
 
   &__paragraph {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: $paragraph-two-line-height;
+    line-height: $line-height-two;
     text-align: left;
     text-transform: uppercase;
   }

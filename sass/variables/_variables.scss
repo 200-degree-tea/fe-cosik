@@ -1,69 +1,43 @@
-
 // Font vaiables
 //----------
-/* stylelint-disable-next-line value-keyword-case */
-$font-family: "PT Sans", Tahoma, Verdana, Segoe, sans-serif;
-$font-size--base:   10px !default;
-$font-size:         1.4rem;
+$font-family: "PT Sans", tahoma, verdana, segoe, sans-serif;
 
-$line-height-base:  2.4rem;
-$header-line-height: 2.6rem;
+$font-size-default:     10px !default;
 
-$font-size--h1:     3rem;
-$font-size--h2:     2.1rem;
-$font-size--h3:     1.8rem;
-$font-size--nav:    1.8rem;
-$font-size--hotel:  2.1rem;
-$font-size--tag:    2.1rem;
+$font-size-one:         3rem;
+$font-size-two:         2.1rem;
+$font-size-three:       1.8rem;
+$font-size-four:        1.4rem;
 
-$font-paragraph:    1.4rem;
-$font-btn:          2.1rem;
+$font-weight-bolded:    700;
 
-$font-bolded:       700;
-
-$paragraph-one-line-height:       2.4rem;
-$paragraph-two-line-height:       2.1rem;
-$paragraph-three-line-height:     2.6rem;
+$line-height-one:       2.4rem;
+$line-height-two:       2.1rem;
+$line-height-three:     2.6rem;
 
 // Colours
 //----------
-$color-prmiary:     #81b3d2;
-$color-white:       #ffffff;
+$color-blue:            #81b3d2;
+$color-blue-dark:       #669ec0;
+$color-blue-darker:     #5496bd;
 
-// -- button
-$color-button:        #81b3d2;
-$color-hover-btn:     #669ec0;
-$color-active-btn:    #5496bd;
-$color-disabled-btn:  #e5e5e5;
-$nav-close-button:    #ffffff;
+$color-white:           #ffffff;
+$color-white-dimm:      rgba($color-white, 0.3);
+$color-white-dimm-two:  rgba($color-white, 0.2);
 
-// -- input-fields
-$color-input:           #f2f2f2;
-$color-hover-input:     #e5e5e5;
-$color-active-border:   #e5e5e5;
-$color-active-input:    #ffffff;
-$color-input--error:    #ff5c5c;
-$color-icon-background: #e6e6e6;
-$color-input-font:      #aaaaaa;
-$color-radio-mark:      #333333;
-$color-checkbox-ticked: #231f20;
-$color-radio-down:      #d5d5d5;
+$color-gray-light:      #f2f2f2;
+$color-gray-lighter:    #eeeeee;
+$color-gray:            #e5e5e5;
+$color-gray-two:        #e6e6e6;
+$color-gray-dark:       #d6d6d6;
+$color-gray-dark-two:   #d5d5d5;
+$color-gray-darker-one: #aaaaaa;
+$color-gray-darker-two: #5c6870;
 
-// -- font
-$font-hover:      #ffffff;
-$font-active:     #ffffff;
-$font-active-btn: rgba($font-active, 0.3);
-$font-text-color: #ffffff;
+$color-red-light:       #ff5c5c;
 
-// -- borders
-$bottom-border-color:   #010101;
-$bottom-border:         rgba($bottom-border-color, 0.2);
-
-$top-border-color:    #ffffff;
-$top-border:          rgba($top-border-color, 0.2);
-
-$gray-bcakground:     darken($color-white, 7%);
-$gray-divider:        #d6d6d6;
-$form-divider:        #e5e5e5;
-
-$dark-gray: #5c6870;
+$color-black-light:     #333333;
+$color-black:           #010101;
+$color-black-darker:    #231f20;
+$color-black-brighten:  rgba($color-black, 0.2);
+$color-black-brighten-two: rgba($color-black, 0.5);

@@ -1,40 +1,39 @@
 html {
-  font-size: $font-size--base;
+  font-size: $font-size-default;
 }
 
 body {
   font-family: $font-family;
-  font-size: $font-size--base;
-  line-height: $line-height-base;
+  font-size: $font-size-default;
+  line-height: $line-height-one;
 }
 // Links
 //----------
 
 a {
   text-decoration: none;
-  color: $font-text-color;
+  color: $color-white;
 
   &:hover {
-    color: $font-hover;
-    // background-color: $color-hover-btn;
+    color: $color-white;
   }
 }
 // Buttons
 //----------
 
 button {
-  background-color: $color-button;
+  background-color: $color-blue;
 
   &:hover {
-    background-color: $color-hover-btn;
+    background-color: $color-blue-dark;
   }
 
   &:active {
-    background-color: $color-active-btn;
+    background-color: $color-blue-darker;
   }
 
   &:disabled {
-    background-color: $color-disabled-btn;
+    background-color: $color-gray;
   }
 }
 
