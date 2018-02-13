@@ -25,12 +25,12 @@
     fill: white;
 
     &:hover {
-      background-color: $color-hover-btn;
+      background-color: $color-blue-dark;
     }
 
     &:active {
-      fill: $font-active-btn;
-      background-color: $color-active-btn;
+      fill: $color-white-dimm;
+      background-color: $color-blue-darker;
     }
   }
 }
