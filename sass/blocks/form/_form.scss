@@ -370,16 +370,14 @@
     height: 5.7rem;
     margin: 0;
     padding: 0;
-    color: $color-gray-darker-one;
     line-height: 5.7rem;
     text-align: center;
     background-color: $color-gray-light;
     border: none;
     outline: none;
-
-    &--inc {
-      margin-left: 0.8rem;
-    }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
 
     &:hover {
       background-color: $color-gray;
@@ -388,14 +386,15 @@
     &:active {
       background-color: $color-gray-dark-two;
     }
-  }
 
-  &__svg {
-    position: relative;
-    top: 0.5rem;
-    width: 2rem;
-    height: 2rem;
-    fill: $color-gray-darker-one;
+    &--inc {
+      background-image: url("../img/icon-plus.svg");
+      margin-left: 0.8rem;
+    }
+
+    &--dec {
+      background-image: url("../img/icon-minus.svg");
+    }
   }
 
   &__submit {

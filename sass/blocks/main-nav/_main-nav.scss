@@ -65,14 +65,11 @@
     }
   }
 
-  &__link {
-    display: inline-block;
-    width: 10.2rem;
-    height: 8.4rem;
+  &__button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
     margin-bottom: -3.8rem;
-    background-image: url("../img/logo-sedona-mobile.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
   }
 }
