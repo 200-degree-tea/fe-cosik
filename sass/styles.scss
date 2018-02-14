@@ -2,9 +2,14 @@
 @import "normalize";
 // Variables
 @import "variables/variables";
+//Mixins
+@import "mixins/_text-hide";
+@import "mixins/_size";
+@import "mixins/_image";
 // Core CSS
 @import "typography/typography";
 @import "scaffolding/scaffolding";
+
 // Components
 @import "blocks/main-nav/main-nav";
 @import "blocks/intro/intro";
