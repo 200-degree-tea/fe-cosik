@@ -65,11 +65,27 @@
     }
   }
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__button {
-    margin: 0;
+    display: block;
+    margin: 0 auto -3.9rem;
     padding: 0;
     border: none;
+    outline: none;
     background-color: transparent;
-    margin-bottom: -3.8rem;
+
+    &:hover {
+      border: none;
+      background-color: transparent;
+    }
+
+    &:active {
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
   }
 }
