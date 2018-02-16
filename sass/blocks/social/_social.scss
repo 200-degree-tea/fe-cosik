@@ -1,8 +1,10 @@
 .social {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding-top: 1.7rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.6rem;
 
   &__text {
     position: absolute;
@@ -15,22 +17,48 @@
     clip: rect(0 0 0 0);
   }
 
-  &__svg {
-    display: inline-block;
-    height: 17px;
-    width: 17px;
-    margin-right: 0.4rem;
-    padding: 1.5rem;
+  &__link {
+    position: relative;
+    height: 48px;
+    width: 48px;
+    margin-right: 0.5rem;
     background-color: $color-blue;
-    fill: white;
 
     &:hover {
       background-color: $color-blue-dark;
     }
 
     &:active {
-      fill: $color-white-dimm;
       background-color: $color-blue-darker;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    height: 48px;
+    width: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 19px;
+
+    @include text_hide();
+
+    &--twitter {
+      background-image: url("../img/icon-twitter.svg");
+    }
+
+    &--facebook {
+      background-image: url("../img/icon-facebook.svg");
+      background-size: 9px;
+    }
+
+    &--youtube {
+      background-image: url("../img/icon-youtube.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

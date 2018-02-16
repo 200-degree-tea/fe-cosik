@@ -42,9 +42,32 @@
 
   &__toggle {
     position: absolute;
-    top: 1.2rem;
-    right: 1.7rem;
+    top: 17px;
+    right: 21px;
     z-index: 2;
+    display: block;
+    height: 22px;
+    width: 22px;
+    border: none;
+    outline: none;
+    background-color: none;
+    background-image: url("../img/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include text-hide();
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &--close {
+      background-image: url("../img/icon-cross.svg");
+    }
   }
 
   &__svg {

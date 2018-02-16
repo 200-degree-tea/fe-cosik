@@ -9,6 +9,21 @@
     &--top {
       padding: 5.7rem 6.25% 4.2rem;
     }
+
+    &--separator {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -19px;
+        left: 0;
+
+        @include size(100%, 3.7rem);
+        background-image: url("../img/bg-triangle.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 3.7rem;
+      }
+    }
   }
 
   &__svg {
