@@ -24,18 +24,18 @@
   }
 
   &__header {
-    @include size(293px, 100%);
+    @include size(100%, 100%);
+    max-width: 29.3rem;
     background-image: url("../img/text-sedona-index.svg");
     background-position: center;
-    background-size: 293px;
+    background-size: 100%;
     background-repeat: no-repeat;
 
     @include text-hide();
 
     &--small-bg {
+      max-width: 23.1rem;
       background-image: url("../img/text-sedona.svg");
-      background-position: center;
-      background-size: 23.1rem;
     }
   }
 
