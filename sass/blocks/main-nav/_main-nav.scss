@@ -70,24 +70,6 @@
     }
   }
 
-  &__svg {
-    cursor: pointer;
-
-    &--open {
-      fill: $color-blue;
-      position: absolute;
-      top: 22.8rem;
-      left: -2.5rem;
-    }
-
-    &--close {
-      fill: $color-white;
-      top: 0.5rem;
-      left: -2.5rem;
-      position: absolute;
-    }
-  }
-
   &__link {
     display: inline-block;
     text-decoration: none;
