@@ -1,6 +1,7 @@
-@mixin header ($size) {
+@mixin header ($size, $height) {
   @if $size == h3 {
     font-size: $font-size-three;
+    line-height: $line-height-three;
   }
 
   @else {
@@ -8,6 +9,5 @@
   }
   margin-top: 0;
   font-weight: $font-weight-bolded;
-  line-height: $line-height-three;
   text-transform: uppercase;
 }
