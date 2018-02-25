@@ -2,11 +2,10 @@
   position: relative;
 
   &__inner {
-    padding: 4rem 6.25% 2.5rem;
+    @include inner_padding;
     padding-top: 4rem;
     padding-bottom: 2.5rem;
 
-    @include inner_padding;
     text-align: center;
 
     &--small {

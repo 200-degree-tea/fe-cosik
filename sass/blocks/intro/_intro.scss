@@ -12,10 +12,9 @@
   background-size: cover;
 
   &::after {
+    @include size(100%, 3rem);
     content: "";
     position: absolute;
-
-    @include size(100%, 3rem);
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-position: center;
     background-size: 100% 3rem;
