@@ -12,10 +12,8 @@
     padding-bottom: 2rem;
 
     &-header {
-      margin-top: 0;
+      @include header(h2);
       margin-bottom: 0;
-      font-size: $font-size-two;
-      line-height: $line-height-three;
     }
   }
 }

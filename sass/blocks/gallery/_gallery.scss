@@ -11,18 +11,14 @@
   }
 
   &__title {
-    margin-top: 0;
+    @include header(h4);
     margin-bottom: 0;
-    font-size: $font-size-four;
-    line-height: $line-height-one;
     text-transform: uppercase;
   }
 
   &__author {
-    margin-top: 0;
+    @include paragraph($line-height-one, no);
     margin-bottom: 0.8rem;
-    font-size: $font-size-four;
-    line-height: $line-height-one;
   }
 
   &__likes {

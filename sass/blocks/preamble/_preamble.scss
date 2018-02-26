@@ -23,10 +23,8 @@
   }
 
   &__paragraph {
-    margin-top: 0;
+    @include paragraph($line-height-three, yes);
     margin-bottom: 0;
-    line-height: $line-height-three;
-    text-transform: uppercase;
 
     &--high {
       line-height: $line-height-one;

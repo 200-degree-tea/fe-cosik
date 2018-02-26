@@ -8,19 +8,14 @@
   }
 
   &__header {
+    @include header(h3);
     margin-bottom: 2.6rem;
-    font-size: $font-size-three;
-    line-height: $line-height-three;
     text-align: center;
-    text-transform: uppercase;
   }
 
   &__paragraph {
-    margin-top: 0;
-    font-size: $font-size-four;
-    line-height: $line-height-one;
+    @include paragraph($line-height-one, yes);
     text-align: center;
-    text-transform: uppercase;
   }
 
   &__inner {

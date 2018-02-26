@@ -9,19 +9,14 @@
   }
 
   &__header {
-    margin-top: 0;
+    @include header(h3);
     margin-bottom: 1.4rem;
-    font-weight: $font-weight-bolded;
-    line-height: $line-height-three;
-    text-transform: uppercase;
   }
 
   &__paragraph {
-    margin-top: 0;
+    @include paragraph($line-height-two, yes);
     margin-bottom: 0;
-    line-height: $line-height-two;
     text-align: left;
-    text-transform: uppercase;
   }
 
   &__item {

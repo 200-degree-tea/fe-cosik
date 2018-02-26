@@ -1,11 +1,20 @@
-@mixin header ($size, $height) {
+@mixin header ($size) {
   @if $size == h3 {
     font-size: $font-size-three;
     line-height: $line-height-three;
   }
-
+  @elseif $size == h4{
+    font-size: $font-size-four;
+  	line-height: $line-height-one;
+  }
+  @elseif $size == h5 {
+    font-size: $font-size-four;
+  	line-height: $line-height-three;
+  }
   @else {
     font-size: $font-size-two;
+    line-height: $line-height-three;
+
   }
   margin-top: 0;
   font-weight: $font-weight-bolded;

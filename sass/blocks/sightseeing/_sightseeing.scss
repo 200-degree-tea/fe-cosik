@@ -36,18 +36,14 @@
   }
 
   &__counter-paragraph {
-    margin-top: 0;
+    @include paragraph($line-height-two, yes);
     margin-bottom: 1.5rem;
     color: $color-white;
-    line-height: $line-height-two;
-    text-transform: uppercase;
   }
 
   &__paragraph {
-    margin-top: 0;
+    @include paragraph($line-height-two, yes);
     margin-bottom: 0;
     color: $color-white;
-    line-height: $line-height-two;
-    text-transform: uppercase;
   }
 }
