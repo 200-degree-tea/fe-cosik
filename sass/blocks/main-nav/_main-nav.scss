@@ -82,10 +82,9 @@
     }
 
     &__item {
-      padding: 14px 10px 17px;      
+      padding: 14px 10px 17px;
       margin-left: 10.5%;
       border: none;
-
 
       & > a {
         font-size: $font-size-four;
@@ -130,7 +129,7 @@
   // Desktop screen
   @media (min-width: 960px) {
     &__item {
-      // padding: 14px 10px 17px;
+      padding: 14px 10px 17px;
       margin-left: 13%;
 
       &:first-child {
