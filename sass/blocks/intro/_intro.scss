@@ -43,4 +43,19 @@
     background-size: auto;
     background-position: 50% 100%;
   }
+
+  // Tablet screen
+  @media (min-width: 480px) {
+    height: 55.5rem;
+
+    &::after {
+      height: 5.6rem;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-size: 100% 5.6rem;
+    }
+
+    &__header {
+      max-width: 45.7rem;
+    }
+  }
 }
