@@ -1,0 +1,9 @@
+//Desktop screen
+.wrapper {
+  @media (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 31px;
+    padding-right: 31px;
+    background-color: $color-gray-light;
+  }
+}
