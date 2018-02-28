@@ -1,3 +1,4 @@
+// Mobile screen
 .main-nav {
   position: relative;
   z-index: 1;
@@ -75,7 +76,7 @@
     text-decoration: none;
   }
   // Tablet screen
-  @media (min-width: 480px) {
+  @media (min-width: 768px) {
     &__list {
       display: flex;
       background-color: $color-white;
@@ -108,10 +109,11 @@
 
       &:nth-child(3) {
         margin-left: auto;
+        margin-right: 7%;
       }
 
       &:last-child {
-        margin-left: 6%;
+        margin-left: 0;
         margin-right: 17px;
       }
     }
@@ -127,21 +129,23 @@
     }
   }
   // Desktop screen
-  @media (min-width: 960px) {
+  @media (min-width: 1200px) {
     &__item {
       padding: 14px 10px 17px;
-      margin-left: 13%;
+      margin-left: 0;
 
       &:first-child {
         margin-left: 10%;
+        margin-right: 13%;
       }
 
       &:nth-child(3) {
         margin-left: auto;
+        margin-right: 11%;
       }
 
       &:last-child {
-        margin-left: 11%;
+        margin-left: 0;
         margin-right: 83px;
       }
     }
