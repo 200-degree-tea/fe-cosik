@@ -12,10 +12,9 @@
   background-size: cover;
 
   &::after {
+    @include size(100%, 3rem);
     content: "";
     position: absolute;
-
-    @include size(100%, 3rem);
     background-image: url("../img/bg-intro-triangle-mobile.svg");
     background-position: center;
     background-size: 100% 3rem;
@@ -43,5 +42,20 @@
     height: 16rem;
     background-size: auto;
     background-position: 50% 100%;
+  }
+
+  // Tablet screen
+  @media (min-width: 480px) {
+    height: 55.5rem;
+
+    &::after {
+      height: 5.6rem;
+      background-image: url("../img/bg-intro-triangle-tablet.svg");
+      background-size: 100% 5.6rem;
+    }
+
+    &__header {
+      max-width: 45.7rem;
+    }
   }
 }

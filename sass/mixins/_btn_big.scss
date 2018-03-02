@@ -1,0 +1,25 @@
+@mixin btn_big {
+  display: inline-block;
+  height: 5.8rem;
+  width: 100%;
+  color: $color-white;
+  font-size: $font-size-two;
+  line-height: 5.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $color-blue;
+  border: none;
+
+  &:hover {
+    background-color: $color-blue-dark;
+  }
+
+  &:active {
+    color: $color-white-dimm;
+    background-color: $color-blue-darker;
+  }
+
+  &:disabled {
+    background-color: $color-gray;
+  }
+}

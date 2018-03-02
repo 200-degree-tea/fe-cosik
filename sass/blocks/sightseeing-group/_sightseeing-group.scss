@@ -1,7 +1,6 @@
 .sightseeing-group {
   padding-left: 6%;
   padding-right: 6%;
-  text-align: center;
   background-color: $color-gray-lighter;
 
   &::after {
@@ -15,26 +14,21 @@
   }
 
   &__inner {
-    padding: 2.7rem 4% 1.3rem;
+    padding: 2.7rem 0.25% 1.3rem;
+    text-align: center;
   }
 
   &__header {
-    margin-top: 0;
+    @include header(h3);
     margin-bottom: 1rem;
-    line-height: $line-height-three;
-    text-transform: uppercase;
   }
 
   &__counter-paragraph {
-    margin-top: 0;
+    @include paragraph($line-height-two, yes);
     margin-bottom: 1.4rem;
-    line-height: $line-height-two;
-    text-transform: uppercase;
   }
 
   &__paragraph {
-    margin-top: 0;
-    line-height: $line-height-two;
-    text-transform: uppercase;
+    @include paragraph($line-height-two, yes);
   }
 }

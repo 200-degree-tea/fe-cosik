@@ -1,19 +1,17 @@
 .developer {
   &__paragraph {
     display: inline-block;
-    margin-top: 0;
+
+    @include header(h5);
     margin-bottom: 0;
-    line-height: $line-height-three;
+    font-weight: 400;
     text-transform: uppercase;
   }
 
   &__logo {
     position: relative;
     top: 1.3rem;
-    left: 0.2rem;
-    display: inline-block;
-    height: 3.6rem;
-    width: 2.8rem;
+    margin-left: 5px;
   }
 
   &__svg {

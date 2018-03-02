@@ -61,4 +61,23 @@
       opacity: 0.3;
     }
   }
+
+  &__svg {
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    margin-right: 0.4rem;
+    padding: 1.5rem;
+    background-color: $color-blue;
+    fill: white;
+
+    &:hover {
+      background-color: $color-blue-dark;
+    }
+
+    &:active {
+      fill: $color-white-dimm;
+      background-color: $color-blue-darker;
+    }
+  }
 }
