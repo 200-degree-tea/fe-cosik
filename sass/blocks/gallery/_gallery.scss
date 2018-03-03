@@ -1,6 +1,6 @@
 .gallery {
   &__inner {
-    @include inner_padding;
+    @include inner_padding($padding-LR);
     padding-top: 2.2rem;
     padding-bottom: 1.7rem;
     border-top: 1px solid $color-gray;
@@ -17,7 +17,7 @@
   }
 
   &__author {
-    @include paragraph($line-height-one, no);
+    @include paragraph($line-height-one);
     margin-bottom: 0.8rem;
   }
 
