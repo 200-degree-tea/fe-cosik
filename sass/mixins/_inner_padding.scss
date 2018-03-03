@@ -1,4 +1,4 @@
-@mixin inner_padding {
-  padding-left: $padding-LR;
-  padding-right: $padding-LR;
+@mixin inner_padding($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
 }

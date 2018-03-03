@@ -16,7 +16,7 @@
   &__inner {
     position: relative;
 
-    @include inner_padding;
+    @include inner_padding($padding-LR);
     padding-top: 1.8rem;
     padding-bottom: 0.9rem;
 

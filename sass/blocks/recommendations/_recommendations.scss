@@ -5,7 +5,7 @@
     padding-top: 2rem;
     padding-bottom: 2.4rem;
 
-    @include inner_padding;
+    @include inner_padding($padding-LR);
   }
 
   &__header {
@@ -14,7 +14,7 @@
   }
 
   &__paragraph {
-    @include paragraph($line-height-two, yes);
+    @include paragraph($line-height-two, $uppercase);
     margin-bottom: 0;
     text-align: left;
   }
