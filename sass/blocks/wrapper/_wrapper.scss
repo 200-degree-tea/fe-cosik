@@ -1,6 +1,6 @@
 //Desktop screen
 .wrapper {
-  @media (min-width: 1200px) {
+  @media (min-width: $desktop-size) {
     width: 100%;
     max-width: 120rem;
     margin: 0 auto;

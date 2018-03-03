@@ -77,7 +77,7 @@
   }
 
   // Tablet screen
-  @media (min-width: 768px) {
+  @include screen-size($tablet-size) {
     &__list {
       display: flex;
       background-color: $color-white;
@@ -131,7 +131,7 @@
   }
 
   // Desktop screen
-  @media (min-width: 1200px) {
+  @include screen-size($desktop-size) {
     &__item {
       margin-left: 12%;
 
