@@ -45,8 +45,8 @@
   }
 
   // Tablet screen
-  @media (min-width: 480px) {
-    height: 55.5rem;
+  @media (min-width: 720px) {
+    height: 55.6rem;
 
     &::after {
       height: 5.6rem;
@@ -56,6 +56,13 @@
 
     &__header {
       max-width: 45.7rem;
+    }
+  }
+
+  // Desktop screen
+  @media (min-width: 1200px) {
+    &::after {
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
     }
   }
 }
