@@ -17,7 +17,7 @@
   }
 
   &__author {
-    @include paragraph($line-height-one, no);
+    @include paragraph($line-height-one);
     margin-bottom: 0.8rem;
   }
 

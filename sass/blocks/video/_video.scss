@@ -14,7 +14,7 @@
   }
 
   &__paragraph {
-    @include paragraph($line-height-one, yes);
+    @include paragraph($line-height-one, $uppercase);
     text-align: center;
   }
 

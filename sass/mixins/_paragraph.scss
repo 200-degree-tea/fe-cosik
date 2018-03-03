@@ -1,7 +1,7 @@
-@mixin paragraph($height, $uppercase) {
+@mixin paragraph($line-height, $uppercase:false) {
   margin-top: 0;
   font-size: $font-size-four;
-  line-height: $height;
+  line-height: $line-height;
 
   @if $uppercase {
     text-transform: uppercase;

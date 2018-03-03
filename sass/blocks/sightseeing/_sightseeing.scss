@@ -36,13 +36,13 @@
   }
 
   &__counter-paragraph {
-    @include paragraph($line-height-two, yes);
+    @include paragraph($line-height-two, $uppercase);
     margin-bottom: 1.5rem;
     color: $color-white;
   }
 
   &__paragraph {
-    @include paragraph($line-height-two, yes);
+    @include paragraph($line-height-two, $uppercase);
     margin-bottom: 0;
     color: $color-white;
   }

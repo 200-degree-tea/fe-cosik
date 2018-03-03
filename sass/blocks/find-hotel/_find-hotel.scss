@@ -15,7 +15,7 @@
   }
 
   &__paragraph {
-    @include paragraph($line-height-one, yes);
+    @include paragraph($line-height-one, $uppercase);
     margin-bottom: 3.5rem;
     padding-left: 3%;
     padding-right: 3%;
