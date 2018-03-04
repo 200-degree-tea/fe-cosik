@@ -46,4 +46,34 @@
     margin-bottom: 0;
     color: $color-white;
   }
+  // Tablet screen
+  @media (min-width: 768px) {
+    display: flex;
+    margin-top: 3px;
+
+    &__inner {
+      width: 249px;
+      padding-top: 4.5rem;
+
+      &--separator {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    &__header {
+      @include text-size($font-size-two, $line-height-three);
+    }
+
+    &__counter-paragraph {
+      margin-bottom: 2.2rem;
+    }
+  }
+  // Desktop screen
+  @media (min-width: 1200px) {
+    &__inner {
+      padding-top: 52px;
+    }
+  }
 }
