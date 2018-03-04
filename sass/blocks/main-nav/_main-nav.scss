@@ -1,4 +1,5 @@
 // Mobile screen
+
 .main-nav {
   position: relative;
   z-index: 1;
@@ -116,6 +117,20 @@
           opacity: 0.3;
         }
       }
+
+      &--active {
+        & > a {
+          color: $color-brown-light;
+
+          &:hover {
+            color: $color-brown;
+          }
+
+          &:active {
+            opacity: 0.3;
+          }
+        }
+      }
     }
 
     &__toggle {
@@ -129,7 +144,6 @@
       transform: translateX(-50%);
     }
   }
-
   // Desktop screen
   @include screen-size($desktop-size) {
     &__item {
