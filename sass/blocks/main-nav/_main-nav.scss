@@ -1,6 +1,5 @@
-// Mobile screen
-
 .main-nav {
+  // Mobile screen
   position: relative;
   z-index: 1;
   text-align: center;
@@ -18,29 +17,25 @@
     border-top: 0.1rem solid $color-white-dimm-two;
     border-bottom: 0.1rem solid $color-black-brighten;
 
-    & > a {
-      display: block;
-      font-weight: $font-weight-bolded;
-      font-size: $font-size-three;
-      text-transform: uppercase;
-
-      &:hover {
-        background-color: $color-blue-dark;
-      }
-
-      &:active {
-        color: $color-white-dimm;
-        background-color: $color-blue-darker;
-      }
-    }
-
     &:first-child {
       border-top: 0;
     }
   }
 
-  &__anchor:active {
-    color: $color-white-dimm;
+  &__link {
+    display: block;
+    font-weight: $font-weight-bolded;
+    font-size: $font-size-three;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-blue-dark;
+    }
+
+    &:active {
+      color: $color-white-dimm;
+      background-color: $color-blue-darker;
+    }
   }
 
   &__toggle {
@@ -72,13 +67,15 @@
     }
   }
 
-  &__link {
+  &__logo {
     display: inline-block;
     text-decoration: none;
   }
 
   // Tablet screen
   @include screen-size($tablet-size) {
+    margin-bottom: 0;
+
     &__list {
       display: flex;
       background-color: $color-white;
@@ -91,7 +88,7 @@
       border: none;
 
       &:first-child {
-        margin-left: 3.5%;
+        margin-left: 0;
       }
 
       &:nth-child(3) {
@@ -99,36 +96,35 @@
       }
 
       &:last-child {
-        margin-right: 3.5%;
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      font-size: $font-size-four;
+      line-height: $line-height-three;
+      color: $color-black;
+
+      &:hover {
+        background-color: transparent;
+        color: $color-blue;
       }
 
-      & > a {
-        font-size: $font-size-four;
-        line-height: $line-height-three;
+      &:active {
+        background-color: transparent;
         color: $color-black;
-
-        &:hover {
-          color: $color-blue;
-          background-color: transparent;
-        }
-
-        &:active {
-          color: $color-black;
-          opacity: 0.3;
-        }
+        opacity: 0.3;
       }
 
       &--active {
-        & > a {
-          color: $color-brown-light;
+        color: $color-brown-light;
 
-          &:hover {
-            color: $color-brown;
-          }
+        &:hover {
+          color: $color-brown;
+        }
 
-          &:active {
-            opacity: 0.3;
-          }
+        &:active {
+          opacity: 0.3;
         }
       }
     }
@@ -137,25 +133,18 @@
       display: none;
     }
 
-    &__link {
+    &__logo {
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
     }
   }
+
   // Desktop screen
   @include screen-size($desktop-size) {
     &__item {
       margin-left: 12%;
-
-      &:first-child {
-        margin-left: 6%;
-      }
-
-      &:last-child {
-        margin-right: 6%;
-      }
     }
   }
 }
