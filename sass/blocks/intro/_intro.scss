@@ -46,7 +46,7 @@
 
   // Tablet screen
   @media (min-width: 768px) {
-    height: 55.6rem;
+    height: 51.6rem;
 
     @include img-retina ("../img/bg-back-tablet@1x.jpg", "../img/bg-back-tablet@2x.jpg");
 
@@ -57,7 +57,7 @@
     }
 
     &__header {
-      max-width: 45.7rem;
+      max-width: 46.7rem;
     }
   }
 
