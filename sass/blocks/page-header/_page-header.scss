@@ -1,0 +1,13 @@
+.page-header {
+  &__inner {
+    @include screen-size($tablet-size) {
+      padding-left: 3.5%;
+      padding-right: 3.5%;
+    }
+
+    @include screen-size($desktop-size) {
+      padding-left: 6%;
+      padding-right: 6%;
+    }
+  }
+}
