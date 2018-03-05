@@ -16,7 +16,7 @@ $line-height-two:       2.1rem;
 $line-height-three:     2.6rem;
 
 //padding
-$padding-LR: 6.25%;
+$padding-LR:            6.25%;
 
 // Colours
 //----------
@@ -45,4 +45,10 @@ $color-black-darker:    #231f20;
 $color-black-brighten:  rgba($color-black, 0.2);
 $color-black-brighten-two: rgba($color-black, 0.5);
 
-$uppercase: true;
+$color-brown-light:     #766357;
+$color-brown:           #604e43;
+$uppercase:             true;
+
+// Media queries break points:
+$tablet-size:           768px;
+$desktop-size:          1200px;
