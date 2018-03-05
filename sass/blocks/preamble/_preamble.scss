@@ -33,7 +33,7 @@
   // Tablet screen
   @media (min-width: 768px) {
     &__inner {
-      padding-top: 5rem;
+      padding-top: 5.1rem;
       padding-bottom: 4.7rem;
 
       @include inner_padding($padding-tablet-one-LR);
