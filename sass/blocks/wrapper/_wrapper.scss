@@ -1,12 +1,7 @@
-//Desktop screen
 .wrapper {
-  @media (min-width: 1200px) {
-    width: 100%;
-    max-width: 120rem;
-    margin: 0 auto;
-    position: relative;
-    -webkit-box-shadow: 0 1px 80px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    -moz-box-shadow: 0 1px 80px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow: 0 1px 80px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  }
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  background-color: $color-white;
+  box-shadow: 0 5px 15px 0 rgba(0, 01, 01, 0.2);
 }
