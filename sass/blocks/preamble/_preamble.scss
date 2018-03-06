@@ -31,7 +31,7 @@
   }
 
   // Tablet screen
-  @media (min-width: 768px) {
+  @include screen-size($tablet-size) {
     &__inner {
       padding-top: 5.1rem;
       padding-bottom: 4.7rem;
@@ -46,7 +46,7 @@
   }
 
   // Desktop screen
-  @media (min-width: 1200px) {
+  @include screen-size($desktop-size) {
     &__inner {
       @include inner_padding($padding-desktop-one-LR);
       padding-bottom: 4.7rem;
