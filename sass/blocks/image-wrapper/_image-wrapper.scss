@@ -5,4 +5,11 @@
   & img {
     width: 100%;
   }
+
+  @include screen-size($tablet-size) {
+    & img {
+      height: 25.7rem;
+      object-fit: cover;
+    }
+  }
 }
