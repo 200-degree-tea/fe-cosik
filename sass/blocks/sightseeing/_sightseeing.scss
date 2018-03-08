@@ -46,14 +46,16 @@
     margin-bottom: 0;
     color: $color-white;
   }
+
   // Tablet screen
   @include screen-size($tablet-size) {
     display: flex;
     margin-top: 3px;
 
     &__inner {
-      width: 249px;
+      width: 239px;
       padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
 
       &--separator {
         &::before {
@@ -73,7 +75,16 @@
   // Desktop screen
   @include screen-size($desktop-size) {
     &__inner {
+      width: 377px;
       padding-top: 52px;
+    }
+
+    &__header {
+      margin-bottom: 1rem;
+    }
+
+    &__counter-paragraph {
+      margin-bottom: 2.1rem;
     }
   }
 }
