@@ -4,35 +4,30 @@
   background-position: center;
   background-size: cover;
 
+  @include text-hide();
+
   &--top {
-    @include img-retina("../img/main-city-mobile@1x.jpg", "../img/main-city-mobile@2x.jpg");
+    @include img-retina("../img/main-city-tablet@1x.jpg", "../img/main-city-tablet@2x.jpg");
   }
 
   &--bottom {
-    @include img-retina("../img/main-bridge-mobile@1x.jpg", "../img/main-bridge-mobile@2x.jpg");
+    @include img-retina("../img/main-bridge-tablet@1x.jpg", "../img/main-bridge-tablet@2x.jpg");
   }
 
   // Tablet-screen
   @include screen-size($tablet-size) {
     height: 256px;
+    line-height: 0;
     max-height: 100%;
     width: 100%;
 
-    &--top {
-      @include img-retina("../img/main-city-tablet@1x.jpg", "../img/main-city-tablet@2x.jpg");
-    }
-
     &--bottom {
       order: -1;
-
-      @include img-retina("../img/main-bridge-tablet@1x.jpg", "../img/main-bridge-tablet@2x.jpg");
     }
   }
 
   // Desktop screen
   @include screen-size($desktop-size) {
-    height: 257px;
-
     &--top {
       @include img-retina("../img/main-city-desktop@1x.jpg", "../img/main-city-desktop@2x.jpg");
     }
