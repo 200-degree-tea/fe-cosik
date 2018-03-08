@@ -54,4 +54,59 @@
       background-size: 39px 35px;
     }
   }
+
+  // Tablet screen
+  @include screen-size($tablet-size) {
+    &__inner {
+      display: flex;
+      padding: 2rem 0 4.8rem;
+    }
+
+    &__header {
+      margin-bottom: 2.1rem;
+
+      @include text-size($font-size-two, $line-height-three);
+      text-align: center;
+    }
+
+    &__paragraph {
+      text-align: center;
+    }
+
+    &__item {
+      width: 256px;
+      padding: 13.9rem 4% 1.3rem;
+
+      &::before {
+        height: 7.5rem;
+        width: 7.7rem;
+      }
+
+      &--house {
+        &::before {
+          top: 4rem;
+          left: 9rem;
+          background-size: 7.6rem 7.2rem;
+        }
+      }
+
+      &--gift {
+        order: 1;
+
+        &::before {
+          top: 3.7rem;
+          left: 9.5rem;
+          background-size: 6.4rem 7.5rem;
+        }
+      }
+
+      &--food {
+        &::before {
+          top: 4.2rem;
+          left: 8.9rem;
+          background-size: 7.7rem 7rem;
+        }
+      }
+    }
+  }
 }
