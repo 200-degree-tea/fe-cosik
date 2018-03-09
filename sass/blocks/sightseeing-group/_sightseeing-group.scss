@@ -1,21 +1,27 @@
 .sightseeing-group {
-  padding-left: 6%;
-  padding-right: 6%;
-  background-color: $color-gray-lighter;
-
-  &::after {
-    content: "";
-    display: block;
-    border-top: 0.1rem solid $color-gray-dark;
-  }
-
-  &:last-child::after {
-    border: none;
+  &__wrapper {
+    padding-left: 6%;
+    padding-right: 6%;
+    background-color: $color-gray-lighter;
   }
 
   &__inner {
-    padding: 2.7rem 0.25% 1.3rem;
+    padding: 2.7rem 0.25% 0;
     text-align: center;
+
+    &::after {
+      content: "";
+      display: block;
+      border-top: 0.1rem solid $color-gray-dark;
+    }
+
+    &:last-child {
+      padding-bottom: 0.1rem;
+
+      &::after {
+        border: none;
+      }
+    }
   }
 
   &__header {
@@ -29,6 +35,53 @@
   }
 
   &__paragraph {
+    margin-bottom: 2.7rem;
+
     @include paragraph($line-height-two, $uppercase);
+  }
+
+  // Tablet screen
+  @include screen-size($tablet-size) {
+    &__wrapper {
+      display: flex;
+      padding: 0;
+    }
+
+    &__inner {
+      width: 33.3%;
+      padding-top: 4.5rem;
+      padding-bottom: 4.4rem;
+
+      @include inner_padding($padding-tablet-two-LR);
+
+      &:last-child {
+        padding-bottom: 4.4rem;
+      }
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__header {
+      @include text-size($font-size-two, $line-height-three);
+    }
+
+    &__counter-paragraph {
+      margin-bottom: 2.1rem;
+    }
+
+    &__paragraph {
+      margin-bottom: 0;
+    }
+  }
+
+  // Desktop screen
+  @include screen-size($desktop-size) {
+    &__inner {
+      padding-bottom: 6.5rem;
+
+      @include inner_padding($padding-desktop-two-LR);
+    }
   }
 }
