@@ -74,18 +74,22 @@
     }
 
     &__item {
-      width: 256px;
-      padding: 13.9rem 4% 1.3rem;
+      width: 33.3%;
+      padding-top: 13.9rem;
+      padding-bottom: 1.3rem;
+
+      @include inner_padding($padding-tablet-two-LR);
 
       &::before {
         height: 7.5rem;
-        width: 7.7rem;
+        left: 50%;
+        transform: translate(-50%);
       }
 
       &--house {
         &::before {
           top: 4rem;
-          left: 9rem;
+          width: 7.7rem;
           background-size: 7.6rem 7.2rem;
         }
       }
@@ -95,7 +99,7 @@
 
         &::before {
           top: 3.7rem;
-          left: 9.5rem;
+          width: 6.6rem;
           background-size: 6.4rem 7.5rem;
         }
       }
@@ -103,10 +107,21 @@
       &--food {
         &::before {
           top: 4.2rem;
-          left: 8.9rem;
+          width: 7.7rem;
           background-size: 7.7rem 7rem;
         }
       }
+    }
+  }
+
+  // Desktop screen
+  @include screen-size($desktop-size) {
+    &__inner {
+      padding-bottom: 6.9rem;
+    }
+
+    &__item {
+      @include inner_padding($padding-desktop-two-LR);
     }
   }
 }
