@@ -50,7 +50,6 @@
   // Tablet screen
   @include screen-size($tablet-size) {
     display: flex;
-    margin-top: 0.3rem;
 
     &__inner {
       width: 24rem;
