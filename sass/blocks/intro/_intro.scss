@@ -59,6 +59,10 @@
     &__header {
       max-width: 46.7rem;
     }
+
+    &--smaller {
+      height: 28.8rem;
+    }
   }
 
   // Desktop screen
@@ -67,6 +71,10 @@
 
     &::after {
       background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
+
+    &--smaller {
+      height: 30rem;
     }
   }
 }
