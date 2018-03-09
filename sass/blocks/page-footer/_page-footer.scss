@@ -16,4 +16,20 @@
       margin-bottom: 0;
     }
   }
+
+  // Tablet Screen
+  @include screen-size($tablet-size) {
+    &__inner {
+      display: flex;
+
+      @include inner_padding(0);
+    }
+
+    &__tag {
+      width: 33.3%;
+      padding-top: 3rem;
+
+      @include inner_padding(0);
+    }
+  }
 }

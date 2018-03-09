@@ -11,7 +11,7 @@
   &__logo {
     position: relative;
     top: 1.3rem;
-    margin-left: 5px;
+    margin-left: 0.5rem;
   }
 
   &__svg {
@@ -21,6 +21,23 @@
 
     &:active {
       opacity: 0.3;
+    }
+  }
+
+  // Tablet screen
+  @include screen-size($tablet-size) {
+    width: 33.3%;
+    padding-top: 1.5rem;
+
+    &__logo {
+      margin-left: 1.4rem;
+    }
+  }
+
+  // Desktop screen
+  @include screen-size($desktop-size) {
+    &__paragraph {
+      margin-left: 17.9rem;
     }
   }
 }
