@@ -1,5 +1,5 @@
 .image-wrapper {
-  height: 260px;
+  height: 26rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -16,8 +16,7 @@
 
   // Tablet-screen
   @include screen-size($tablet-size) {
-    height: 256px;
-    line-height: 0;
+    height: 25.6rem;
     max-height: 100%;
     width: 100%;
 
