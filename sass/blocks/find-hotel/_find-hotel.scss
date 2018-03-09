@@ -24,4 +24,37 @@
   &__btn {
     @include btn_big;
   }
+
+  //Tablet screen
+  @include screen-size($tablet-size) {
+    &__inner {
+      padding-top: 5.5rem;
+      padding-bottom: 5.8rem;
+
+      @include inner_padding($padding-tablet-three-LR);
+    }
+
+    &__header {
+      @include text-size($font-size-one, $line-height-three);
+      margin-bottom: 3.1rem;
+    }
+
+    &__paragraph {
+      @include inner_padding($padding-tablet-two-LR);
+      margin-bottom: 4.2rem;
+    }
+  }
+
+  // Desktop screen
+  @include screen-size($desktop-size) {
+    &__inner {
+      padding-bottom: 6.6rem;
+
+      @include inner_padding($padding-desktop-three-LR);
+    }
+
+    &__paragraph {
+      margin-bottom: 4.7rem;
+    }
+  }
 }
