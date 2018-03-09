@@ -34,7 +34,7 @@
   @include screen-size($tablet-size) {
     &__inner {
       padding-top: 5.1rem;
-      padding-bottom: 4.7rem;
+      padding-bottom: 5rem;
 
       @include inner_padding($padding-tablet-one-LR);
     }
@@ -49,7 +49,6 @@
   @include screen-size($desktop-size) {
     &__inner {
       @include inner_padding($padding-desktop-one-LR);
-      padding-bottom: 4.7rem;
     }
   }
 }
