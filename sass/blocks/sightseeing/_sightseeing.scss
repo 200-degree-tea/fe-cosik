@@ -50,7 +50,6 @@
   // Tablet screen
   @include screen-size($tablet-size) {
     display: flex;
-    margin-top: 3px;
 
     &__inner {
       width: 24rem;
@@ -75,8 +74,8 @@
   // Desktop screen
   @include screen-size($desktop-size) {
     &__inner {
-      width: 376px;
-      padding-top: 52px;
+      width: 37.6rem;
+      padding-top: 5.2rem;
     }
 
     &__header {
