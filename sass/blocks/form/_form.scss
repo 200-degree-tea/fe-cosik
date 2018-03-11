@@ -464,9 +464,15 @@
 
     &__section {
       width: 100%;
+      flex-basis: 100%;
+
+      &::after {
+        content: none;
+      }
 
       &:first-child {
         width: 50%;
+        flex-basis: 50%;
 
         &::before {
           content: "";
@@ -475,15 +481,12 @@
           margin-top: 25px;
           border-left: 0.1rem solid $color-gray;
         }
-
-        &::after {
-          content: none;
-        }
       }
 
       &:nth-child(5) {
         order: -1;
         width: 50%;
+        flex-basis: 50%;
 
         &::after {
           content: none;
@@ -493,22 +496,132 @@
 
     &__header {
       @include header(h2);
-      margin-bottom: 5.6rem;
+      position: relative;
+      margin-bottom: 2.4rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1.2rem;
+        left: 0;
+        width: 25%;
+        border-top: 0.1rem solid $color-gray;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1.2rem;
+        right: 0;
+        width: 25%;
+        border-top: 0.1rem solid $color-gray;
+      }
 
       &--left {
+        margin-bottom: 5.6rem;
         text-align: left;
+
+        &::before,
+        &::after {
+          content: none;
+        }
       }
     }
 
     &__inner {
-      padding-top: 2.1rem;
+      padding-top: 3.5rem;
 
-      @include inner_padding(15%);
+      @include inner_padding(7.8%);
+
+      &--narrow {
+        padding-top: 2.1rem;
+
+        @include inner_padding(15%);
+      }
     }
 
     &__field {
       &--radio-box {
         margin-bottom: 2.7rem;
+      }
+
+      &--phone {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2.3rem;
+      }
+
+      &--envelope {
+        margin-bottom: 1rem;
+      }
+
+      &--small {
+        width: 28%;
+        flex-basis: 28%;
+      }
+
+      &--constant {
+        width: 28%;
+        flex-basis: 28%;
+      }
+
+      &--column {
+        width: 32%;
+        flex-basis: 32%;
+      }
+    }
+
+    &__input {
+      &--phone {
+        order: 1;
+      }
+
+      &--small {
+        margin: 0;
+      }
+    }
+
+    &__label {
+      &--swap {
+        visibility: hidden;
+
+        &::before {
+          content: "Days of stay:";
+          visibility: visible;
+        }
+      }
+    }
+
+    &__error {
+      margin: 0;
+      position: absolute;
+      right: 0;
+      text-align: right;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__type-parallel {
+      display: none;
+    }
+
+    &__btn {
+      &--inc {
+        margin: 0;
+      }
+    }
+
+    &__flex-block {
+      // flex-wrap: wrap;
+    }
+
+    &__column {
+      &--bg {
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
