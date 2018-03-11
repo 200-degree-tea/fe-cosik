@@ -4,6 +4,11 @@
     line-height: $line-height-three;
   }
 
+  @else if $size == h2 {
+    font-size: $font-size-two;
+    line-height: $line-height-three;
+  }
+
   @else if $size == h3 {
     font-size: $font-size-three;
     line-height: $line-height-three;

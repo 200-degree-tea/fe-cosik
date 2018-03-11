@@ -456,4 +456,60 @@
   input::-webkit-outer-spin-button {
     display: none;
   }
+
+  // Tablet screen
+  @include screen-size($tablet-size) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__section {
+      width: 100%;
+
+      &:first-child {
+        width: 50%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 292px;
+          margin-top: 25px;
+          border-left: 0.1rem solid $color-gray;
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+
+      &:nth-child(5) {
+        order: -1;
+        width: 50%;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    &__header {
+      @include header(h2);
+      margin-bottom: 5.6rem;
+
+      &--left {
+        text-align: left;
+      }
+    }
+
+    &__inner {
+      padding-top: 2.1rem;
+
+      @include inner_padding(15%);
+    }
+
+    &__field {
+      &--radio-box {
+        margin-bottom: 2.7rem;
+      }
+    }
+  }
 }
