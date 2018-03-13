@@ -1,11 +1,11 @@
 .sightseeing-group {
-  &__wrapper {
+  &__inner {
     padding-left: 6%;
     padding-right: 6%;
     background-color: $color-gray-lighter;
   }
 
-  &__inner {
+  &__item {
     padding: 2.7rem 0.25% 0;
     text-align: center;
 
@@ -42,12 +42,12 @@
 
   // Tablet screen
   @include screen-size($tablet-size) {
-    &__wrapper {
+    &__inner {
       display: flex;
       padding: 0;
     }
 
-    &__inner {
+    &__item {
       width: 33.3%;
       padding-top: 4.5rem;
       padding-bottom: 4.4rem;
@@ -78,7 +78,7 @@
 
   // Desktop screen
   @include screen-size($desktop-size) {
-    &__inner {
+    &__item {
       padding-bottom: 6.5rem;
 
       @include inner_padding($padding-desktop-two-LR);
