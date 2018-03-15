@@ -526,6 +526,10 @@
           content: none;
         }
       }
+
+      &--bottom-space {
+        margin-bottom: 56px;
+      }
     }
 
     &__inner {
@@ -593,6 +597,10 @@
         width: 32%;
         flex-basis: 32%;
       }
+
+      &--bottom-space {
+        margin-bottom: 65px;
+      }
     }
 
     &__input {
@@ -617,6 +625,13 @@
 
       &--checkbox {
         margin-right: 0;
+      }
+
+      &--file {
+        width: 70%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin: 0 auto;
       }
     }
 
@@ -654,6 +669,12 @@
       flex-wrap: wrap;
       justify-content: center;
       padding-top: 2.1rem;
+    }
+
+    &__remove-btn {
+      left: unset;
+      right: 0;
+      margin-right: -20%;
     }
   }
 }
