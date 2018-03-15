@@ -547,19 +547,15 @@
 
       &--checkbox {
         height: 52px;
-        width: 43%;
-        // border: 1px solid red;
+        width: 43.5%;
+        margin-left: 31px;
 
         &:first-child {
           order: 1;
-          margin-left: 31px;
-          margin-right: 36px;
         }
 
         &:nth-child(2) {
           order: 3;
-          margin-left: 31px;
-          margin-right: 36px;
         }
 
         &:nth-child(3) {
@@ -568,6 +564,7 @@
 
         &:nth-child(4) {
           order: 4;
+          margin-bottom: 3.5rem;
         }
       }
 
