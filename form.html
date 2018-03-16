@@ -51,7 +51,7 @@
       <form class="form" action="" method="get">
 
         <section class="form__section">
-          <div class="form__inner form__inner--smaller form__inner--narrow">
+          <div class="form__inner form__inner--smaller form__inner--right">
             <h3 class="form__header form__header--space-bottom form__header--left">Introduce yourself:</h3>
             <div class="form__field form__field--flexgrid">
               <label class="form__label form__label--stretch" for="name">Name:</label>
@@ -71,14 +71,16 @@
         <section class="form__section">
           <div class="form__inner">
             <h3 class="form__header">Contact Information:</h3>
-            <div class="form__field form__field--phone">
-              <label class="form__label" for="phone">Contact number:</label>
-              <input class="form__input form__input--phone" id="phone" name="phone" type="tel">
-              <span class="form__error">Error, double-check the number</span>
-            </div>
-            <div class="form__field form__field--envelope">
-              <label class="form__label" for="email">Email:</label>
-              <input class="form__input form__input--envelope" id="email" name="email" type="email" required>
+            <div class="form__item-row">
+              <div class="form__field form__field--phone">
+                <label class="form__label form__label--phone" for="phone">Contact number:</label>
+                <input class="form__input form__input--phone" id="phone" name="phone" type="tel">
+                <span class="form__error">Error, double-check the number</span>
+              </div>
+              <div class="form__field form__field--envelope">
+                <label class="form__label form__label--envelope" for="email">Email:</label>
+                <input class="form__input form__input--envelope" id="email" name="email" type="email" required>
+              </div>
             </div>
           </div>
         </section>
@@ -111,7 +113,7 @@
         <section class="form__section">
           <div class="form__inner">
             <h3 class="form__header">Number of travellers</h3>
-            <div class="form__field form__field--constant">
+            <div class="form__field form__field--constant form__field--aligne-left">
               <label class="form__label" for="travellers">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
               <div class="form__number form__number--flexgrid">
                 <button class="form__btn form__btn--dec" type="button"></button>
@@ -147,7 +149,7 @@
         </section>
 
         <section class="form__section">
-          <div class="form__inner form__inner--narrow">
+          <div class="form__inner form__inner--left">
             <h3 class="form__header form__header--left">Your General impression:</h3>
             <div class="form__field form__field--radio-box">
               <input class="form__input form__input--radio form__input--hidden" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
