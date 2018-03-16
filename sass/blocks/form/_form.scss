@@ -542,6 +542,24 @@
 
         @include inner_padding(15%);
       }
+
+      &--lower {
+        padding-top: 0;
+      }
+
+      &--high {
+        padding-top: 0.4rem;
+
+        &::after {
+          content: "* - required fields";
+          position: absolute;
+          top: 22px;
+          right: 8%;
+          font-size: $font-size-four;
+          line-height: $line-height-three;
+          text-transform: uppercase;
+        }
+      }
     }
 
     &__field {
@@ -611,6 +629,10 @@
       &--small {
         margin: 0;
       }
+
+      &--textarea {
+        min-height: 16rem;
+      }
     }
 
     &__label {
@@ -675,6 +697,16 @@
       left: unset;
       right: 0;
       margin-right: -20%;
+    }
+
+    &__grid-item {
+      flex-basis: 22%;
+      margin-right: 6%;
+      margin-bottom: 10%;
+    }
+
+    &__submit {
+      width: 50%;
     }
   }
 }
