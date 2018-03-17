@@ -1,5 +1,24 @@
 .developer {
+  &__svg {
+    position: absolute;
+    top: 13px;
+    left: 83px;
+  }
+
   &__logo {
+    display: inline-block;
+    position: relative;
+
+    &:hover .developer__svg {
+      fill: $color-blue;
+    }
+
+    &:active .developer__svg {
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
     display: inline-block;
     position: relative;
     top: 16px;
@@ -10,21 +29,6 @@
     margin-bottom: 0;
     font-weight: 400;
     text-transform: uppercase;
-
-    &:hover {
-      color: $color-blue;
-      fill: $color-blue;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &__svg {
-    position: absolute;
-    top: -3px;
-    left: 103px;
   }
 
   // Tablet screen
@@ -33,7 +37,7 @@
     padding-top: 1.5rem;
 
     &__logo {
-      margin-left: 1.4rem;
+      margin-left: 1.1rem;
     }
   }
 
