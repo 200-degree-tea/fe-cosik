@@ -67,4 +67,37 @@
       width: 100%;
     }
   }
+
+  // Tablet screen
+  @include screen-size($tablet-size) {
+    &__inner {
+      @include inner_padding($padding-tablet-four-LR);
+      padding-top: 20px;
+    }
+
+    &__picture {
+      margin-bottom: 1.4rem;
+    }
+
+    &__caption {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      margin-left: 2rem;
+    }
+
+    &__likes {
+      padding-top: 13px;
+      margin-left: 0;
+      margin-right: 21px;
+    }
+
+    &__btn {
+      top: 13px;
+      left: unset;
+      right: 61px;
+    }
+  }
 }
