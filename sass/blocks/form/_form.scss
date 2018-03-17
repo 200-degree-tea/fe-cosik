@@ -912,5 +912,15 @@
         margin-left: 0.8rem;
       }
     }
+
+    &__grid-item {
+      flex-basis: 14%;
+      margin-left: 0;
+      margin-right: 7.2rem;
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
   }
 }
