@@ -9,19 +9,31 @@
   }
 
   &__logo {
+    display: inline-block;
     position: relative;
-    top: 1.3rem;
-    margin-left: 0.5rem;
-  }
+    top: 16px;
+    left: -20px;
+    color: $color-black;
 
-  &__svg {
+    @include header(h5);
+    margin-bottom: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+
     &:hover {
+      color: $color-blue;
       fill: $color-blue;
     }
 
     &:active {
       opacity: 0.3;
     }
+  }
+
+  &__svg {
+    position: absolute;
+    top: -3px;
+    left: 103px;
   }
 
   // Tablet screen
@@ -36,8 +48,8 @@
 
   // Desktop screen
   @include screen-size($desktop-size) {
-    &__paragraph {
-      margin-left: 17.9rem;
+    &__logo {
+      margin-left: 18.9rem;
     }
   }
 }
