@@ -1,13 +1,4 @@
 .developer {
-  &__paragraph {
-    display: inline-block;
-
-    @include header(h5);
-    margin-bottom: 0;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-
   &__logo {
     display: inline-block;
     position: relative;
