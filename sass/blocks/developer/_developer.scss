@@ -2,7 +2,7 @@
   &__svg {
     position: absolute;
     top: 13px;
-    left: 83px;
+    left: 103px;
   }
 
   &__logo {
@@ -21,8 +21,8 @@
   &__text {
     display: inline-block;
     position: relative;
-    top: 16px;
-    left: -20px;
+    margin-right: 40px;
+    padding-top: 16px;
     color: $color-black;
 
     @include header(h5);
@@ -36,8 +36,8 @@
     width: 33.3%;
     padding-top: 1.5rem;
 
-    &__logo {
-      margin-left: 1.1rem;
+    &__text {
+      margin-right: 28px;
     }
   }
 
