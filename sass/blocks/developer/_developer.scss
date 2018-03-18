@@ -9,6 +9,16 @@
     display: inline-block;
     position: relative;
 
+    margin-right: 40px;
+    padding-top: 16px;
+    color: $color-black;
+
+    @include header(h5);
+    margin-bottom: 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+
     &:hover .developer__svg {
       fill: $color-blue;
     }
