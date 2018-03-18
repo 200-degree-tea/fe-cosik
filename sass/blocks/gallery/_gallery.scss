@@ -66,6 +66,14 @@
     & img {
       width: 100%;
     }
+
+    // &--photo-one {
+    //   height: 280px;
+    //   @include img-retina("../img/photo-cactus-tablet@1x.jpg", "../img/photo-cactus-tablet@2x.jpg");
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-size: cover;
+    // }
   }
 
   // Tablet screen
@@ -73,10 +81,22 @@
     &__inner {
       @include inner_padding($padding-tablet-four-LR);
       padding-top: 20px;
+      padding-bottom: 9px;
+
+      &--flex-item {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        border-top: none;
+      }
     }
 
     &__picture {
       margin-bottom: 1.4rem;
+
+      &--higher {
+        // height: 270px;
+      }
     }
 
     &__caption {
@@ -85,19 +105,35 @@
     }
 
     &__text {
+      flex-basis: 50%;
+      width: 50%;
       margin-left: 2rem;
     }
 
     &__likes {
+      flex-basis: 50%;
+      width: 50%;
       padding-top: 13px;
       margin-left: 0;
       margin-right: 21px;
+      text-align: right;
     }
 
     &__btn {
       top: 13px;
       left: unset;
       right: 61px;
+    }
+
+    &__collection {
+      display: flex;
+      flex-wrap: wrap;
+      @include inner_padding($padding-tablet-four-LR);
+    }
+
+    &__item {
+      flex-basis: 50%;
+      width: 50%;
     }
   }
 }
