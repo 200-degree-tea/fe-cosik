@@ -26,11 +26,14 @@
 
   &__link {
     display: block;
+    color: $color-white;
     font-weight: $font-weight-bolded;
     font-size: $font-size-three;
     text-transform: uppercase;
+    text-decoration: none;
 
     &:hover {
+      color: $color-white;
       background-color: $color-blue-dark;
     }
 
