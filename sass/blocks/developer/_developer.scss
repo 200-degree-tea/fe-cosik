@@ -1,25 +1,28 @@
 .developer {
-  &__paragraph {
+  &__svg {
+    position: absolute;
+    top: 1.3rem;
+    left: 10.3rem;
+  }
+
+  &__logo {
     display: inline-block;
+    position: relative;
+    margin-right: 40px;
+    padding-top: 1.6rem;
+    color: $color-black;
 
     @include header(h5);
     margin-bottom: 0;
     font-weight: 400;
     text-transform: uppercase;
-  }
+    text-decoration: none;
 
-  &__logo {
-    position: relative;
-    top: 1.3rem;
-    margin-left: 0.5rem;
-  }
-
-  &__svg {
-    &:hover {
+    &:hover .developer__svg {
       fill: $color-blue;
     }
 
-    &:active {
+    &:active .developer__svg {
       opacity: 0.3;
     }
   }
@@ -28,16 +31,21 @@
   @include screen-size($tablet-size) {
     width: 33.3%;
     padding-top: 1.5rem;
+    text-align: left;
 
     &__logo {
-      margin-left: 1.4rem;
+      margin-right: 0;
+      margin-left: 6.6rem;
     }
   }
 
   // Desktop screen
   @include screen-size($desktop-size) {
-    &__paragraph {
-      margin-left: 17.9rem;
+    text-align: right;
+
+    &__logo {
+      margin-left: 0;
+      margin-right: 8rem;
     }
   }
 }
