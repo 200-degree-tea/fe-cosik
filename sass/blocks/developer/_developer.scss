@@ -1,16 +1,15 @@
 .developer {
   &__svg {
     position: absolute;
-    top: 13px;
-    left: 103px;
+    top: 1.3rem;
+    left: 10.3rem;
   }
 
   &__logo {
     display: inline-block;
     position: relative;
-
     margin-right: 40px;
-    padding-top: 16px;
+    padding-top: 1.6rem;
     color: $color-black;
 
     @include header(h5);
@@ -28,33 +27,25 @@
     }
   }
 
-  &__text {
-    display: inline-block;
-    position: relative;
-    margin-right: 40px;
-    padding-top: 16px;
-    color: $color-black;
-
-    @include header(h5);
-    margin-bottom: 0;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-
   // Tablet screen
   @include screen-size($tablet-size) {
     width: 33.3%;
     padding-top: 1.5rem;
+    text-align: left;
 
-    &__text {
-      margin-right: 28px;
+    &__logo {
+      margin-right: 0;
+      margin-left: 6.6rem;
     }
   }
 
   // Desktop screen
   @include screen-size($desktop-size) {
+    text-align: right;
+
     &__logo {
-      margin-left: 18.9rem;
+      margin-left: 0;
+      margin-right: 8rem;
     }
   }
 }
