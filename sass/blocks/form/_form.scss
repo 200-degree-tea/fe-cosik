@@ -149,6 +149,7 @@
     @include header(h3);
     margin-bottom: 2rem;
     text-align: center;
+    white-space: nowrap;
 
     &--space-bottom {
       margin-bottom: 2.2rem;
@@ -372,6 +373,7 @@
   }
 
   &__btn {
+    flex-basis: 5.7rem;
     width: 5.7rem;
     height: 5.7rem;
     margin: 0;
@@ -467,16 +469,16 @@
     flex-wrap: wrap;
 
     &__section {
-      width: 100%;
       flex-basis: 100%;
+      width: 100%;
 
       &::after {
         content: none;
       }
 
       &:first-child {
-        width: 50%;
         flex-basis: 50%;
+        width: 50%;
 
         &::before {
           content: "";
@@ -488,9 +490,9 @@
       }
 
       &:nth-child(5) {
+        flex-basis: 50%;
         order: -1;
         width: 50%;
-        flex-basis: 50%;
 
         &::after {
           content: none;
@@ -758,10 +760,10 @@
     &__field {
       &--phone {
         flex-wrap: nowrap;
-        align-items: center;
-        padding-top: 1.3rem;
-        width: 42%;
         flex-basis: 42%;
+        align-items: center;
+        width: 42%;
+        padding-top: 1.3rem;
 
         &::before {
           top: 1.3rem;
@@ -770,9 +772,9 @@
 
       &--envelope {
         display: flex;
+        flex-basis: 42%;
         align-items: center;
         width: 42%;
-        flex-basis: 42%;
 
         &::before {
           top: 1.3rem;
@@ -780,13 +782,13 @@
       }
 
       &--small {
-        width: 29%;
         flex-basis: 29%;
+        width: 29%;
       }
 
       &--constant {
-        width: 29%;
         flex-basis: 29%;
+        width: 29%;
       }
 
       &--aligne-left {
