@@ -460,6 +460,14 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+
+    &:hover {
+      background-color: $color-gray;
+    }
+
+    &:active {
+      background-color: $color-gray-dark-two;
+    }
   }
 
   input::-webkit-calendar-picker-indicator,
@@ -712,7 +720,7 @@
     }
 
     &__remove-btn {
-      left: unset;
+      left: auto;
       right: 0;
       margin-right: -20%;
     }
@@ -921,7 +929,7 @@
     &__grid-item {
       flex-basis: 14%;
       margin-left: 0;
-      margin-right: 7.2rem;
+      margin-right: 7rem;
 
       &:nth-child(5n) {
         margin-right: 0;
