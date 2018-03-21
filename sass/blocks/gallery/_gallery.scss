@@ -102,6 +102,8 @@
     }
 
     &__likes {
+      display: flex;
+      justify-content: flex-end;
       flex-basis: 50%;
       width: 50%;
       padding-top: 13px;
@@ -111,9 +113,11 @@
     }
 
     &__btn {
-      top: 27px;
+      position: relative;
+      top: auto;
       left: auto;
-      right: 62px;
+      right: auto;
+      margin-right: 10px;
     }
 
     &__collection {
