@@ -122,4 +122,23 @@
       opacity: 0.3;
     }
   }
+
+  // Tablet screen
+  @include screen-size($tablet-size) {
+    &__intro {
+      padding-top: 6.6rem;
+      border-top: none;
+
+      @include inner_padding($padding-tablet-three-LR);
+    }
+
+    &__header {
+      @include header(h1);
+      margin-bottom: 3.1rem;
+    }
+
+    &__inner {
+      @include inner_padding($padding-tablet-four-LR);
+    }
+  }
 }
