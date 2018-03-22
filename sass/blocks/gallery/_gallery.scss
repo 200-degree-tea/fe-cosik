@@ -129,6 +129,62 @@
 
     &__item {
       flex-basis: 50%;
+      // width: 100%;
+    }
+  }
+
+  // Desktop screen
+  @include screen-size($desktop-size) {
+    &__inner {
+      position: relative;
+
+      @include inner_padding($padding-desktop-five-LR);
+
+      &--top {
+        padding-top: 22px;
+      }
+    }
+
+    &__collection {
+      flex-wrap: nowrap;
+
+      @include inner_padding($padding-desktop-five-LR);
+    }
+
+    &__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: $color-black-brighten-three;
+    }
+
+    &__title {
+      color: $color-white;
+    }
+
+    &__author {
+      color: $color-white;
+    }
+
+    &__number {
+      color: $color-white;
+    }
+
+    &__btn {
+      background-image: url("../img/icon-like_3.svg");
+      background-color: transparent;
+      opacity: 1;
+
+      &:hover {
+        background-color: transparent;
+        opacity: 0.4;
+      }
+
+      &:active {
+        background-color: transparent;
+        opacity: 0.2;
+      }
     }
   }
 }
