@@ -1,10 +1,10 @@
 .video {
   &__intro {
-    padding-top: 1.5rem;
+    padding-top: 3.3rem;
     padding-bottom: 1rem;
 
     @include inner_padding($padding-LR);
-    border-top: 1px solid $color-gray;
+    border-top: 0.1rem solid $color-gray;
   }
 
   &__header {
@@ -19,10 +19,8 @@
   }
 
   &__inner {
-    position: relative;
     padding-top: 1rem;
     padding-bottom: 9.8rem;
-    overflow: hidden;
   }
 
   &__picture {
@@ -31,7 +29,7 @@
 
   &__control {
     position: absolute;
-    bottom: 41px;
+    top: 15.7rem;
     width: 88%;
     padding-left: 6.25%;
     padding-right: 6.25%;
@@ -39,7 +37,7 @@
 
   &__bar {
     position: relative;
-    height: 44px;
+    height: 4.4rem;
     background-color: $color-black-brighten-two;
 
     &::before {
@@ -57,11 +55,11 @@
 
   &__pointer {
     position: relative;
-    top: 17px;
-    left: 22px;
+    top: 1.7rem;
+    left: 2.2rem;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     background-color: $color-white;
     border-radius: 50%;
     border-color: $color-white;
@@ -88,24 +86,24 @@
     }
 
     &--play {
-      top: 23px;
-      left: 26px;
+      top: 2.3rem;
+      left: 2.6rem;
       height: 2rem;
       width: 1.6rem;
     }
 
     &--subtitles {
       position: absolute;
-      top: 23px;
-      right: 75px;
+      top: 2.3rem;
+      right: 7.5rem;
       height: 2rem;
       width: 3.2rem;
     }
 
     &--full-scr {
       position: absolute;
-      top: 23px;
-      right: 25px;
+      top: 2.3rem;
+      right: 2.5rem;
       height: 2rem;
       width: 2rem;
     }
@@ -123,6 +121,10 @@
     }
   }
 
+  &__item {
+    position: relative;
+  }
+
   // Tablet screen
   @include screen-size($tablet-size) {
     &__intro {
@@ -138,7 +140,121 @@
     }
 
     &__inner {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+
       @include inner_padding($padding-tablet-four-LR);
+    }
+
+    &__picture {
+      line-height: 0;
+    }
+
+    &__control {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 9.3rem;
+      top: auto;
+      bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      background-color: rgba(1, 1, 1, 0.5);
+    }
+
+    &__bar {
+      top: 2.5rem;
+      left: 7rem;
+      width: 67%;
+      flex-basis: 67%;
+      background-color: transparent;
+    }
+
+    &__pointer {
+      top: 1.2rem;
+    }
+
+    &__btn-control {
+      bottom: 2.5rem;
+      flex-basis: 100%;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    &__svg {
+      fill: $color-white;
+
+      &:hover {
+        fill: $color-white;
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &__icon {
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &--play {
+        left: 3.5rem;
+      }
+
+      &--subtitles {
+        right: 9.1rem;
+      }
+
+      &--full-scr {
+        right: 4rem;
+      }
+    }
+  }
+
+  // Desktop screen
+  @include screen-size($desktop-size) {
+    &__intro {
+      padding-top: 6.9rem;
+
+      @include inner_padding($padding-desktop-three-LR);
+    }
+
+    &__inner {
+      padding-top: 4.8rem;
+      padding-bottom: 8.5rem;
+
+      @include inner_padding($padding-desktop-six-LR);
+    }
+
+    &__bar {
+      width: 73%;
+      flex-basis: 73%;
+    }
+
+    &__pointer {
+      top: 1.3rem;
+    }
+
+    &__btn-control {
+      bottom: 2.7rem;
+    }
+
+    &__icon {
+      &--play {
+        left: 3.4rem;
+      }
+
+      &--subtitles {
+        right: 9.3rem;
+      }
+
+      &--full-scr {
+        right: 4.2rem;
+      }
     }
   }
 }
