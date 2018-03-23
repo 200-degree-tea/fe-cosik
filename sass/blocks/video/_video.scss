@@ -2,8 +2,6 @@
   &__intro {
     padding-top: 3.3rem;
     padding-bottom: 1rem;
-
-    @include inner_padding($padding-LR);
     border-top: 0.1rem solid $color-gray;
   }
 
