@@ -118,6 +118,14 @@
       left: auto;
       right: auto;
       margin-right: 1rem;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
     }
 
     &__collection {
@@ -176,12 +184,10 @@
       opacity: 1;
 
       &:hover {
-        background-color: transparent;
         opacity: 0.4;
       }
 
       &:active {
-        background-color: transparent;
         opacity: 0.2;
       }
     }
