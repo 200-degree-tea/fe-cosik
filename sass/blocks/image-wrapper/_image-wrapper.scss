@@ -16,9 +16,10 @@
 
   // Tablet-screen
   @include screen-size($tablet-size) {
-    height: 25.6rem;
+    height: auto;
     max-height: 100%;
     width: 100%;
+    flex-basis: 100%;
 
     &--bottom {
       order: -1;
