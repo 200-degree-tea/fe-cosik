@@ -25,12 +25,12 @@
     }
 
     &--high {
-      padding-bottom: 3.7rem;
+      padding-bottom: 1.4rem;
       padding-right: 7%;
     }
 
     &--lower {
-      padding-bottom: 2.4rem;
+      padding-bottom: 0.4rem;
     }
   }
 
@@ -50,35 +50,11 @@
     }
 
     &--phone {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 3.4rem;
-        right: 0;
-        height: 5.7rem;
-        width: 5.8rem;
-        background-color: $color-gray-two;
-        background-image: url("../img/icon-phone.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-      }
+      margin-bottom: 1.1rem;
     }
 
     &--envelope {
       margin-bottom: 1.9rem;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 3.4rem;
-        right: 0;
-        height: 5.7rem;
-        width: 5.8rem;
-        background-color: $color-gray-two;
-        background-image: url("../img/icon-mail.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-      }
     }
 
     &--radio-box {
@@ -93,7 +69,7 @@
       margin-bottom: 3.5rem;
 
       &:last-child {
-        margin-bottom: 2.6rem;
+        margin-bottom: 2.4rem;
       }
     }
 
@@ -131,7 +107,7 @@
   &__label-count {
     margin: 0;
     padding-top: 0.3rem;
-    margin-bottom: 0.7rem;
+    padding-bottom: 0.7rem;
     font-size: $font-size-four;
     text-transform: uppercase;
     text-align: center;
@@ -159,18 +135,18 @@
   &__label {
     display: block;
     width: auto;
-    margin-right: 2.1rem;
-    margin-left: 2.1rem;
-    margin-bottom: 0.8rem;
+    padding-right: 2.1rem;
+    padding-left: 2.1rem;
+    padding-bottom: 0.8rem;
     font-size: $font-size-four;
     line-height: $line-height-three;
     white-space: nowrap;
     text-transform: uppercase;
 
     &--stretch {
-      margin-left: 0;
-      margin-right: 2.3rem;
-      margin-bottom: 0;
+      padding-left: 0;
+      padding-right: 2.3rem;
+      padding-bottom: 0;
     }
 
     &--bolded {
@@ -295,6 +271,40 @@
     &--hidden {
       display: none;
     }
+
+    &--phone {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3.4rem;
+        right: 0;
+        height: 5.7rem;
+        width: 5.8rem;
+        background-color: $color-gray-two;
+        background-image: url("../img/icon-phone.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    &--phone-hidden {
+      display: none;
+    }
+
+    &--envelope {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 3.4rem;
+        right: 0;
+        height: 5.7rem;
+        width: 5.8rem;
+        background-color: $color-gray-two;
+        background-image: url("../img/icon-mail.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
   }
 
   &__input {
@@ -302,6 +312,7 @@
     top: -0.1rem;
     height: 5.7rem;
     width: 100%;
+    flex-basis: 100%;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
     font-size: $font-size-three;
@@ -334,6 +345,11 @@
       min-height: 15.8rem;
       width: 100%;
       resize: none;
+    }
+
+    &--envelope,
+    &--phone {
+      padding-right: 5.6rem;
     }
   }
 
@@ -375,6 +391,14 @@
   &__required {
     color: $color-red-light;
     margin-left: 0.7rem;
+
+    &--right {
+      visibility: hidden;
+    }
+
+    &--text {
+      visibility: hidden;
+    }
   }
 
   &__btn {
@@ -426,7 +450,7 @@
     line-height: 0;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 8%;
+    margin-bottom: 40px;
   }
 
   &__preview-photo {
@@ -570,21 +594,12 @@
 
       &--lower {
         padding-top: 0;
+            padding-bottom: 2.4rem;
       }
 
       &--high {
         padding-top: 0.4rem;
         padding-bottom: 6.1rem;
-
-        &::after {
-          content: "* - required fields";
-          position: absolute;
-          top: 2.2rem;
-          right: 8%;
-          font-size: $font-size-four;
-          line-height: $line-height-three;
-          text-transform: uppercase;
-        }
       }
     }
 
@@ -594,18 +609,20 @@
       }
 
       &--checkbox {
-        flex-basis: 35%;
+        flex-basis: 38%;
         height: 5.2rem;
-        width: 35%;
-        margin-left: 3.1rem;
+        width: 38%;
+        margin-left: 1.3rem;
         margin-bottom: 3.6rem;
 
         &:first-child {
           order: 1;
+          margin-left: 5rem;
         }
 
         &:nth-child(2) {
           order: 3;
+          margin-left: 5rem;
         }
 
         &:nth-child(3) {
@@ -671,6 +688,10 @@
         }
       }
 
+      &--radio-box {
+        margin-left: 3.6rem;
+      }
+
       &--checkbox {
         margin-right: 0;
       }
@@ -679,6 +700,8 @@
         width: 70%;
         padding-top: 1.6rem;
         padding-bottom: 1.6rem;
+        padding-left: 0;
+        padding-right: 0;
         margin: 0 auto;
       }
     }
@@ -728,11 +751,32 @@
     &__grid-item {
       flex-basis: 22%;
       margin-right: 6%;
-      margin-bottom: 10%;
+      margin-bottom: 10vw;
+      margin-bottom: 65px;
     }
 
     &__submit {
       width: 50%;
+    }
+
+    &__required {
+
+      &--right {
+        visibility: visible;
+        font-size: $font-size-four;
+        line-height: $line-height-three;
+      }
+
+      &--text {
+        visibility: visible;
+          position: absolute;
+          top: 2.2rem;
+          right: 8%;
+          font-size: $font-size-four;
+          line-height: $line-height-three;
+          color: $color-black;
+          text-transform: uppercase;
+      }
     }
   }
 
@@ -852,19 +896,29 @@
 
     &__label {
       &--phone {
-        visibility: hidden;
         width: 15%;
-        margin-left: 1.7rem;
-        margin-right: 0.9rem;
+        padding-left: 1.7rem;
+        padding-right: 2.1rem;
 
-        &::before {
-          content: "Phone:";
-          visibility: visible;
+        &::after {
+              top: 1.3rem;
         }
+      }
+
+      &--phone-hidden {
+        display: block;
+      }
+
+      &--phone-visible {
+        display: none;
       }
 
       &--envelope {
         margin-left: 2.5rem;
+
+        &::after {
+          top: 1.3rem;
+        }
       }
 
       &--swap {

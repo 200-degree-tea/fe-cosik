@@ -73,7 +73,8 @@
             <h3 class="form__header">Contact Information:</h3>
             <div class="form__item-row">
               <div class="form__field form__field--phone">
-                <label class="form__label form__label--phone" for="phone">Contact number:</label>
+                <label class="form__label form__label--phone form__label--phone-hidden" for="phone">Phone:</label>
+                <label class="form__label form__label--phone form__label--phone-visible" for="phone">Contact number:</label>
                 <input class="form__input form__input--phone" id="phone" name="phone" type="tel">
                 <span class="form__error">Error, double-check the number</span>
               </div>
@@ -97,7 +98,7 @@
                 <label class="form__label form__label--swap" for="stay">Length of stay:<span class="form__required form__required--aligne">*</span></label>
                 <div class="form__number form__number--flexgrid">
                   <button class="form__btn form__btn--dec" type="button"></button>
-                  <div class="form__number-holder" id="stay">1</div>
+                  <div class="form__number-holder form__number-holder--day" id="stay">1</div>
                   <div class="form__type-parallel">day</div>
                   <button class="form__btn form__btn--inc" type="button"></button>
                 </div>
@@ -241,7 +242,8 @@
         </section>
         <section class="form__section form__section--no-divider">
           <div class="form__inner form__inner--high">
-            <button class="form__submit" type="submit">POST REVIEW</button>
+            <button class="form__submit" type="submit">Send Review</button>
+            <span class="form__required form__required--text"><span class="form__required">*</span> - required fields</span>
           </div>
         </section>
       </form>
