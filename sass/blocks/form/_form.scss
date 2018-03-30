@@ -309,7 +309,6 @@
 
   &__input {
     box-sizing: border-box;
-    top: -0.1rem;
     height: 5.7rem;
     width: 100%;
     flex-basis: 100%;
@@ -594,7 +593,7 @@
 
       &--lower {
         padding-top: 0;
-            padding-bottom: 2.4rem;
+        padding-bottom: 2.4rem;
       }
 
       &--high {
@@ -760,7 +759,6 @@
     }
 
     &__required {
-
       &--right {
         visibility: visible;
         font-size: $font-size-four;
@@ -769,13 +767,13 @@
 
       &--text {
         visibility: visible;
-          position: absolute;
-          top: 2.2rem;
-          right: 8%;
-          font-size: $font-size-four;
-          line-height: $line-height-three;
-          color: $color-black;
-          text-transform: uppercase;
+        position: absolute;
+        top: 2.2rem;
+        right: 8%;
+        font-size: $font-size-four;
+        line-height: $line-height-three;
+        color: $color-black;
+        text-transform: uppercase;
       }
     }
   }
@@ -901,7 +899,7 @@
         padding-right: 2.1rem;
 
         &::after {
-              top: 1.3rem;
+          top: 1.3rem;
         }
       }
 
