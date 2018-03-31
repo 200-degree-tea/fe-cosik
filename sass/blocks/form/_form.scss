@@ -469,7 +469,7 @@
     line-height: 0;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
   }
 
   &__preview-photo {
@@ -782,8 +782,7 @@
     &__grid-item {
       flex-basis: 22%;
       margin-right: 6%;
-      margin-bottom: 10vw;
-      margin-bottom: 65px;
+      margin-bottom: 6.5rem;
     }
 
     &__submit {
@@ -919,7 +918,7 @@
     }
 
     &__error {
-      top: -20px;
+      top: -2rem;
       left: 10.7rem;
       text-align: left;
     }
@@ -962,6 +961,19 @@
 
     &__number-holder {
       margin-left: 0.8rem;
+      padding-right: 6.5rem;
+
+      &--day {
+        &::after {
+          content: "day";
+        }
+      }
+
+      &--person {
+        &::after {
+          content: "person";
+        }
+      }
     }
 
     &__btn {
