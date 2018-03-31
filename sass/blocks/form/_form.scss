@@ -287,10 +287,6 @@
       }
     }
 
-    &--phone-hidden {
-      display: none;
-    }
-
     &--envelope {
       &::after {
         content: "";
@@ -520,6 +516,10 @@
   input::-webkit-calendar-picker-indicator,
   input::-webkit-inner-spin-button,
   input::-webkit-outer-spin-button {
+    display: none;
+  }
+
+  &__text-desktop {
     display: none;
   }
 
@@ -935,14 +935,6 @@
         }
       }
 
-      &--phone-hidden {
-        display: block;
-      }
-
-      &--phone-visible {
-        display: none;
-      }
-
       &--envelope {
         margin-left: 2.5rem;
 
@@ -960,38 +952,6 @@
       }
 
       &--file {
-        width: 100%;
-      }
-
-      &--visible {
-        display: none;
-      }
-
-      &--hidden {
-        display: inline-block;
-        color: $color-white;
-        text-align: center;
-        text-transform: uppercase;
-        background-color: $color-blue;
-        border: none;
-
-        &:hover {
-          background-color: $color-blue-dark;
-        }
-
-        &:active {
-          color: $color-white-dimm;
-          background-color: $color-blue-darker;
-        }
-
-        &:disabled {
-          background-color: $color-gray;
-        }
-      }
-
-      &--second-txt {
-        visibility: visible;
-        content: "Drag and drop yout photo here";
         width: 100%;
       }
     }
@@ -1018,6 +978,14 @@
       &:nth-child(5n) {
         margin-right: 0;
       }
+    }
+
+    &__text-desktop {
+      display: block;
+    }
+
+    &__text-mobile {
+      display: none;
     }
   }
 }

@@ -73,8 +73,10 @@
             <h3 class="form__header">Contact Information:</h3>
             <div class="form__item-row">
               <div class="form__field form__field--phone">
-                <label class="form__label form__label--phone form__label--phone-hidden" for="phone">Phone:</label>
-                <label class="form__label form__label--phone form__label--phone-visible" for="phone">Contact number:</label>
+                <label class="form__label form__label--phone" for="phone">
+                  <span class="form__text-mobile">Contact number:</span>
+                  <span class="form__text-desktop">Phone:</span>
+                </label>
                 <input class="form__input form__input--phone" id="phone" name="phone" type="tel">
                 <span class="form__error">Error, double-check the number</span>
               </div>
@@ -193,8 +195,10 @@
           <div class="form__inner">
             <h3 class="form__header form__header--bottom-space">Upload photos</h3>
             <div class="form__field form__field--bottom-space">
-              <label class="form__label form__label--file form__label--visible" for="file">Choose photos</label>
-              <label class="form__label form__label--file form__label--hidden" for="file">Drag and drop your photo here</label>
+              <label class="form__label form__label--file" for="file">
+                <span class="form__text-mobile">Choose photos</span>
+                <span class="form__text-desktop">Drag and drop your photo here</span>
+              </label>
               <input class="form__input form__input--hidden" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
             </div>
             <div class="form__display-photos">
