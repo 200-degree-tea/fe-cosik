@@ -73,7 +73,10 @@
             <h3 class="form__header">Contact Information:</h3>
             <div class="form__item-row">
               <div class="form__field form__field--phone">
-                <label class="form__label form__label--phone" for="phone">Contact number:</label>
+                <label class="form__label form__label--phone" for="phone">
+                  <span class="form__text-mobile">Contact number:</span>
+                  <span class="form__text-desktop">Phone:</span>
+                </label>
                 <input class="form__input form__input--phone" id="phone" name="phone" type="tel">
                 <span class="form__error">Error, double-check the number</span>
               </div>
@@ -97,8 +100,7 @@
                 <label class="form__label form__label--swap" for="stay">Length of stay:<span class="form__required form__required--aligne">*</span></label>
                 <div class="form__number form__number--flexgrid">
                   <button class="form__btn form__btn--dec" type="button"></button>
-                  <input class="form__input form__input--small" id="stay" min="1" step="1" max="31" type="number" value="1" required readonly="readonly">
-                  <div class="form__type-parallel">day</div>
+                  <div class="form__number-holder form__number-holder--day" id="stay">1</div>
                   <button class="form__btn form__btn--inc" type="button"></button>
                 </div>
               </div>
@@ -117,8 +119,7 @@
               <label class="form__label" for="travellers">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
               <div class="form__number form__number--flexgrid">
                 <button class="form__btn form__btn--dec" type="button"></button>
-                <input class="form__input form__input--small" id="travellers" min="1" step="1" max="10" value="1" placeholder="person" type="number" required readonly="readonly">
-                <div class="form__type-parallel">person</div>
+                <div class="form__number-holder form__number-holder--person" id="travellers">1</div>
                 <button class="form__btn form__btn--inc" type="button"></button>
               </div>
             </div>
@@ -194,8 +195,10 @@
           <div class="form__inner">
             <h3 class="form__header form__header--bottom-space">Upload photos</h3>
             <div class="form__field form__field--bottom-space">
-              <label class="form__label form__label--file form__label--visible" for="file">Choose photos</label>
-              <label class="form__label form__label--file form__label--hidden" for="file">Drag and drop your photo here</label>
+              <label class="form__label form__label--file" for="file">
+                <span class="form__text-mobile">Choose photos</span>
+                <span class="form__text-desktop">Drag and drop your photo here</span>
+              </label>
               <input class="form__input form__input--hidden" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
             </div>
             <div class="form__display-photos">
@@ -241,7 +244,8 @@
         </section>
         <section class="form__section form__section--no-divider">
           <div class="form__inner form__inner--high">
-            <button class="form__submit" type="submit">POST REVIEW</button>
+            <button class="form__submit" type="submit">Send Review</button>
+            <span class="form__required form__required--text"><span class="form__required">*</span> - required fields</span>
           </div>
         </section>
       </form>
