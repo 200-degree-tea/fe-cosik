@@ -962,6 +962,19 @@
 
     &__number-holder {
       margin-left: 0.8rem;
+      padding-right: 6.5rem;
+
+      &--day {
+        &::after {
+          content: "day";
+        }
+      }
+
+      &--person {
+        &::after {
+          content: "person";
+        }
+      }
     }
 
     &__btn {
