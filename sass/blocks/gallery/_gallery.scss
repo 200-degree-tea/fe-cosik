@@ -2,12 +2,14 @@
   &__inner {
     @include inner_padding($padding-LR);
     padding-top: 2.2rem;
-    padding-bottom: 1.7rem;
+    padding-bottom: 1.6rem;
     border-top: 1px solid $color-gray;
   }
 
   &__caption {
     position: relative;
+    margin-top: 1.5rem;
+    text-align: left;
   }
 
   &__title {
@@ -56,10 +58,11 @@
   &__number {
     margin-top: 0;
     margin-bottom: 0;
+    line-height: 25px;
   }
 
   &__picture {
-    margin-bottom: 1.5rem;
+    // margin-bottom: 1.5rem;
     text-align: center;
     line-height: 0;
 
@@ -92,6 +95,7 @@
       justify-content: space-between;
       padding-top: 1.5rem;
       padding-bottom: 0.9rem;
+      margin-top: 0;
       background-color: $color-gray-light;
     }
 
