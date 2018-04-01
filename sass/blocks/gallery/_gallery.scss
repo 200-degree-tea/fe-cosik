@@ -3,7 +3,7 @@
     @include inner_padding($padding-LR);
     padding-top: 2.2rem;
     padding-bottom: 1.6rem;
-    border-top: 1px solid $color-gray;
+    border-top: 0.1rem solid $color-gray;
   }
 
   &__caption {
@@ -58,11 +58,10 @@
   &__number {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 25px;
+    line-height: 2.5rem;
   }
 
   &__picture {
-    // margin-bottom: 1.5rem;
     text-align: center;
     line-height: 0;
 
