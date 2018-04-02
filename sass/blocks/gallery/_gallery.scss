@@ -2,12 +2,14 @@
   &__inner {
     @include inner_padding($padding-LR);
     padding-top: 2.2rem;
-    padding-bottom: 1.7rem;
-    border-top: 1px solid $color-gray;
+    padding-bottom: 1.6rem;
+    border-top: 0.1rem solid $color-gray;
   }
 
   &__caption {
     position: relative;
+    margin-top: 1.5rem;
+    text-align: left;
   }
 
   &__title {
@@ -56,10 +58,10 @@
   &__number {
     margin-top: 0;
     margin-bottom: 0;
+    line-height: 2.5rem;
   }
 
   &__picture {
-    margin-bottom: 1.5rem;
     text-align: center;
     line-height: 0;
 
@@ -72,7 +74,7 @@
   @include screen-size($tablet-size) {
     &__inner {
       @include inner_padding($padding-tablet-four-LR);
-      padding-top: 20px;
+      padding-top: 2rem;
       padding-bottom: 0;
       border-top: none;
 
@@ -90,8 +92,9 @@
     &__caption {
       display: flex;
       justify-content: space-between;
-      padding-top: 15px;
-      padding-bottom: 9px;
+      padding-top: 1.5rem;
+      padding-bottom: 0.9rem;
+      margin-top: 0;
       background-color: $color-gray-light;
     }
 
@@ -106,9 +109,9 @@
       justify-content: flex-end;
       flex-basis: 50%;
       width: 50%;
-      padding-top: 13px;
+      padding-top: 1.3rem;
       margin-left: 0;
-      margin-right: 22px;
+      margin-right: 2.2rem;
       text-align: right;
     }
 
@@ -117,7 +120,15 @@
       top: auto;
       left: auto;
       right: auto;
-      margin-right: 10px;
+      margin-right: 1rem;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
     }
 
     &__collection {
@@ -129,7 +140,6 @@
 
     &__item {
       flex-basis: 50%;
-      // width: 100%;
     }
   }
 
@@ -141,7 +151,7 @@
       @include inner_padding($padding-desktop-five-LR);
 
       &--top {
-        padding-top: 22px;
+        padding-top: 2.2rem;
       }
     }
 
@@ -177,12 +187,10 @@
       opacity: 1;
 
       &:hover {
-        background-color: transparent;
         opacity: 0.4;
       }
 
       &:active {
-        background-color: transparent;
         opacity: 0.2;
       }
     }
