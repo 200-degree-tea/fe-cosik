@@ -29,8 +29,8 @@
     position: absolute;
     top: 15.7rem;
     width: 88%;
-    padding-left: 6.25%;
-    padding-right: 6.25%;
+    margin-left: 6.25%;
+    margin-right: 6.25%;
   }
 
   &__bar {
@@ -155,8 +155,8 @@
       height: 9.3rem;
       top: auto;
       bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
       background-color: rgba(1, 1, 1, 0.5);
     }
 
@@ -169,7 +169,7 @@
     }
 
     &__pointer {
-      top: 1.2rem;
+      top: 1.3rem;
     }
 
     &__btn-control {
