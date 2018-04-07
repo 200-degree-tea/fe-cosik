@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     background: $color-blue;
+    overflow: hidden;
   }
 
   &__item {
@@ -53,7 +54,7 @@
     width: 22px;
     border: none;
     outline: none;
-    background-image: url("../img/icon-menu.svg");
+    background-image: url("../img/icon-cross--white.svg");
     background-repeat: no-repeat;
     background-position: center;
 
@@ -66,9 +67,15 @@
     &:active {
       background-color: transparent;
     }
+  }
 
-    &--close {
-      background-image: url("../img/icon-cross--white.svg");
+  &--close {
+    .main-nav__list {
+      max-height: 0;
+    }
+
+    .main-nav__toggle {
+      background-image: url("../img/icon-menu.svg");
     }
   }
 
