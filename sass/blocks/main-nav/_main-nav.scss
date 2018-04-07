@@ -12,6 +12,8 @@
     padding: 0;
     background: $color-blue;
     overflow: hidden;
+    max-height: 30rem;
+    transition: max-height 0.3s ease-out;
   }
 
   &__item {
