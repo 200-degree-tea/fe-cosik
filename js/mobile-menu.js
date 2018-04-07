@@ -13,7 +13,8 @@
       this.button.addEventListener('click', this.onButtonClick.bind(this));
     },
 
-    onButtonClick: function(){
+    onButtonClick: function(event){
+      event.preventDefault();
       this.elem.classList.toggle('main-nav--close');
     }
   }
