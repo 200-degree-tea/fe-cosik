@@ -94,7 +94,7 @@
           </div>
         </section>
 
-        <section class="form__section">
+        <section class="form__section js-counter-days">
           <div class="form__inner">
             <h3 class="form__header">Travel Dates:</h3>
             <div class="form__wrapper">
@@ -103,7 +103,7 @@
                 <input class="form__input" id="checkin" name="checkin" type="date">
               </div>
               <div class="form__field form__field--constant">
-                <label class="form__label form__label--swap" for="stay">Length of stay:<span class="form__required form__required--aligne">*</span></label>
+                <label class="form__label form__label--swap">Length of stay:<span class="form__required form__required--aligne">*</span></label>
                 <div class="form__number form__number--flexgrid">
                   <button class="form__btn form__btn--dec" type="button"></button>
                   <div class="form__number-holder form__number-holder--day" id="stay">1</div>
@@ -118,11 +118,11 @@
           </div>
         </section>
 
-        <section class="form__section">
+        <section class="form__section js-counter-people">
           <div class="form__inner">
             <h3 class="form__header">Number of travellers</h3>
             <div class="form__field form__field--constant form__field--aligne-left">
-              <label class="form__label" for="travellers">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
+              <label class="form__label">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
               <div class="form__number form__number--flexgrid">
                 <button class="form__btn form__btn--dec" type="button"></button>
                 <div class="form__number-holder form__number-holder--person" id="travellers">1</div>
@@ -286,6 +286,7 @@
     </footer>
   </div>
   <script src="js/mobile-menu.js"></script>
+  <script src="js/counter.js"></script>
 </body>
 
 </html>
