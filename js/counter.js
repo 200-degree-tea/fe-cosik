@@ -15,22 +15,19 @@
 
       this.buttonMinus.addEventListener('click', this.onButtonMinusClick.bind(this));
       this.buttonPlus.addEventListener('click', this.onButtonPlusClick.bind(this));
+
     },
 
     onButtonMinusClick() {
       console.log("minus");
-
     },
 
     onButtonPlusClick() {
       console.log("plus");
-
     }
-
   }
 
   var dayCounterElem = document.querySelector('.js-counter-days');
-
   var counter = Object.create(Counter);
 
   counter.init({
