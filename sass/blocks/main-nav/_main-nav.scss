@@ -147,6 +147,13 @@
       display: none;
     }
 
+    &--close {
+      .main-nav__list {
+        max-height: 5.7rem;
+        transition: none;
+      }
+    }
+
     &__logo {
       position: absolute;
       top: 0;
