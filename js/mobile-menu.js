@@ -1,7 +1,9 @@
-(function() {
+(function(window) {
   'use strict';
 
-  var MobileMenu = {
+  window.sedona = window.sedona || {};
+
+  window.sedona.MobileMenu = {
     init: function(elem) {
       this.elem = elem;
       this.button = this.elem.querySelector('.main-nav__toggle');
@@ -18,9 +20,4 @@
       this.elem.classList.toggle('main-nav--close');
     }
   }
-
-  var mobileMenuElem = document.querySelector('.main-nav');
-  var menu = Object.create(MobileMenu);
-
-  menu.init(mobileMenuElem);
-}());
+}(window));
