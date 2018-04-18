@@ -1,5 +1,3 @@
-// Mobile screen
-
 .main-nav {
   // Mobile screen
   position: relative;
@@ -145,6 +143,13 @@
 
     &__toggle {
       display: none;
+    }
+
+    &--close {
+      .main-nav__list {
+        max-height: none;
+        transition: none;
+      }
     }
 
     &__logo {
