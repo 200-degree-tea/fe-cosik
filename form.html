@@ -285,9 +285,34 @@
       </div>
     </footer>
   </div>
+  <script id="person-template" type="text/html">
+    <div class="form__flex-block form__flex-block--template">
+      <div class="form__column form__column--sm">
+        <p class="form__label-count">№</p>
+        <div class="form__input-count">{{index}}</div>
+      </div>
+      <div class="form__column form__column--bg">
+        <div class="form__field form__field--column">
+          <label class="form__label" for="person-surname-{{index}}">Surname:<span class="form__required form__required--aligne">*</span></label>
+          <input class="form__input" id="person-surname-{{index}}" name="person-surname-{{index}}" type="text" required>
+        </div>
+        <div class="form__field form__field--column">
+          <label class="form__label" for="person-name-{{index}}">Name:<span class="form__required form__required--aligne">*</span></label>
+          <input class="form__input" id="person-name-{{index}}" name="name-{{index}}" type="text" required>
+        </div>
+        <div class="form__field form__field--column">
+          <label class="form__label" for="person-second-name-{{index}}">Middle name:</label>
+          <input class="form__input" id="person-second-name-{{index}}" name="person-second-name-{{index}}" type="text" required>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
   <script src="js/mobile-menu.js"></script>
   <script src="js/counter.js"></script>
   <script src="js/date-counter.js"></script>
+  <script src="js/people-counter.js"></script>
   <script src="js/main.js"></script>
 </body>
 

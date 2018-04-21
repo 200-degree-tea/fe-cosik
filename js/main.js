@@ -11,12 +11,23 @@
 
 // Init counter
   var dayCounterElems = document.querySelectorAll('.js-counter-days');
+  var peopleCounterElems = document.querySelectorAll('.js-counter-people');
 
   if(dayCounterElems){
     for( var i = 0; i < dayCounterElems.length; i++ ) {
       var dateCounter = Object.create(sedona.DateCounter);
       dateCounter.setup({
         elem: dayCounterElems[i],
+      });
+    }
+  }
+
+  if(peopleCounterElems){
+    for( var i = 0; i < peopleCounterElems.length; i++){
+      var peopleCounter = Object.create(sedona.PeopleCounter);
+      peopleCounter.setup({
+        elem: peopleCounterElems[i],
+        maxValue: 20
       });
     }
   }

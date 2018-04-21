@@ -27,19 +27,23 @@
     onButtonMinusClick: function() {
       this.counterValue = this.counterValue - 1;
       if(this.counterValue <= this.minValue) {
-        this.counterValue = 1;
+        this.counterValue = this.minValue;
       }
       this.renderNumber();
-      this.updateCheckoutDate();
+      this.minusButtonHendler();
     },
 
     onButtonPlusClick: function() {
       this.counterValue = this.counterValue + 1;
       if(this.counterValue > this.maxValue) {
-        this.counterValue = 365;
+        this.counterValue = this.maxValue;
       }
       this.renderNumber();
-      this.updateCheckoutDate();
+      this.plusButtonHendler();
     },
+
+    plusButtonHendler: function(){},
+
+    minusButtonHendler: function(){},
   }
 }(window));

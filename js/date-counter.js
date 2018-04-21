@@ -59,6 +59,14 @@
     this.updateCheckinDate();
   };
 
+  DateCounter.plusButtonHendler = function(){
+    this.updateCheckoutDate();
+  };
+
+  DateCounter.minusButtonHendler = function(){
+    this.updateCheckoutDate();
+  };
+
   window.sedona = window.sedona || {};
   window.sedona.DateCounter = DateCounter;
 }(window));
