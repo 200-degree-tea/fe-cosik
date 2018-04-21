@@ -286,7 +286,7 @@
     </footer>
   </div>
   <script id="person-template" type="text/html">
-    <div class="form__flex-block form__flex-block--template">
+    <div class="form__flex-block person-template-{{index}}">
       <div class="form__column form__column--sm">
         <p class="form__label-count">№</p>
         <div class="form__input-count">{{index}}</div>
@@ -308,7 +308,7 @@
     </div>
   </script>
 
-
+  <script src="node_modules\mustache\mustache.js"></script>
   <script src="js/mobile-menu.js"></script>
   <script src="js/counter.js"></script>
   <script src="js/date-counter.js"></script>
