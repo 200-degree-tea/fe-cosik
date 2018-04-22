@@ -13,26 +13,22 @@
     this.addPerson(index);
   };
 
-  PeopleCounter.minusButtonHandler = function(index){
+  PeopleCounter.minusButtonHandler = function(index) {
     this.removePerson(index);
   }
 
   PeopleCounter.addPerson = function(index) {
-    // if(this.lastAdded != this.maxValue){
-      var person = Mustache.render(this.template, {
-        index: index
-      });
-      this.peopleContainer.insertAdjacentHTML('beforeend', person);
-      // this.lastAdded = index;
-    // }
+    var person = Mustache.render(this.template, {
+      index: index
+    });
+    this.peopleContainer.insertAdjacentHTML('beforeend', person);
   };
 
-  PeopleCounter.removePerson = function(index){
+  PeopleCounter.removePerson = function(index) {
     var person = this.elem.querySelector('.person-template-' + (index + 1));
-    if(person){
+    if (person) {
       this.peopleContainer.removeChild(person);
     }
-    // this.lastAdded = index;
   };
 
   window.sedona = window.sedona || {};

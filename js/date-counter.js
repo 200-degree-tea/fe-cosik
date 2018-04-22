@@ -59,11 +59,11 @@
     this.updateCheckinDate();
   };
 
-  DateCounter.plusButtonHandler = function(){
+  DateCounter.plusButtonHandler = function() {
     this.updateCheckoutDate();
   };
 
-  DateCounter.minusButtonHandler = function(){
+  DateCounter.minusButtonHandler = function() {
     this.updateCheckoutDate();
   };
 

@@ -14,7 +14,7 @@
       this.buttonMinus = this.elem.querySelector('.form__btn--dec');
       this.buttonPlus = this.elem.querySelector('.form__btn--inc');
       this.displayContainer = this.elem.querySelector('.form__number-holder');
-      this.counterValue =  this.initialValue;
+      this.counterValue = this.initialValue;
       this.displayContainer.textContent = this.counterValue;
 
       this.buttonMinus.addEventListener('click', this.onButtonMinusClick.bind(this));
