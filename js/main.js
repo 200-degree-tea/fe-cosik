@@ -12,7 +12,7 @@
   // Init day counter
   var dayCounterElems = document.querySelectorAll('.js-counter-days');
 
-  if (dayCounterElems) {
+  if (dayCounterElems.length) {
     for (var i = 0; i < dayCounterElems.length; i++) {
       var dateCounter = Object.create(sedona.DateCounter);
       dateCounter.setup({
@@ -25,7 +25,7 @@
   var peopleCounterElems = document.querySelectorAll('.js-counter-people');
   var template = document.querySelector('#person-template').innerHTML;
 
-  if (peopleCounterElems) {
+  if (peopleCounterElems.length) {
     for (var i = 0; i < peopleCounterElems.length; i++) {
       var peopleCounter = Object.create(sedona.PeopleCounter);
       peopleCounter.setup({
@@ -34,6 +34,19 @@
         template: template
       });
     }
+  }
+
+  // Init Photo Selector
+  var photoContainer = document.querySelector('.js-add-photos');
+  var template = document.querySelector('#photo-template').innerHTML;
+
+  if(photoContainer){
+    var photoSelector = Object.create(sedona.PhotoSelector);
+
+    photoSelector.init({
+      elem: photoContainer,
+      template: template
+    });
   }
 
 }(window.sedona || {}));
