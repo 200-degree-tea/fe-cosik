@@ -37,16 +37,29 @@
   }
 
   // Init Photo Selector
-  var photoContainer = document.querySelector('.js-add-photos');
-  var template = document.querySelector('#photo-template').innerHTML;
 
-  if(photoContainer){
+
+  // Init Send Form
+  var form = document.querySelector('.form');
+  if (form && ('FormData' in window)) {
+    var photoContainer = document.querySelector('.js-add-photos');
+    var template = document.querySelector('#photo-template').innerHTML;
+
     var photoSelector = Object.create(sedona.PhotoSelector);
+    var sendForm = Object.create(sedona.SendForm);
 
     photoSelector.init({
       elem: photoContainer,
       template: template
     });
+
+    sendForm.init({
+      elem: form,
+      url: 'https://echo.htmlacademy.ru/adaptive',
+      photoSelector: photoSelector
+    })
   }
+
+
 
 }(window.sedona || {}));

@@ -13,18 +13,28 @@
       this.removeButton = this.elem.querySelector('.form__remove-btn');
     },
 
+    getImages: function() {
+      return this.queue;
+    },
+
     onInputChange: function() {
       var files = this.fileInput.files;
 
       for (var i = 0; i < files.length; i++) {
         this.preview(files[i]);
       }
+
+      this.fileInput.value = '';
     },
 
     preview: function(file) {
       if (file.type.match(/image.*/)) {
         var reader = new FileReader();
-        reader.addEventListener('load', this.onFileLoad.bind(this));
+
+        reader.addEventListener('load', function(event) {
+          this.onFileLoad(event, file);
+        }.bind(this));
+
         reader.readAsDataURL(file);
       }
     },
@@ -36,7 +46,7 @@
       previewImage.parentNode.removeChild(previewImage);
     },
 
-    onFileLoad: function(event) {
+    onFileLoad: function(event, file) {
       var photo = Mustache.render(this.template, {
         file: event.target.result
       });

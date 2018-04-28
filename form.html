@@ -54,18 +54,18 @@
         </div>
       </section>
 
-      <form class="form" action="" method="get">
+      <form class="form" action="https://echo.htmlacademy.ru/adaptive" method="POST">
 
         <section class="form__section">
           <div class="form__inner form__inner--smaller form__inner--right">
             <h3 class="form__header form__header--space-bottom form__header--left">Introduce yourself:</h3>
             <div class="form__field form__field--flexgrid">
-              <label class="form__label form__label--stretch" for="name">Name:</label>
-              <input class="form__input" id="name" name="name" type="text">
+              <label class="form__label form__label--stretch" for="name">Name:<span class="form__required form__required--aligne">*</span></label>
+              <input class="form__input" id="name" name="name" type="text" required>
             </div>
             <div class="form__field form__field--flexgrid">
-              <label class="form__label form__label--stretch" for="surname">Surname:</label>
-              <input class="form__input" id="surname" name="surAname" type="text">
+              <label class="form__label form__label--stretch" for="surname">Surname:<span class="form__required form__required--aligne">*</span></label>
+              <input class="form__input" id="surname" name="surname" type="text" required>
             </div>
             <div class="form__field form__field--flexgrid">
               <label class="form__label form__label--stretch" for="second-name">Middle name:</label>
@@ -87,7 +87,7 @@
                 <span class="form__error">Error, double-check the number</span>
               </div>
               <div class="form__field form__field--envelope">
-                <label class="form__label form__label--envelope" for="email">Email:</label>
+                <label class="form__label form__label--envelope" for="email">Email:<span class="form__required form__required--aligne">*</span></label>
                 <input class="form__input form__input--envelope" id="email" name="email" type="email" required>
               </div>
             </div>
@@ -100,7 +100,7 @@
             <div class="form__wrapper">
               <div class="form__field form__field--small">
                 <label class="form__label" for="checkin">Checkin:<span class="form__required form__required--aligne">*</span></label>
-                <input class="form__input" id="checkin" name="checkin" type="date">
+                <input class="form__input" id="checkin" name="checkin" type="date" required>
               </div>
               <div class="form__field form__field--constant">
                 <label class="form__label form__label--swap">Length of stay:<span class="form__required form__required--aligne">*</span></label>
@@ -122,7 +122,7 @@
           <div class="form__inner">
             <h3 class="form__header">Number of travellers</h3>
             <div class="form__field form__field--constant form__field--aligne-left">
-              <label class="form__label">Number of travellers:<span class="form__required form__required--aligne">*</span></label>
+              <label class="form__label">Number of travellers:</label>
               <div class="form__number form__number--flexgrid">
                 <button class="form__btn form__btn--dec" type="button"></button>
                 <div class="form__number-holder form__number-holder--person" id="travellers">1</div>
@@ -139,16 +139,16 @@
 
               <div class="form__column form__column--bg">
                 <div class="form__field form__field--column">
-                  <label class="form__label" for="person-surname">Surname:<span class="form__required form__required--aligne">*</span></label>
-                  <input class="form__input" id="person-surname" name="person-surname" type="text" required>
+                  <label class="form__label" for="person-surname-1">Surname:</label>
+                  <input class="form__input" id="person-surname-1" name="person-surname-1" type="text">
                 </div>
                 <div class="form__field form__field--column">
-                  <label class="form__label" for="person-name">Name:<span class="form__required form__required--aligne">*</span></label>
-                  <input class="form__input" id="person-name" name="name" type="text" required>
+                  <label class="form__label" for="person-name-1">Name:</label>
+                  <input class="form__input" id="person-name-1" name="person-name-1" type="text">
                 </div>
                 <div class="form__field form__field--column">
-                  <label class="form__label" for="person-second-name">Middle name:</label>
-                  <input class="form__input" id="person-second-name" name="person-second-name" type="text" required>
+                  <label class="form__label" for="person-second-name-1">Middle name:</label>
+                  <input class="form__input" id="person-second-name-1" name="person-second-name-1" type="text">
                 </div>
               </div>
             </div>
@@ -159,15 +159,15 @@
           <div class="form__inner form__inner--left">
             <h3 class="form__header form__header--left">Your General impression:</h3>
             <div class="form__field form__field--radio-box">
-              <input class="form__input form__input--radio form__input--hidden" id="answer-positive" name="answer" type="radio" value="rather-positive" checked/>
+              <input class="form__input form__input--radio form__input--hidden" id="answer-positive" name="impression" type="radio" value="rather-positive" checked/>
               <label class="form__label form__label--radio-box form__label--bolded" for="answer-positive">Rather positive</label>
             </div>
             <div class="form__field form__field--radio-box">
-              <input class="form__input form__input--radio form__input--hidden" id="answer-negative" name="answer" type="radio" value="rather-negative" />
+              <input class="form__input form__input--radio form__input--hidden" id="answer-negative" name="impression" type="radio" value="rather-negative" />
               <label class="form__label form__label--radio-box form__label--bolded" for="answer-negative">Rather negative</label>
             </div>
             <div class="form__field form__field--radio-box">
-              <input class="form__input form__input--radio form__input--hidden" id="answer-difficult" name="answer" type="radio" value="difficult-answer" />
+              <input class="form__input form__input--radio form__input--hidden" id="answer-difficult" name="impression" type="radio" value="difficult-answer" />
               <label class="form__label form__label--radio-box form__label--bolded" for="answer-difficult">Difficult to answer</label>
             </div>
           </div>
@@ -178,19 +178,19 @@
             <h3 class="form__header">Sights visited:</h3>
             <div class="form__item">
               <div class="form__field form__field--checkbox">
-                <input class="form__input form__input--checkbox form__input--hidden" id="bridge" name="bridge" type="checkbox" value="devils-bridge">
+                <input class="form__input form__input--checkbox form__input--hidden" id="bridge" name="sightseeing" type="checkbox" value="devils-bridge">
                 <label class="form__label form__label--checkbox form__label--bolded" for="bridge">The Devil's Bridge</label>
               </div>
               <div class="form__field form__field--checkbox">
-                <input class="form__input form__input--checkbox form__input--hidden" id="park" name="park" type="checkbox" value="slide-park">
+                <input class="form__input form__input--checkbox form__input--hidden" id="park" name="sightseeing" type="checkbox" value="slide-park">
                 <label class="form__label form__label--checkbox form__label--bolded" for="park">Slide-park</label>
               </div>
               <div class="form__field form__field--checkbox">
-                <input class="form__input form__input--checkbox form__input--hidden" id="mountain" name="mountain" type="checkbox" value="mountain-bell">
+                <input class="form__input form__input--checkbox form__input--hidden" id="mountain" name="sightseeing" type="checkbox" value="mountain-bell">
                 <label class="form__label form__label--checkbox form__label--bolded" for="mountain">Mountain-bell</label>
               </div>
               <div class="form__field form__field--checkbox">
-                <input class="form__input form__input--checkbox form__input--hidden" id="cliffs" name="cliffs" type="checkbox" value="red-cliffs">
+                <input class="form__input form__input--checkbox form__input--hidden" id="cliffs" name="sightseeing" type="checkbox" value="red-cliffs">
                 <label class="form__label form__label--checkbox form__label--bolded" for="cliffs">Red cliffs</label>
               </div>
             </div>
@@ -265,16 +265,16 @@
       </div>
       <div class="form__column form__column--bg">
         <div class="form__field form__field--column">
-          <label class="form__label" for="person-surname-{{index}}">Surname:<span class="form__required form__required--aligne">*</span></label>
-          <input class="form__input" id="person-surname-{{index}}" name="person-surname-{{index}}" type="text" required>
+          <label class="form__label" for="person-surname-{{index}}">Surname:</label>
+          <input class="form__input" id="person-surname-{{index}}" name="person-surname-{{index}}" type="text">
         </div>
         <div class="form__field form__field--column">
-          <label class="form__label" for="person-name-{{index}}">Name:<span class="form__required form__required--aligne">*</span></label>
-          <input class="form__input" id="person-name-{{index}}" name="name-{{index}}" type="text" required>
+          <label class="form__label" for="person-name-{{index}}">Name:</label>
+          <input class="form__input" id="person-name-{{index}}" name="name-{{index}}" type="text">
         </div>
         <div class="form__field form__field--column">
           <label class="form__label" for="person-second-name-{{index}}">Middle name:</label>
-          <input class="form__input" id="person-second-name-{{index}}" name="person-second-name-{{index}}" type="text" required>
+          <input class="form__input" id="person-second-name-{{index}}" name="person-second-name-{{index}}" type="text">
         </div>
       </div>
     </div>
@@ -291,6 +291,7 @@
   <script src="js/date-counter.js"></script>
   <script src="js/people-counter.js"></script>
   <script src="js/photo-selector.js"></script>
+  <script src="js/send-form.js"></script>
   <script src="js/main.js"></script>
 </body>
 
