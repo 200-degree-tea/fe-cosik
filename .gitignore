@@ -59,5 +59,8 @@ typings/
 
 # exclude directories
 
+# local project file
 css/
+build/
+
 .idea/
