@@ -46,26 +46,30 @@ gulp.task('watch', ['sass', 'browserSync'], function() {
   gulp.watch('./*.html', browserSync.reload);
 });
 
+
+//Release build scripts
 // Copy html
 gulp.task('html', function() {
- return gulp.src('*.html')
-   .pipe(gulp.dest('./build'));
+  return gulp.src('*.html')
+    .pipe(gulp.dest('./build'));
 });
 
-// optimise images
+// Optimise images
 gulp.task('images', function() {
- return gulp.src('img/**')
-   .pipe(plumber())
-   .pipe(gulp.dest('build/img'))
-   .pipe(imagemin({
-     progressive: true,
-     svgoPlugins: [{removeViewBox: false}]
-   }))
-   .pipe(gulp.dest('build/img'));
+  return gulp.src('img/**')
+    .pipe(plumber())
+    .pipe(gulp.dest('build/img'))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{
+        removeViewBox: false
+      }]
+    }))
+    .pipe(gulp.dest('build/img'));
 });
 
-// build Sass compliler
-gulp.task("sass-build", function() {
+// compress and build CSS
+gulp.task("css-build", function() {
   return gulp.src('sass/**/*.scss')
     .pipe(plumber())
     .pipe(sass({
@@ -76,41 +80,35 @@ gulp.task("sass-build", function() {
         browsers: 'last 2 versions'
       })
     ]))
+    .pipe(cleanCSS({
+      compatibility: 'ie9'
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('build/css'))
 });
 
-// minify - uglify CSS
-gulp.task('minifycss', ['sass-build'], function() {
-  return gulp.src('build/css/styles.css')
-    .pipe(cleanCSS({compatibility: 'ie9'}))
+// compress and build JS
+gulp.task('js-build', function() {
+  return gulp.src([
+      'node_modules/picturefill/dist/picturefill.js',
+      'node_modules/mustache/mustache.js',
+      'js/mobile-menu.js',
+      'js/google-map.js',
+      'js/counter.js',
+      'js/date-counter.js',
+      'js/people-counter.js',
+      'js/photo-selector.js',
+      'js/send-form.js',
+      'js/main.js'
+    ]).pipe(concat('main.js'))
+    .pipe(uglify())
     .pipe(rename({
-      suffix: '-min'
+      suffix: '.min'
     }))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('build/js'));
 });
 
-// build JS
-gulp.task('js-build', function() {
- return gulp.src([
-   'node_modules/picturefill/dist/picturefill.js',
-   'node_modules/mustache/mustache.js',
-   'js/mobile-menu.js',
-   'js/google-map.js',
-   'js/counter.js',
-   'js/date-counter.js',
-   'js/people-counter.js',
-   'js/photo-selector.js',
-   'js/send-form.js',
-   'js/main.js'
- ]).pipe(concat('main.js'))
-   .pipe(gulp.dest('build/js'));
-});
-// minify - uglify JS
-gulp.task('minifyjs', ['js-build'], function() {
- return gulp.src('build/js/main.js')
-   .pipe(uglify())
-   .pipe(rename({
-     suffix: '-min'
-   }))
-   .pipe(gulp.dest('build/js'));
+gulp.task('release', ['css-build', 'js-build', 'images', 'html'], function(){
 });
