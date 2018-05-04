@@ -62,5 +62,6 @@ typings/
 # local project file
 css/
 build/
+tmp/
 
 .idea/

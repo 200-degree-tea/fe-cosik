@@ -12,103 +12,155 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const deploy = require('gulp-gh-pages');
+const inject = require('gulp-inject');
+const webp = require('gulp-webp');
 
-// Test Sass compliler
-gulp.task("sass", function() {
-  return gulp.src('sass/**/*.scss')
+var paths = {
+	src: './src/**/*',
+  srcHTML: './src/*.html',
+  srcSASS: './src/sass/**/*.scss',
+  srcJS: './src/js/*.js',
+  srcIMG: './src/img/**',
+
+	tmp: './tmp',
+  tmpHTML: './tmp/**/*.html',
+  tmpCSS: './tmp/**/*.css',
+  tmpCSSdest: './tmp/css',
+  tmpJS: './tmp/**/*.js',
+  tmpJSdest: './tmp/js',
+  tmpIMG: './tmp/img',
+
+  dist: 'dist',
+  distIndex: 'dist/index.html',
+  distCSS: 'dist/**/*.css',
+  distJS: 'dist/**/*.js'
+};
+
+
+/**
+ * DEVELOPMENT
+ */
+
+
+ /*
+ * Copy HTML
+ */
+gulp.task('devHTML', function(){
+  return gulp.src(paths.srcHTML)
+    .pipe(gulp.dest(paths.tmp));
+});
+
+
+/*
+* Copy and minify images
+*/
+gulp.task('devIMG', function() {
+  return gulp.src(paths.srcIMG)
     .pipe(plumber())
-    .pipe(sass({
-      includePaths: path.join(__dirname, '/node_modules/normalize.scss/')
-    }).on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer({
-        browsers: 'last 2 versions'
-      })
-    ]))
-    .pipe(gulp.dest('./css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
-
-// Browser Sync
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
-
-// Background Task runner
-gulp.task('watch', ['sass', 'browserSync'], function() {
-  gulp.watch('sass/**/*.scss', ['sass']);
-  gulp.watch('./*.html', browserSync.reload);
+    .pipe(imagemin({ progressive: true, svgoPlugins: [{ removeViewBox: false }]}))
+    .pipe(gulp.dest(paths.tmpIMG));
 });
 
 
-//Release build scripts
-// Copy html
-gulp.task('html', function() {
-  return gulp.src('*.html')
-    .pipe(gulp.dest('./build'));
-});
-
-// Optimise images
-gulp.task('images', function() {
-  return gulp.src('img/**')
+/*
+* Copy, compile and minify CSS
+*/
+gulp.task('devCSS', function() {
+  return gulp.src(paths.srcSASS)
     .pipe(plumber())
-    .pipe(gulp.dest('build/img'))
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{
-        removeViewBox: false
-      }]
-    }))
-    .pipe(gulp.dest('build/img'));
+    .pipe(sass({ includePaths: path.join(__dirname, '/node_modules/normalize.scss/' )})
+    .on('error', sass.logError))
+    .pipe(postcss([autoprefixer({ browsers: 'last 2 versions' })]))
+    .pipe(cleanCSS({ compatibility: 'ie10' }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.tmpCSSdest))
+    .pipe(browserSync.stream());
 });
 
-// compress and build CSS
-gulp.task("css-build", function() {
-  return gulp.src('sass/**/*.scss')
-    .pipe(plumber())
-    .pipe(sass({
-      includePaths: path.join(__dirname, '/node_modules/normalize.scss/')
-    }).on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer({
-        browsers: 'last 2 versions'
-      })
-    ]))
-    .pipe(cleanCSS({
-      compatibility: 'ie9'
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('build/css'))
-});
 
-// compress and build JS
-gulp.task('js-build', function() {
+/*
+* Copy and minify JS
+*/
+gulp.task('devJS', function() {
   return gulp.src([
       'node_modules/picturefill/dist/picturefill.js',
       'node_modules/mustache/mustache.js',
-      'js/mobile-menu.js',
-      'js/google-map.js',
-      'js/counter.js',
-      'js/date-counter.js',
-      'js/people-counter.js',
-      'js/photo-selector.js',
-      'js/send-form.js',
-      'js/main.js'
+      './src/js/mobile-menu.js',
+      './src/js/google-map.js',
+      './src/js/counter.js',
+      './src/js/date-counter.js',
+      './src/js/people-counter.js',
+      './src/js/photo-selector.js',
+      './src/js/send-form.js',
+      './src/js/main.js'
     ]).pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('build/js'));
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.tmpJSdest))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('release', ['css-build', 'js-build', 'images', 'html'], function(){
+
+/*
+* Creates development copy
+*/
+gulp.task('devCopy',['devHTML', 'devIMG', 'devCSS', 'devJS']);
+
+
+/*
+* Injects CSS and JS paths into HTML
+*/
+gulp.task('devInject', ['devCopy'], function(){
+  var css = gulp.src(paths.tmpCSS);
+  var js = gulp.src(paths.tmpJS);
+
+  return gulp.src(paths.tmpHTML)
+  .pipe(inject(css, {relative: true}))
+  .pipe(inject(js, {relative: true}))
+  .pipe(gulp.dest(paths.tmp));
 });
+
+
+/*
+*  Sets local development server
+*/
+gulp.task('devServer', ['devInject'], function() {
+    browserSync.init({
+      server: paths.tmp
+    });
+});
+
+
+/*
+* Do the devInject and reloads files on change (imgs and HTML)
+*/
+gulp.task('reloadOnChange', ['devInject'], function(){
+  browserSync.reload();
+})
+
+
+/*
+* listens for the file change in the SRC Location and
+* Reloads local server
+*/
+gulp.task('watch', ['devServer'], function(){
+  gulp.watch(paths.srcSASS, ['devCSS']);
+  gulp.watch(paths.srcJS, ['devJS']);
+  gulp.watch(paths.srcHTML, ['reloadOnChange']);
+  gulp.watch(paths.srcIMG, ['reloadOnChange']);
+});
+
+
+/*
+* Conver images to WEBP
+*/
+gulp.task('imgWEBP', function(){
+  return gulp.src('./src/img/**')
+  .pipe(plumber())
+  .pipe(webp())
+  .pipe(gulp.dest('./src/img'));
+});
+/**
+ * DEVELOPMENT ENDS
+ */

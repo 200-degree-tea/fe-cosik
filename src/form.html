@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Front end development project">
+  <title>Sedona Feedback</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700">
+  <!-- inject:css -->
+  <!-- endinject -->
+
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="node_modules\picturefill\dist\picturefill.min.js" async></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="page-header">
+      <div class="page-header__inner">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">Home</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="photos.html">Multimedia</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="form.html">Feedback</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">HTML</a></li>
+          </ul>
+          <button class="main-nav__toggle main-nav__toggle--close">Menu</button>
+          <a class="main-nav__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 480px)" srcset="img/logo-sedona-tablet.svg">
+              <source srcset="img/logo-sedona-mobile.svg">
+              <img src="img/logo-sedona-mobile.svg" alt="Sedona logo">
+            </picture>
+          </a>
+        </nav>
+      </div>
+
+      <div class="intro intro--smaller">
+        <h3 class="intro__header intro__header--small-bg">Welcome to gorgeous Sedona. "Because the Grand Canyon sucks!"</h3>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="preamble">
+        <div class="preamble__inner preamble__inner--small">
+          <h3 class="preamble__header preamble__header--small">Leave your feedback</h3>
+          <p class="preamble__paragraph">Help our hotels to become better! Leave a comment about it, also please leave a feedback about the sights you visited</p>
+        </div>
+      </section>
+
+      <form class="form" action="https://echo.htmlacademy.ru/adaptive" method="POST">
+
+        <section class="form__section">
+          <div class="form__inner form__inner--smaller form__inner--right">
+            <h3 class="form__header form__header--space-bottom form__header--left">Introduce yourself:</h3>
+            <div class="form__field form__field--flexgrid">
+              <label class="form__label form__label--stretch" for="name">Name:<span class="form__required form__required--aligne">*</span></label>
+              <input class="form__input" id="name" name="name" type="text" required>
+            </div>
+            <div class="form__field form__field--flexgrid">
+              <label class="form__label form__label--stretch" for="surname">Surname:<span class="form__required form__required--aligne">*</span></label>
+              <input class="form__input" id="surname" name="surname" type="text" required>
+            </div>
+            <div class="form__field form__field--flexgrid">
+              <label class="form__label form__label--stretch" for="second-name">Middle name:</label>
+              <input class="form__input" id="second-name" name="second-name" type="text">
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section">
+          <div class="form__inner">
+            <h3 class="form__header">Contact Information:</h3>
+            <div class="form__item-row">
+              <div class="form__field form__field--phone">
+                <label class="form__label form__label--phone" for="phone">
+                  <span class="form__text-mobile">Contact number:</span>
+                  <span class="form__text-desktop">Phone:</span>
+                </label>
+                <input class="form__input form__input--phone" id="phone" name="phone" type="tel">
+                <span class="form__error">Error, double-check the number</span>
+              </div>
+              <div class="form__field form__field--envelope">
+                <label class="form__label form__label--envelope" for="email">Email:<span class="form__required form__required--aligne">*</span></label>
+                <input class="form__input form__input--envelope" id="email" name="email" type="email" required>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section js-counter-days">
+          <div class="form__inner">
+            <h3 class="form__header">Travel Dates:</h3>
+            <div class="form__wrapper">
+              <div class="form__field form__field--small">
+                <label class="form__label" for="checkin">Checkin:<span class="form__required form__required--aligne">*</span></label>
+                <input class="form__input" id="checkin" name="checkin" type="date" required>
+              </div>
+              <div class="form__field form__field--constant">
+                <label class="form__label form__label--swap">Length of stay:<span class="form__required form__required--aligne">*</span></label>
+                <div class="form__number form__number--flexgrid">
+                  <button class="form__btn form__btn--dec" type="button"></button>
+                  <div class="form__number-holder form__number-holder--day" id="stay">1</div>
+                  <button class="form__btn form__btn--inc" type="button"></button>
+                </div>
+              </div>
+              <div class="form__field  form__field--small">
+                <label class="form__label" for="checkout">Checkout:<span class="form__required form__required--aligne">*</span></label>
+                <input class="form__input" id="checkout" name="checkout" type="date" required>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section js-counter-people">
+          <div class="form__inner">
+            <h3 class="form__header">Number of travellers</h3>
+            <div class="form__field form__field--constant form__field--aligne-left">
+              <label class="form__label">Number of travellers:</label>
+              <div class="form__number form__number--flexgrid">
+                <button class="form__btn form__btn--dec" type="button"></button>
+                <div class="form__number-holder form__number-holder--person" id="travellers">1</div>
+                <button class="form__btn form__btn--inc" type="button"></button>
+              </div>
+            </div>
+
+            <div class="form__flex-block">
+
+              <div class="form__column form__column--sm">
+                <p class="form__label-count">№</p>
+                <div class="form__input-count">1</div>
+              </div>
+
+              <div class="form__column form__column--bg">
+                <div class="form__field form__field--column">
+                  <label class="form__label" for="person-surname-1">Surname:</label>
+                  <input class="form__input" id="person-surname-1" name="person-surname-1" type="text">
+                </div>
+                <div class="form__field form__field--column">
+                  <label class="form__label" for="person-name-1">Name:</label>
+                  <input class="form__input" id="person-name-1" name="person-name-1" type="text">
+                </div>
+                <div class="form__field form__field--column">
+                  <label class="form__label" for="person-second-name-1">Middle name:</label>
+                  <input class="form__input" id="person-second-name-1" name="person-second-name-1" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section">
+          <div class="form__inner form__inner--left">
+            <h3 class="form__header form__header--left">Your General impression:</h3>
+            <div class="form__field form__field--radio-box">
+              <input class="form__input form__input--radio form__input--hidden" id="answer-positive" name="impression" type="radio" value="rather-positive" checked/>
+              <label class="form__label form__label--radio-box form__label--bolded" for="answer-positive">Rather positive</label>
+            </div>
+            <div class="form__field form__field--radio-box">
+              <input class="form__input form__input--radio form__input--hidden" id="answer-negative" name="impression" type="radio" value="rather-negative" />
+              <label class="form__label form__label--radio-box form__label--bolded" for="answer-negative">Rather negative</label>
+            </div>
+            <div class="form__field form__field--radio-box">
+              <input class="form__input form__input--radio form__input--hidden" id="answer-difficult" name="impression" type="radio" value="difficult-answer" />
+              <label class="form__label form__label--radio-box form__label--bolded" for="answer-difficult">Difficult to answer</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section">
+          <div class="form__inner">
+            <h3 class="form__header">Sights visited:</h3>
+            <div class="form__item">
+              <div class="form__field form__field--checkbox">
+                <input class="form__input form__input--checkbox form__input--hidden" id="bridge" name="sightseeing" type="checkbox" value="devils-bridge">
+                <label class="form__label form__label--checkbox form__label--bolded" for="bridge">The Devil's Bridge</label>
+              </div>
+              <div class="form__field form__field--checkbox">
+                <input class="form__input form__input--checkbox form__input--hidden" id="park" name="sightseeing" type="checkbox" value="slide-park">
+                <label class="form__label form__label--checkbox form__label--bolded" for="park">Slide-park</label>
+              </div>
+              <div class="form__field form__field--checkbox">
+                <input class="form__input form__input--checkbox form__input--hidden" id="mountain" name="sightseeing" type="checkbox" value="mountain-bell">
+                <label class="form__label form__label--checkbox form__label--bolded" for="mountain">Mountain-bell</label>
+              </div>
+              <div class="form__field form__field--checkbox">
+                <input class="form__input form__input--checkbox form__input--hidden" id="cliffs" name="sightseeing" type="checkbox" value="red-cliffs">
+                <label class="form__label form__label--checkbox form__label--bolded" for="cliffs">Red cliffs</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section js-add-photos">
+          <div class="form__inner">
+            <h3 class="form__header form__header--bottom-space">Upload photos</h3>
+            <div class="form__field form__field--bottom-space">
+              <label class="form__label form__label--file" for="file">
+                <span class="form__text-mobile">Choose photos</span>
+                <span class="form__text-desktop">Drag and drop your photo here</span>
+              </label>
+              <input class="form__input form__input--hidden form__input--photos" id="file" name="file" accept=".jpg, .jpeg, .png" type="file" multiple>
+            </div>
+            <div class="form__display-photos">
+            </div>
+          </div>
+        </section>
+
+        <section class="form__section form__section--no-divider">
+          <div class="form__inner form__inner--lower">
+            <h3 class="form__header form__header--bottom-space">Describe your emotions:</h3>
+            <div class="form__field">
+              <textarea class="form__input form__input--textarea" id="feedback" name="feedback"></textarea>
+            </div>
+          </div>
+        </section>
+        <section class="form__section form__section--no-divider">
+          <div class="form__inner form__inner--high">
+            <button class="form__submit" type="submit">Send Review</button>
+            <span class="form__required form__required--text"><span class="form__required">*</span> - required fields</span>
+          </div>
+        </section>
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__tag">
+          <h3 class="page-footer__tag-header">#VISITSEDONA</h3>
+        </div>
+
+        <div class="social">
+          <a href="#" class="social__link">
+            <span class="social__icon social__icon--twitter">twitter site</span>
+          </a>
+          <a href="#" class="social__link">
+            <span class="social__icon social__icon--facebook">facebook page</span>
+          </a>
+          <a href="#" class="social__link">
+            <span class="social__icon social__icon--youtube">youtube channel</span>
+          </a>
+        </div>
+
+        <div class="developer">
+          <a href="#" class="developer__logo">Developed by
+            <svg class="developer__svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script id="person-template" type="text/html">
+    <div class="form__flex-block person-template-{{index}}">
+      <div class="form__column form__column--sm">
+        <p class="form__label-count">№</p>
+        <div class="form__input-count">{{index}}</div>
+      </div>
+      <div class="form__column form__column--bg">
+        <div class="form__field form__field--column">
+          <label class="form__label" for="person-surname-{{index}}">Surname:</label>
+          <input class="form__input" id="person-surname-{{index}}" name="person-surname-{{index}}" type="text">
+        </div>
+        <div class="form__field form__field--column">
+          <label class="form__label" for="person-name-{{index}}">Name:</label>
+          <input class="form__input" id="person-name-{{index}}" name="name-{{index}}" type="text">
+        </div>
+        <div class="form__field form__field--column">
+          <label class="form__label" for="person-second-name-{{index}}">Middle name:</label>
+          <input class="form__input" id="person-second-name-{{index}}" name="person-second-name-{{index}}" type="text">
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script id="photo-template" type="text/html">
+    <button class="form__remove-btn" type="button">Remove image</button>
+    <img class="form__preview-photo" src="{{file}}" alt="">
+  </script>
+
+  <!-- inject:js -->
+  <!-- endinject -->
+</body>
+</html>
