@@ -162,7 +162,9 @@ gulp.task('distCSS', function() {
     .on('error', sass.logError))
 		.pipe(postcss([
 			autoprefixer({ browsers: 'last 2 versions' }),
-			MQpacker()
+			MQpacker({
+				sort: true
+			})
 		]))
     .pipe(cleanCSS({ compatibility: 'ie10' }))
     .pipe(rename({ suffix: '.min' }))
