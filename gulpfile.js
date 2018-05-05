@@ -31,17 +31,19 @@ var paths = {
   tmpJSdest: './tmp/js',
   tmpIMG: './tmp/img',
 
-  dist: 'dist',
-  distIndex: 'dist/index.html',
-  distCSS: 'dist/**/*.css',
-  distJS: 'dist/**/*.js'
+  dist: './dist',
+  distHTML: './dist/**/*.html',
+  distCSS: './dist/**/*.css',
+  distCSSdest: './dist/css',
+  distJS: './dist/**/*.js',
+  distJSdest: './dist/js',
+  distIMG: './dist/img',
 };
 
 
 /**
  * DEVELOPMENT
  */
-
 
  /*
  * Copy HTML
@@ -164,3 +166,87 @@ gulp.task('imgWEBP', function(){
 /**
  * DEVELOPMENT ENDS
  */
+
+
+
+ /*
+ * PRODUCTION
+ */
+
+ /*
+ * Copy HTML
+ */
+gulp.task('distHTML', function(){
+  return gulp.src(paths.srcHTML)
+    .pipe(gulp.dest(paths.dist));
+});
+
+
+/*
+* Copy and minify images
+*/
+gulp.task('distIMG', function() {
+  return gulp.src(paths.srcIMG)
+    .pipe(plumber())
+    .pipe(imagemin({ progressive: true, svgoPlugins: [{ removeViewBox: false }]}))
+    .pipe(gulp.dest(paths.distIMG));
+});
+
+
+/*
+* Copy, compile and minify CSS
+*/
+gulp.task('distCSS', function() {
+  return gulp.src(paths.srcSASS)
+    .pipe(plumber())
+    .pipe(sass({ includePaths: path.join(__dirname, '/node_modules/normalize.scss/' )})
+    .on('error', sass.logError))
+    .pipe(postcss([autoprefixer({ browsers: 'last 2 versions' })]))
+    .pipe(cleanCSS({ compatibility: 'ie10' }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.distCSSdest));
+});
+
+
+/*
+* Copy and minify JS
+*/
+gulp.task('distJS', function() {
+  return gulp.src([
+      'node_modules/picturefill/dist/picturefill.js',
+      'node_modules/mustache/mustache.js',
+      './src/js/mobile-menu.js',
+      './src/js/google-map.js',
+      './src/js/counter.js',
+      './src/js/date-counter.js',
+      './src/js/people-counter.js',
+      './src/js/photo-selector.js',
+      './src/js/send-form.js',
+      './src/js/main.js'
+    ]).pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.distJSdest));
+});
+
+
+/*
+* Create distribution copy
+*/
+gulp.task('distCopy',['distHTML', 'distIMG', 'distCSS', 'distJS']);
+
+
+/*
+* Injects CSS and JS paths into HTML
+*/
+gulp.task('distInject', ['distCopy'], function(){
+  var css = gulp.src(paths.distCSS);
+  var js = gulp.src(paths.distJS);
+
+  return gulp.src(paths.distHTML)
+  .pipe(inject(css, {relative: true}))
+  .pipe(inject(js, {relative: true}))
+  .pipe(gulp.dest(paths.dist));
+});
+
+gulp.task('buildDist', ['distInject']);

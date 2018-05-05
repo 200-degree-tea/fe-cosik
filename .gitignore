@@ -63,5 +63,6 @@ typings/
 css/
 build/
 tmp/
+dist/
 
 .idea/
