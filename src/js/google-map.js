@@ -18,7 +18,7 @@
         zoom: 7,
         center: position
       });
-      var iconPicture = '../img/icon-map-marker.svg'
+      var iconPicture = 'img/icon-map-marker.svg'
       var marker = new google.maps.Marker({
         position: position,
         map: map,
