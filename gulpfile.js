@@ -15,6 +15,9 @@ const uglify = require('gulp-uglify');
 const deploy = require('gulp-gh-pages');
 const inject = require('gulp-inject');
 const webp = require('gulp-webp');
+const MQpacker = require('css-mqpacker');
+const del = require('del');
+const runSequence = require('run-sequence');
 
 var paths = {
 	src: './src/**/*',
@@ -40,50 +43,39 @@ var paths = {
   distIMG: './dist/img',
 };
 
-
 /**
  * DEVELOPMENT
  */
 
- /*
- * Copy HTML
- */
+// Copy HTML
 gulp.task('devHTML', function(){
   return gulp.src(paths.srcHTML)
     .pipe(gulp.dest(paths.tmp));
 });
 
-
-/*
-* Copy and minify images
-*/
+// Copy and minify images
 gulp.task('devIMG', function() {
   return gulp.src(paths.srcIMG)
     .pipe(plumber())
-    .pipe(imagemin({ progressive: true, svgoPlugins: [{ removeViewBox: false }]}))
-    .pipe(gulp.dest(paths.tmpIMG));
+    .pipe(gulp.dest(paths.tmpIMG))
+		.pipe(webp())
+		.pipe(gulp.dest(paths.tmpIMG));
 });
 
-
-/*
-* Copy, compile and minify CSS
-*/
+// Copy, compile and minify CSS
 gulp.task('devCSS', function() {
   return gulp.src(paths.srcSASS)
     .pipe(plumber())
     .pipe(sass({ includePaths: path.join(__dirname, '/node_modules/normalize.scss/' )})
     .on('error', sass.logError))
-    .pipe(postcss([autoprefixer({ browsers: 'last 2 versions' })]))
-    .pipe(cleanCSS({ compatibility: 'ie10' }))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(postcss([
+			autoprefixer({ browsers: 'last 2 versions' }),
+		]))
     .pipe(gulp.dest(paths.tmpCSSdest))
     .pipe(browserSync.stream());
 });
 
-
-/*
-* Copy and minify JS
-*/
+// Copy and minify JS
 gulp.task('devJS', function() {
   return gulp.src([
       'node_modules/picturefill/dist/picturefill.js',
@@ -96,24 +88,14 @@ gulp.task('devJS', function() {
       './src/js/photo-selector.js',
       './src/js/send-form.js',
       './src/js/main.js'
-    ]).pipe(concat('main.js'))
-    .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
+    ])
+		.pipe(concat('main.js'))
     .pipe(gulp.dest(paths.tmpJSdest))
     .pipe(browserSync.stream());
 });
 
-
-/*
-* Creates development copy
-*/
-gulp.task('devCopy',['devHTML', 'devIMG', 'devCSS', 'devJS']);
-
-
-/*
-* Injects CSS and JS paths into HTML
-*/
-gulp.task('devInject', ['devCopy'], function(){
+// Injects CSS and JS paths into HTML
+gulp.task('devInject', function(){
   var css = gulp.src(paths.tmpCSS);
   var js = gulp.src(paths.tmpJS);
 
@@ -123,94 +105,72 @@ gulp.task('devInject', ['devCopy'], function(){
   .pipe(gulp.dest(paths.tmp));
 });
 
+// Clean tmp folder
+gulp.task('devClean', function(){
+	return del([
+		'tmp/**', '!tmp'
+	]);
+});
 
-/*
-*  Sets local development server
-*/
-gulp.task('devServer', ['devInject'], function() {
+// Creates development copy
+gulp.task('buildDev', function(done){
+	runSequence('devClean', ['devHTML', 'devIMG', 'devCSS', 'devJS'],'devInject', done);
+});
+
+//  Sets local development server
+gulp.task('devServer', ['buildDev'], function() {
     browserSync.init({
       server: paths.tmp
     });
+
+		gulp.watch(paths.srcSASS, ['devCSS']);
+	  gulp.watch(paths.srcJS, ['devJS']);
+		gulp.watch(paths.srcHTML, function() {
+			runSequence('devHTML', 'devInject', browserSync.reload)
+		});
+		gulp.watch(paths.srcIMG, ['devIMG']);
 });
 
-
 /*
-* Do the devInject and reloads files on change (imgs and HTML)
-*/
-gulp.task('reloadOnChange', ['devInject'], function(){
-  browserSync.reload();
-})
-
-
-/*
-* listens for the file change in the SRC Location and
-* Reloads local server
-*/
-gulp.task('watch', ['devServer'], function(){
-  gulp.watch(paths.srcSASS, ['devCSS']);
-  gulp.watch(paths.srcJS, ['devJS']);
-  gulp.watch(paths.srcHTML, ['reloadOnChange']);
-  gulp.watch(paths.srcIMG, ['reloadOnChange']);
-});
-
-
-/*
-* Conver images to WEBP
-*/
-gulp.task('imgWEBP', function(){
-  return gulp.src('./src/img/**')
-  .pipe(plumber())
-  .pipe(webp())
-  .pipe(gulp.dest('./src/img'));
-});
-/**
  * DEVELOPMENT ENDS
  */
-
-
 
  /*
  * PRODUCTION
  */
 
- /*
- * Copy HTML
- */
+// Copy HTML
 gulp.task('distHTML', function(){
   return gulp.src(paths.srcHTML)
     .pipe(gulp.dest(paths.dist));
 });
 
-
-/*
-* Copy and minify images
-*/
+// Copy and minify images
 gulp.task('distIMG', function() {
   return gulp.src(paths.srcIMG)
     .pipe(plumber())
     .pipe(imagemin({ progressive: true, svgoPlugins: [{ removeViewBox: false }]}))
-    .pipe(gulp.dest(paths.distIMG));
+    .pipe(gulp.dest(paths.distIMG))
+		.pipe(webp())
+		.pipe(gulp.dest(paths.distIMG));
 });
 
-
-/*
-* Copy, compile and minify CSS
-*/
+//Copy, compile and minify CSS
 gulp.task('distCSS', function() {
   return gulp.src(paths.srcSASS)
     .pipe(plumber())
     .pipe(sass({ includePaths: path.join(__dirname, '/node_modules/normalize.scss/' )})
     .on('error', sass.logError))
-    .pipe(postcss([autoprefixer({ browsers: 'last 2 versions' })]))
+		.pipe(postcss([
+			autoprefixer({ browsers: 'last 2 versions' }),
+			MQpacker()
+		]))
     .pipe(cleanCSS({ compatibility: 'ie10' }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.distCSSdest));
 });
 
-
-/*
-* Copy and minify JS
-*/
+// Copy and minify JS
 gulp.task('distJS', function() {
   return gulp.src([
       'node_modules/picturefill/dist/picturefill.js',
@@ -229,17 +189,8 @@ gulp.task('distJS', function() {
     .pipe(gulp.dest(paths.distJSdest));
 });
 
-
-/*
-* Create distribution copy
-*/
-gulp.task('distCopy',['distHTML', 'distIMG', 'distCSS', 'distJS']);
-
-
-/*
-* Injects CSS and JS paths into HTML
-*/
-gulp.task('distInject', ['distCopy'], function(){
+// Injects CSS and JS paths into HTML
+gulp.task('distInject', function(){
   var css = gulp.src(paths.distCSS);
   var js = gulp.src(paths.distJS);
 
@@ -249,4 +200,24 @@ gulp.task('distInject', ['distCopy'], function(){
   .pipe(gulp.dest(paths.dist));
 });
 
-gulp.task('buildDist', ['distInject']);
+// Clean distribution folder
+gulp.task('distClean', function(){
+	return del([
+		'dist/**', '!dist'
+	]);
+});
+
+// Build distribution
+gulp.task('buildDist', function(done){
+	runSequence('distClean', ['distHTML', 'distIMG', 'distCSS', 'distJS'],'distInject', done);
+});
+
+// Githpages Deployment
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
+
+/*
+* PRODUCTION ENDS
+*/

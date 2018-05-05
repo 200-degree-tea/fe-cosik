@@ -60,8 +60,7 @@ typings/
 # exclude directories
 
 # local project file
-css/
-build/
+
 tmp/
 dist/
 
