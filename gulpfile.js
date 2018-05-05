@@ -12,7 +12,6 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require("gulp-rename");
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const deploy = require('gulp-gh-pages');
 const inject = require('gulp-inject');
 const webp = require('gulp-webp');
 const MQpacker = require('css-mqpacker');
@@ -210,12 +209,6 @@ gulp.task('distClean', function(){
 // Build distribution
 gulp.task('buildDist', function(done){
 	runSequence('distClean', ['distHTML', 'distIMG', 'distCSS', 'distJS'],'distInject', done);
-});
-
-// Githpages Deployment
-gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
 });
 
 /*

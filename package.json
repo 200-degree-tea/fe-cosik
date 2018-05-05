@@ -4,7 +4,11 @@
   "description": " Visit Sedona - tourist website",
   "main": "index.js",
   "scripts": {
-    "stylelint": "stylelint \"sass/**/*.scss\" --syntax scss"
+    "stylelint": "stylelint \"sass/**/*.scss\" --syntax scss",
+    "deploy": "gh-pages -d dist",
+    "dev": "gulp devServer",
+    "start" : "npm run dev",
+    "build": "gulp buildDist"
   },
   "pre-commit": [
     "stylelint"
@@ -27,10 +31,10 @@
     "browser-sync": "2.18.13",
     "css-mqpacker": "^6.0.2",
     "del": "^3.0.0",
+    "gh-pages": "^1.1.0",
     "gulp": "3.9.1",
     "gulp-clean-css": "^3.9.3",
     "gulp-concat": "^2.6.1",
-    "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^4.1.0",
     "gulp-inject": "^4.3.2",
     "gulp-plumber": "1.1.0",
