@@ -72,13 +72,22 @@
 
   // Tablet screen
   @include screen-size($tablet-size) {
+    &__item {
+      &--flex {
+        width: 50%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 50%;
+      }
+    }
+
     &__inner {
       @include inner_padding($padding-tablet-four-LR);
       padding-top: 2rem;
       padding-bottom: 0;
       border-top: none;
 
-      &--flex-item {
+      &--small {
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
@@ -99,6 +108,8 @@
     }
 
     &__text {
+      flex-grow: 0;
+      flex-shrink: 1;
       flex-basis: 50%;
       width: 50%;
       margin-left: 2rem;
@@ -107,6 +118,8 @@
     &__likes {
       display: flex;
       justify-content: flex-end;
+      flex-grow: 0;
+      flex-shrink: 1;
       flex-basis: 50%;
       width: 50%;
       padding-top: 1.3rem;
@@ -116,6 +129,9 @@
     }
 
     &__btn {
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
       position: relative;
       top: auto;
       left: auto;
@@ -131,20 +147,29 @@
       }
     }
 
+    &__number {
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
+    }
+
     &__collection {
       display: flex;
       flex-wrap: wrap;
 
       @include inner_padding($padding-tablet-four-LR);
     }
-
-    &__item {
-      flex-basis: 50%;
-    }
   }
 
   // Desktop screen
   @include screen-size($desktop-size) {
+    &__item {
+      &--flex {
+        width: 33.3%;
+        flex-basis: 33.3%;
+      }
+    }
+
     &__inner {
       position: relative;
 
