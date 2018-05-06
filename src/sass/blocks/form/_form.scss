@@ -135,6 +135,9 @@
   &__label {
     display: block;
     width: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
     padding-right: 2.1rem;
     padding-left: 2.1rem;
     padding-bottom: 0.8rem;
@@ -307,7 +310,9 @@
     box-sizing: border-box;
     height: 5.7rem;
     width: 100%;
-    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
     font-size: $font-size-three;
@@ -351,6 +356,7 @@
   &__number-holder {
     position: relative;
     flex-grow: 1;
+    flex-shrink: 1;
     flex-basis: 6.5rem;
     width: 6.5rem;
     height: 5.7rem;
@@ -367,12 +373,14 @@
         content: "day";
         position: absolute;
         right: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
         flex-basis: 6.5rem;
+        height: 5.7rem;
         width: 6.5rem;
         font-size: $font-size-three;
         color: $color-gray-darker-one;
         font-weight: $font-weight-bolded;
-        line-height: 5.7rem;
         text-align: center;
         background-color: $color-gray-light;
       }
@@ -383,26 +391,18 @@
         content: "person";
         position: absolute;
         right: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
         flex-basis: 6.5rem;
+        height: 5.7rem;
         width: 6.5rem;
         font-size: $font-size-three;
         color: $color-gray-darker-one;
         font-weight: $font-weight-bolded;
-        line-height: 5.7rem;
         text-align: center;
         background-color: $color-gray-light;
       }
     }
-  }
-
-  &__error {
-    display: block;
-    margin-top: 0.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    font-size: $font-size-four;
-    line-height: 2.6rem;
-    color: $color-red-light;
   }
 
   &__required {
@@ -419,6 +419,8 @@
   }
 
   &__btn {
+    flex-grow: 0;
+    flex-shrink: 1;
     flex-basis: 5.7rem;
     width: 5.7rem;
     height: 5.7rem;
@@ -734,13 +736,6 @@
       }
     }
 
-    &__error {
-      margin: 0;
-      position: absolute;
-      right: 0;
-      text-align: right;
-    }
-
     &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -845,6 +840,8 @@
     &__field {
       &--phone {
         flex-wrap: nowrap;
+        flex-grow: 0;
+        flex-shrink: 1;
         flex-basis: 42%;
         align-items: center;
         width: 42%;
@@ -857,9 +854,11 @@
 
       &--envelope {
         display: flex;
-        flex-basis: 42%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 46%;
         align-items: center;
-        width: 42%;
+        width: 46%;
 
         &::before {
           top: 1.3rem;
@@ -916,15 +915,12 @@
       padding-top: 3.7rem;
     }
 
-    &__error {
-      top: -2rem;
-      left: 10.7rem;
-      text-align: left;
-    }
-
     &__label {
       &--phone {
         width: 15%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 15%;
         padding-left: 1.7rem;
         padding-right: 2.1rem;
 
@@ -997,6 +993,12 @@
 
     &__text-mobile {
       display: none;
+    }
+
+    &__required {
+      &--text {
+        right: 10%;
+      }
     }
   }
 }
