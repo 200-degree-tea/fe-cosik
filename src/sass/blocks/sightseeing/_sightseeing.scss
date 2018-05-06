@@ -74,9 +74,14 @@
   // Desktop screen
   @include screen-size($desktop-size) {
     &__inner {
-      width: 37.6rem;
+      box-sizing: border-box;
+      height: 256px;
+      width: 400px;
       padding-top: 5.2rem;
       padding-bottom: 8.4rem;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
     }
 
     &__header {
