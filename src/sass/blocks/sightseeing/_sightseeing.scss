@@ -17,7 +17,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: -19px;
+        top: -1.9rem;
         left: 0;
 
         @include size(100%, 3.7rem);
@@ -75,8 +75,8 @@
   @include screen-size($desktop-size) {
     &__inner {
       box-sizing: border-box;
-      height: 256px;
-      width: 400px;
+      height: 25.6rem;
+      width: 40rem;
       padding-top: 5.2rem;
       padding-bottom: 8.4rem;
       flex-grow: 0;

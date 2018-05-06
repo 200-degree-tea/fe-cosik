@@ -27,6 +27,8 @@
 
     &__tag {
       width: 33.3%;
+      flex-shrink: 1;
+      flex-basis: 33.3%;
       padding-top: 3.1rem;
 
       @include inner_padding(0);

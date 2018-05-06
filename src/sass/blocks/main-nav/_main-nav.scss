@@ -46,12 +46,12 @@
 
   &__toggle {
     position: absolute;
-    top: 17px;
-    right: 21px;
+    top: 1.7rem;
+    right: 2.1rem;
     z-index: 2;
     display: block;
-    height: 22px;
-    width: 22px;
+    height: 2.2rem;
+    width: 2.2rem;
     border: none;
     outline: none;
     background-image: url("../img/icon-cross--white.svg");
@@ -94,8 +94,9 @@
     }
 
     &__item {
-      padding: 14px 0 17px;
+      padding: 1.4rem 0 1.7rem;
       width: 10rem;
+      flex-basis: 10rem;
       margin-left: 7%;
       border: none;
 
