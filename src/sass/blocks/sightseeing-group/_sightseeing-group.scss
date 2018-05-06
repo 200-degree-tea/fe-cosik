@@ -49,6 +49,9 @@
 
     &__item {
       width: 33.3%;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 33.3%;
       padding-top: 4.5rem;
       padding-bottom: 4.4rem;
 
