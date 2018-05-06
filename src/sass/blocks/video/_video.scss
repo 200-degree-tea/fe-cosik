@@ -45,6 +45,7 @@
       top: 52%;
       margin-left: 2.2rem;
       margin-right: 2.2rem;
+      flex-basis: auto;
       width: auto;
       height: 0.3rem;
       background-color: $color-white-dimm-two;
@@ -164,6 +165,8 @@
       top: 2.5rem;
       left: 7rem;
       width: 67%;
+      flex-grow: 0;
+      flex-shrink: 1;
       flex-basis: 67%;
       background-color: transparent;
     }
@@ -174,6 +177,8 @@
 
     &__btn-control {
       bottom: 2.5rem;
+      flex-grow: 0;
+      flex-shrink: 1;
       flex-basis: 100%;
       width: 100%;
       background-color: transparent;
