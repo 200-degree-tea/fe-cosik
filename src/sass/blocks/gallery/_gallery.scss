@@ -72,13 +72,11 @@
 
   // Tablet screen
   @include screen-size($tablet-size) {
-    &__item {
-      &--flex {
-        width: 50%;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 50%;
-      }
+    &__item--flex {
+      width: 50%;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 50%;
     }
 
     &__inner {
@@ -163,11 +161,9 @@
 
   // Desktop screen
   @include screen-size($desktop-size) {
-    &__item {
-      &--flex {
-        width: 33.3%;
-        flex-basis: 33.3%;
-      }
+    &__item--flex {
+      width: 33.3%;
+      flex-basis: 33.3%;
     }
 
     &__inner {

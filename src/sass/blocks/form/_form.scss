@@ -6,10 +6,8 @@
       border-top: 0.1rem solid $color-gray;
     }
 
-    &--no-divider {
-      &::after {
-        content: none;
-      }
+    &--no-divider::after {
+      content: none;
     }
   }
 
@@ -273,34 +271,30 @@
       display: none;
     }
 
-    &--phone {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 3.4rem;
-        right: 0;
-        height: 5.7rem;
-        width: 5.8rem;
-        background-color: $color-gray-two;
-        background-image: url("../img/icon-phone.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-      }
+    &--phone::after {
+      content: "";
+      position: absolute;
+      top: 3.4rem;
+      right: 0;
+      height: 5.7rem;
+      width: 5.8rem;
+      background-color: $color-gray-two;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
-    &--envelope {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 3.4rem;
-        right: 0;
-        height: 5.7rem;
-        width: 5.8rem;
-        background-color: $color-gray-two;
-        background-image: url("../img/icon-mail.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-      }
+    &--envelope::after {
+      content: "";
+      position: absolute;
+      top: 3.4rem;
+      right: 0;
+      height: 5.7rem;
+      width: 5.8rem;
+      background-color: $color-gray-two;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 
@@ -366,40 +360,36 @@
     text-align: center;
     background-color: $color-gray-light;
 
-    &--day {
-      &::after {
-        content: "day";
-        position: absolute;
-        right: 0;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 6.5rem;
-        height: 5.7rem;
-        width: 6.5rem;
-        font-size: $font-size-three;
-        color: $color-gray-darker-one;
-        font-weight: $font-weight-bolded;
-        text-align: center;
-        background-color: $color-gray-light;
-      }
+    &--day::after {
+      content: "day";
+      position: absolute;
+      right: 0;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 6.5rem;
+      height: 5.7rem;
+      width: 6.5rem;
+      font-size: $font-size-three;
+      color: $color-gray-darker-one;
+      font-weight: $font-weight-bolded;
+      text-align: center;
+      background-color: $color-gray-light;
     }
 
-    &--person {
-      &::after {
-        content: "person";
-        position: absolute;
-        right: 0;
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: 6.5rem;
-        height: 5.7rem;
-        width: 6.5rem;
-        font-size: $font-size-three;
-        color: $color-gray-darker-one;
-        font-weight: $font-weight-bolded;
-        text-align: center;
-        background-color: $color-gray-light;
-      }
+    &--person::after {
+      content: "person";
+      position: absolute;
+      right: 0;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 6.5rem;
+      height: 5.7rem;
+      width: 6.5rem;
+      font-size: $font-size-three;
+      color: $color-gray-darker-one;
+      font-weight: $font-weight-bolded;
+      text-align: center;
+      background-color: $color-gray-light;
     }
   }
 
@@ -584,8 +574,8 @@
         margin-bottom: 5.6rem;
         text-align: left;
 
-        &::before,
-        &::after {
+        &::after,
+        &::before {
           content: none;
         }
       }
@@ -597,18 +587,15 @@
 
     &__inner {
       padding-top: 3.5rem;
-
       @include inner_padding($padding-tablet-four-LR);
 
       &--left {
         padding-top: 2.1rem;
-
         @include inner_padding($padding-tablet-five-LR);
       }
 
       &--right {
         padding-top: 2.1rem;
-
         @include inner_padding($padding-tablet-five-LR);
       }
 
@@ -726,10 +713,7 @@
 
       &--file {
         width: 70%;
-        padding-top: 1.6rem;
-        padding-bottom: 1.6rem;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 1.6rem 0;
         margin: 0 auto;
       }
     }
@@ -744,12 +728,12 @@
     }
 
     &__btn--inc {
-        margin: 0;
+      margin: 0;
     }
 
     &__column--bg {
-        display: flex;
-        justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
     }
 
     &__item {
@@ -810,10 +794,7 @@
       }
 
       &--right {
-        padding-top: 0.6rem;
-        padding-left: 12%;
-        padding-right: 20%;
-        padding-bottom: 0.7rem;
+        padding: 0.6rem 20% 0.7rem 12%;
       }
 
       &--high {
@@ -950,23 +931,17 @@
       margin-left: 0.8rem;
       padding-right: 6.5rem;
 
-      &--day {
-        &::after {
-          content: "day";
-        }
+      &--day::after {
+        content: "day";
       }
 
-      &--person {
-        &::after {
-          content: "person";
-        }
+      &--person::after {
+        content: "person";
       }
     }
 
-    &__btn {
-      &--inc {
-        margin-left: 0.8rem;
-      }
+    &__btn--inc {
+      margin-left: 0.8rem;
     }
 
     &__grid-item {

@@ -89,12 +89,10 @@
         transform: translate(-50%);
       }
 
-      &--house {
-        &::before {
-          top: 4rem;
-          width: 7.7rem;
-          background-size: 7.6rem 7.2rem;
-        }
+      &--house::before {
+        top: 4rem;
+        width: 7.7rem;
+        background-size: 7.6rem 7.2rem;
       }
 
       &--gift {
@@ -107,12 +105,10 @@
         }
       }
 
-      &--food {
-        &::before {
-          top: 4.2rem;
-          width: 7.7rem;
-          background-size: 7.7rem 7rem;
-        }
+      &--food::before {
+        top: 4.2rem;
+        width: 7.7rem;
+        background-size: 7.7rem 7rem;
       }
     }
   }
