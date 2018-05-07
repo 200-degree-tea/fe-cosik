@@ -29,26 +29,34 @@
     return this.formatDate(new Date());
   };
 
-  DateCounter.getCheckoutDate = function() {
-    var newDate = new Date(this.checkin.value);
-    newDate.setDate(newDate.getDate() + this.counterValue);
 
+  DateCounter.getCheckoutDate = function(checkinValue) {
+    var newDate = new Date(checkinValue);
+    newDate.setDate(newDate.getDate() + this.counterValue);
     return this.formatDate(newDate);
   };
 
-  DateCounter.getCheckinDate = function() {
-    var newDate = new Date(this.checkout.value);
+  DateCounter.getCheckinDate = function(checkoutValue) {
+    var newDate = new Date(checkoutValue);
     newDate.setDate(newDate.getDate() - this.counterValue);
 
     return this.formatDate(newDate);
   };
 
   DateCounter.updateCheckinDate = function() {
-    this.checkin.value = this.getCheckinDate();
+    var newCheckinDate = this.getCheckinDate(this.checkout.value);
+
+    if (/\d{4}-\d{2}-\d{2}/.test(newCheckinDate)) {
+      this.checkin.value = (newCheckinDate);
+    }
   };
 
   DateCounter.updateCheckoutDate = function() {
-    this.checkout.value = this.getCheckoutDate();
+    var newCheckoutDate = this.getCheckoutDate(this.checkin.value);
+
+    if (/\d{4}-\d{2}-\d{2}/.test(newCheckoutDate)) {
+      this.checkout.value = newCheckoutDate;
+    }
   };
 
   DateCounter.onCheckinDateChange = function() {
