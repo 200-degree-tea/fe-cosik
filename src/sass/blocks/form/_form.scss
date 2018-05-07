@@ -80,10 +80,8 @@
     }
   }
 
-  &__number {
-    &--flexgrid {
-      display: flex;
-    }
+  &__number--flexgrid {
+    display: flex;
   }
 
   &__flex-block {
@@ -745,17 +743,13 @@
       display: none;
     }
 
-    &__btn {
-      &--inc {
+    &__btn--inc {
         margin: 0;
-      }
     }
 
-    &__column {
-      &--bg {
+    &__column--bg {
         display: flex;
         justify-content: space-between;
-      }
     }
 
     &__item {
@@ -831,10 +825,8 @@
       }
     }
 
-    &__header {
-      &--left {
-        margin-bottom: 5.6rem;
-      }
+    &__header--left {
+      margin-bottom: 5.6rem;
     }
 
     &__field {
@@ -995,10 +987,8 @@
       display: none;
     }
 
-    &__required {
-      &--text {
-        right: 10%;
-      }
+    &__required--text {
+      right: 10%;
     }
   }
 }
