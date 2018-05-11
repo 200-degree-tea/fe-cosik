@@ -57,7 +57,7 @@
 
     sendForm.init({
       elem: form,
-      url: 'https://echo.htmlacademy.ru/adaptive',
+      url: 'https://cosik-echo-node.herokuapp.com/echo',
       photoSelector: photoSelector
     })
   }
