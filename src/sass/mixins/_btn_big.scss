@@ -1,5 +1,6 @@
 @mixin btn_big {
   display: inline-block;
+  vertical-align: top;
   height: 5.8rem;
   width: 100%;
   color: $color-white;
