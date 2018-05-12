@@ -82,7 +82,7 @@
     display: inline-block;
     vertical-align: top;
     text-decoration: none;
-    max-width: 18.6rem;
+    max-width: 10.2rem;
   }
 
   &__logo img {
@@ -170,6 +170,10 @@
   @include screen-size($desktop-size) {
     &__item {
       margin-left: 12%;
+    }
+
+    &__logo {
+      max-width: 18.9rem;
     }
   }
 }
