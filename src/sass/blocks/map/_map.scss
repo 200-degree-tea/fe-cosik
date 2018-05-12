@@ -1,25 +1,17 @@
 .map {
   position: relative;
+  height: 35rem;
 
-  &__image {
-    width: 100%;
-    text-align: center;
-    line-height: 0;
-    height: 35rem;
+  @include img-retina('../img/bg-map-mobile@1x.jpg', '../img/bg-map-mobile@2x.jpg')
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-    & img {
-      width: 100%;
-    }
+  @include screen-size($tablet-size) {
+    @include img-retina('../img/bg-map-tablet@1x.jpg', '../img/bg-map-tablet@2x.jpg')
   }
 
-  &__caption {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+  @include screen-size($desktop-size) {
+    @include img-retina('../img/bg-map-desktop@1x.jpg', '../img/bg-map-desktop@2x.jpg')
   }
 }
