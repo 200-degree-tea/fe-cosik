@@ -23,11 +23,16 @@
 
   &__picture {
     text-align: center;
+    line-height: 0;
+  }
+
+  &__picture img {
+    width: 100%;
   }
 
   &__control {
     position: absolute;
-    top: 15.7rem;
+    bottom: -6.6rem;
     width: 88%;
     margin-left: 6.25%;
     margin-right: 6.25%;
