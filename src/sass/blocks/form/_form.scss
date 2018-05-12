@@ -316,6 +316,7 @@
     background-color: $color-gray-light;
     border: 0.4rem solid $color-gray-light;
     outline: none;
+    appearance: none;
 
     &:hover {
       background-color: $color-gray;
