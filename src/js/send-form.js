@@ -8,22 +8,33 @@
       this.photoSelector = options.photoSelector;
 
       this.form.addEventListener('submit', this.onFormSubmit.bind(this));
-      this.button = this.form.querySelector('.form__submit')
+
     },
 
     onFormSubmit: function(event) {
       event.preventDefault();
+      var file = this.form.querySelector('.form__input--photos');
+      var fileParent = file.parentElement;
+
+      // omits mobile browsers bug on iOS when empty file object is send
+      fileParent.removeChild(file);
+
       var data = new FormData(this.form);
+      var images = this.photoSelector.getImages();
+      var button = this.form.querySelector('.form__submit');
 
-      this.photoSelector.getImages().forEach(function(image) {
-        data.append('images', image.file);
-      });
+      if (images.length) {
+        images.forEach(function(image) {
+          data.append('images', image.file);
+        });
+      }
 
-      if (!this.button.disabled) {
-        this.button.disabled = true;
+      if (!button.disabled) {
+        button.disabled = true;
         this.request(data, function() {
-          this.button.disabled = false;
-        }.bind(this));
+          button.disabled = false;
+          fileParent.appendChild(file);
+        });
       }
     },
 
